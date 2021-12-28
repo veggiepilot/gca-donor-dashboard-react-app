@@ -1,0 +1,26 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/veggiepilot/gca-donor-dashboard-react-app.git"
+  },
+  "author": "Johannes Chitura, Sarah Maskill, Adam Olsey, Rebecca Sundquist",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/veggiepilot/gca-donor-dashboard-react-app/issues"
+  },
+  "homepage": "https://github.com/veggiepilot/gca-donor-dashboard-react-app#readme",
+  "dependencies": {
+    "express": "^4.17.2",
+    "express-graphql": "^0.12.0",
+    "express-session": "^1.17.2",
+    "graphql": "^15.8.0",
+    "mongoose": "^6.1.4"
+  }
+}
