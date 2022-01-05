@@ -1,6 +1,7 @@
 import "./sidebar.css";
+import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
-import Nav from "react-bootstrap/Nav";
+import Stack from 'react-bootstrap/Stack'
 import Navbar from "react-bootstrap/Navbar";
 import StudentDropdown from "./studentDropdown";
 import DonorDropdown from "./donorDropdown";
@@ -8,29 +9,27 @@ import AccountDropdown from "./accountDropdown";
 
 const SideBarWrapper = (Student, Donor, Account) => {
   return (
+
+    <Col lg={2}>
     <Navbar
       variant="dark"
-      bg="light"
-      expand="lg"
+      bg="dark"
       collapseOnSelect
-      expand="lg"
+      expand="md"
       sticky="left"
     >
       <Container>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav>
+        <Stack gap={3}>
           <StudentDropdown />
-          </Nav>
-          <Nav>
           <DonorDropdown/>
-          </Nav>
-          <Nav>
           <AccountDropdown />
-          </Nav>
+        </Stack>
         </Navbar.Collapse>
       </Container>
     </Navbar>
+    </Col>
   );
 };
 
