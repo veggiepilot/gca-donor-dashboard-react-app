@@ -5,10 +5,14 @@ import SideBarWrapper from "./dropDownComponents/sideBarWrapper";
 
 const DashboardWrapper = () => {
   return (
-    <Container lg={12}>
-      <Row>
-      <SideBarWrapper />
-        <Col lg={8}>Center Display</Col>
+    <Container>
+      <Row lg={1}>
+        <Col md={2}>
+          <SideBarWrapper />
+        </Col>
+        <Col md={10}>
+         
+        </Col>
       </Row>
     </Container>
   );

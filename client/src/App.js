@@ -1,11 +1,13 @@
 import "./App.css";
 import DashboardWrapper from "./components/dashboardWrapper";
+import Header from "./components/header";
 
 function App() {
   return (
-    <DashboardWrapper>
-      
-    </DashboardWrapper>
+    <div>
+      <Header />
+      <DashboardWrapper />
+    </div>
   );
 }
 
