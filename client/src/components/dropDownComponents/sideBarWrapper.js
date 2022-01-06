@@ -4,14 +4,13 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Accordion from "react-bootstrap/Accordion";
 import Nav from "react-bootstrap/nav";
-import Button from "react-bootstrap/Button"
+
 
 const SideBarWrapper = () => {
   return (
     <Container className="container-fluid">
       <Row>
         <Col className="sidebar">
-      <span className="navbar-toggler-icon"></span>
       <Accordion className="nav nav-sidebar">
         <Accordion.Item eventKey="0">
           <Accordion.Header>Student</Accordion.Header>
