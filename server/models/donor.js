@@ -2,15 +2,62 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const donorSchema = new Schema({
-    name: String, 
-    address1: String,
-    address2: String,
-    city: String, 
-    state: String, 
-    zip: Number,
-    email: String,
-    phone: Number,
-    amountDonated: Number
+    firstName: {
+        type: String,
+        trim: true,
+        required: "Enter a donor first name"
+    }, 
+    LastName: {
+        type: String,
+        trim: true,
+        required: "Enter a donor last name"
+    }, 
+    address1: {
+        type: String,
+        trim: true,
+        required: "Enter an address" 
+    },
+    address2: {
+        type: String,
+        trim: true
+    },
+    city: {
+        type: String,
+        trim: true,
+        required: "Enter a city"
+    }, 
+    state: {
+        type: String,
+        required: "Please choose a state"
+    }, 
+    zip: {
+        type: Number,
+        trim: true,
+        required: "Please enter a zipcode"
+    },
+    email: {
+        type: String,
+        required: "Email is required",
+        unique: true,
+    },
+    phone: {
+        type: Number,
+        required: "Phone number is required"
+    },
+    donations: [
+        {
+            amount: {
+                type: Number,
+                trim: true
+            },
+            date: {
+                type: Date,
+                default: Date.now
+            }
+        }
+    ]
 });
 
-module.exports = mongoose.model('Donor', donorSchema);
+ const Donor = mongoose.model('Donor', donorSchema);
+
+ module.exports = Donor;
