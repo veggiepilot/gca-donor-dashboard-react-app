@@ -1,0 +1,27 @@
+{
+  "name": "gca-donor-dashboard-react-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/app.js",
+    "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
+    "install": "cd server && npm i && cd ../client && npm i",
+    "seed": "cd server && npm run seed",
+    "build": "cd client && npm run build"
+  },
+  "devDependencies": {
+    "concurrently": "^5.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/veggiepilot/gca-donor-dashboard-react-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/veggiepilot/gca-donor-dashboard-react-app/issues"
+  },
+  "homepage": "https://github.com/veggiepilot/gca-donor-dashboard-react-app#readme"
+}

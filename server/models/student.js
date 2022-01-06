@@ -2,9 +2,27 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const studentSchema = new Schema({
-    name: String, 
-    patrentEmail: String,
-    fundingNeeded: Number
+    firstName: {
+        type: String,
+        trim: true,
+        required: "Enter a student first name"
+    }, 
+    LastName: {
+        type: String,
+        trim: true,
+        required: "Enter a student last name"
+    }, 
+    parentEmail: {
+        type: String,
+        trim: true,
+        required: "Enter a parent email",
+        unique: true
+    },
+    fundingNeeded: {
+        type: Number
+    }
 });
 
-module.exports = mongoose.model('Student', studentSchema);
+const Student = mongoose.model('Student', studentSchema);
+
+ module.exports = Student;
