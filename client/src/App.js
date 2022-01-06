@@ -1,12 +1,12 @@
 import "./App.css";
-import DashboardWrapper from "./components/dashboardWrapper";
+import Dashboard from "./components/dashboard";
 import Header from "./components/header";
 
 function App() {
   return (
     <div>
     <Header/>
-    <DashboardWrapper/>  
+    <Dashboard/>  
     </div>
   );
 }
