@@ -5,7 +5,8 @@ import Header from "./components/header";
 function App() {
   return (
     <div>
-      <h1>Welcome to the GCA Donor Dashboard! Enjoy</h1>
+    <Header/>
+    <DashboardWrapper/>  
     </div>
   );
 }
