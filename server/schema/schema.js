@@ -1,13 +1,15 @@
-const { GraphQLObjectType } = require("graphql");
 const graphql = require("graphql");
 const Donor = require("../models/donor");
 const Student = require("../models/student");
 const User = require("../models/user");
 
 const {
+    GraphQLObjectType,
     GraphQLID,
     GraphQLString,
-    GraphQLInt
+    GraphQLInt,
+    GraphQLList,
+    GraphQLSchema
 } = graphql;
 
 const DonorType = new GraphQLObjectType({
@@ -38,4 +40,18 @@ const StudentType = new GraphQLObjectType({
     })
 });
 
-const RootQuery = new GraphQLObjectType();
+const RootQuery = new GraphQLObjectType({
+    name: "RootQueryType",
+    fields: {
+        donors: {
+            type: new GraphQLList(DonorType),
+            resolve(parent, args) {
+                return Donor.find({});
+            }
+        }
+    }
+});
+
+module.exports = new GraphQLSchema({
+    query: RootQuery
+});
