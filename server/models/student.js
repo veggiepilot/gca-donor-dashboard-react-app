@@ -7,7 +7,7 @@ const studentSchema = new Schema({
         trim: true,
         required: "Enter a student first name"
     }, 
-    LastName: {
+    lastName: {
         type: String,
         trim: true,
         required: "Enter a student last name"
@@ -25,4 +25,4 @@ const studentSchema = new Schema({
 
 const Student = mongoose.model('Student', studentSchema);
 
- module.exports = Student;
+module.exports = Student;
