@@ -1,9 +1,9 @@
-.sidebar {
+.navbar-nav {
     border-radius: 0,5px;
     width: 180px;
+    margin: 20px;
     position: fixed;
-    z-index: -1;
-    display: flex;
+    display: inline;
     justify-content:center;
     align-content:center;
     flex-direction: column;
@@ -12,39 +12,10 @@
     overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
     background-color: transparent;
 }
-    
+
 @media (min-width: 768px) {
     .main {
     padding-right: 40px;
     padding-left: 220px; /* 180 + 40 */
     }
-}
-
-.accordion {
-    outline: hidden;
-    display: flex;
-    justify-content: space-evenly;
-    border: transparent;
-    background-color: transparent;
-    width:150px;
-    margin-top: 20px;
-    margin-bottom: 50px;
-}
-
-.accordion-button {
-    outline-style: none;
-    -webkit-tap-highlight-color: transparent;
-    color: black; 
-    box-sizing: content-box;
-    text-decoration: none;
-    text-align: center;
-    background-color:transparent;
-    width: 150px;
-    display: block;
-}
-
-.accordion-button ::before {
-    transition: none;
-    border: none;
-    outline: none;
 }
