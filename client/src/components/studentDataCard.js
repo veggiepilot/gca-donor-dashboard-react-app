@@ -18,19 +18,33 @@ export default function App() {
           <tbody>
             <tr>
               <td>1</td>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
+              <td>Rebecca</td>
+              <td>Sundquist </td>
+              <td>@Sund</td>
             </tr>
             <tr>
               <td>2</td>
-              <td>Jacob</td>
-              <td>Thornton</td>
-              <td>@fat</td>
+              <td>Adam</td>
+              <td>Olsey</td>
+              <td>@Olse</td>
             </tr>
             <tr>
-              <td>3</td>
-              <td colSpan="2">Larry the Bird</td>
+              <td>1</td>
+              <td>sarah</td>
+              <td>Maskill</td>
+              <td>@Maski</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>Johannes</td>
+              <td>Chitura</td>
+              <td>@Chitu</td>
+            </tr>
+            <tr>
+            </tr> 
+            <tr>
+              <td>5</td>
+              <td colSpan="2">Johannes Chitura</td>
               <td>@twitter</td>
             </tr>
           </tbody>
