@@ -29,13 +29,13 @@ export default function App() {
               <td>@Olse</td>
             </tr>
             <tr>
-              <td>1</td>
+              <td>3</td>
               <td>sarah</td>
               <td>Maskill</td>
               <td>@Maski</td>
             </tr>
             <tr>
-              <td>1</td>
+              <td>4</td>
               <td>Johannes</td>
               <td>Chitura</td>
               <td>@Chitu</td>

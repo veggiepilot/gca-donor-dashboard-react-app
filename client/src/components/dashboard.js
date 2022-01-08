@@ -2,7 +2,9 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import SideBar from "./dropDownComponents/sideBar";
-import StudentVeiws from "./studentVeiw";
+import StudentDataCard from "./studentDataCard";
+import PledgeCard from "./pledgeCard";
+import DonorsCard from "./donorsCard";
 
 const Dashboard = () => {
   return (
@@ -12,7 +14,9 @@ const Dashboard = () => {
           <SideBar/>
         </Col>
         <Col lg={10} className="bg-primary">
-         <StudentVeiws/>
+         <StudentDataCard/>
+         <DonorsCard/>
+         <PledgeCard/>
         </Col>
       </Row>
     </Container>
