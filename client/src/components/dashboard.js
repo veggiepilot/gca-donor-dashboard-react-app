@@ -3,8 +3,8 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import SideBar from "./dropDownComponents/sideBar";
 import StudentDataCard from "./studentDataCard";
-import PledgeCard from "./pledgeCard";
-import DonorsCard from "./donorsCard";
+import PledgeCard from "./PledgeCard";
+import DonorsCard from "./DonorsCard";
 
 const Dashboard = () => {
   return (
