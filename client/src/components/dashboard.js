@@ -6,12 +6,12 @@ import StudentVeiws from "./studentVeiw";
 
 const Dashboard = () => {
   return (
-    <Container>
-      <Row lg={12}>
-        <Col lg={2}>
+    <Container className="m-3" fluid="true">
+      <Row>
+        <Col lg={2} className="bg-warning">
           <SideBar/>
         </Col>
-        <Col lg={10}>
+        <Col lg={10} className="bg-danger">
          <StudentVeiws/>
         </Col>
       </Row>
