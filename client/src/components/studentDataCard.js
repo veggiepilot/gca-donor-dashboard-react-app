@@ -5,7 +5,7 @@ export default function App() {
   return (
     <Card>
       <Card.Body>
-        <Card.Title>Card Title</Card.Title>
+        <Card.Title>Student Data</Card.Title>
         <Table>
           <thead>
             <tr>
