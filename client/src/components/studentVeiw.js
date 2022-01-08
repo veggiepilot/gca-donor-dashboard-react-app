@@ -31,7 +31,7 @@ const StudentVeiws = () => {
               </Col>
               <Col>
                 <div>
-                  <Row xs={1} md={2} className="g-4">
+                  <Row md={1} className="g-4">
                     {Array.from({ length: 4 }).map((_, idx) => (
                       <Col>
                         <Card>

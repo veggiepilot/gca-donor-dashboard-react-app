@@ -1,13 +1,1 @@
-.userTabs {
-    z-index: -2;
-    padding: 20px;
-    margin-right: 50px;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-content: flex-end;
-}
 
-.tabsContainer {
-    display: inline;
-}
