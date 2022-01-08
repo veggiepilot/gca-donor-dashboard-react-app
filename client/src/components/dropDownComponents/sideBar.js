@@ -1,4 +1,3 @@
-import "./sidebar.css";
 import Container from "react-bootstrap/Container";
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
@@ -9,11 +8,9 @@ const SideBar = () => {
 
   return (
 
-    <Container className="container-fluid">
-      <Row>
-        <Col lg={6} className="sidebar">
+    <div>
       <Accordion className="nav nav-sidebar">
-        <Accordion.Item eventKey="0">
+        <Accordion.Item eventKey="0" className="w-100">
           <Accordion.Header>Student</Accordion.Header>
           <Accordion.Body>
             <Nav.Link href="#home">Student Overveiw</Nav.Link>
@@ -40,10 +37,7 @@ const SideBar = () => {
           </Accordion.Body>
         </Accordion.Item>
       </Accordion>
-      
-      </Col>
-      </Row>
-    </Container>
+    </div>
   );
 };
 

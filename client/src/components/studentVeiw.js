@@ -1,4 +1,4 @@
-import "./studentVeiws.css";
+
 import Tabs from "react-bootstrap/Tabs";
 import Tab from "react-bootstrap/Tab";
 import Col from "react-bootstrap/Col";
@@ -10,7 +10,6 @@ import Form from "react-bootstrap/Form";
 
 const StudentVeiws = () => {
   return (
-    <Col lg={12} className="mb-3">
       <Container>
         <Tabs defaultActiveKey="home" id="tab" className="mb-3 userTabs">
           <Tab eventKey="home" title="Notes">
@@ -53,7 +52,6 @@ const StudentVeiws = () => {
           <Tab eventKey="profile" title="Donors"></Tab>
         </Tabs>
       </Container>
-    </Col>
   );
 };
 
