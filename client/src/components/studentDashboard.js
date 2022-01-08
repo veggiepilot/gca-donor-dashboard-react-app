@@ -7,7 +7,7 @@ import Button from "react-bootstrap/Button";
 import { Container } from "react-bootstrap";
 import Form from "react-bootstrap/Form";
 
-const StudentVeiws = () => {
+const StudentDashboard = () => {
   return (
       <Container>
         <Tabs defaultActiveKey="home" id="tab" className="mb-3 userTabs">
@@ -54,4 +54,4 @@ const StudentVeiws = () => {
   );
 };
 
-export default StudentVeiws;
+export default StudentDashboard;
