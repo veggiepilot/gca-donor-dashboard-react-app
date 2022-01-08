@@ -3,7 +3,7 @@ if (process.env.NODE_ENV !== "production") {
 }
 
 const express = require("express");
-const { graphQLHTTP } = require("express-graphql");
+const { graphqlHTTP } = require("express-graphql");
 const schema = require("./schema/schema");
 const mongoose = require("mongoose");
 const path = require("path");
@@ -17,11 +17,11 @@ app.use(express.json());
 app.use(express.static("public"));
 
 //connect to mlab database
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://loclahost/gca-dashboard', {
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/gca-dashboard', {
     useNewUrlParser: true,
-    useFindAndModify: false,
+    // useFindAndModify: false,
     useUnifiedTopology: true,
-    useCreateIndex: true
+    // useCreateIndex: true
 });
 
 mongoose.connection.once("open", () => {
@@ -29,7 +29,7 @@ mongoose.connection.once("open", () => {
 });
 
 app.use(
-  "graphql",
+  "/graphql",
   graphqlHTTP({
     schema,
     graphiql: true,
