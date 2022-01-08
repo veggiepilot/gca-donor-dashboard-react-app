@@ -1,0 +1,26 @@
+[
+    {
+        "firstName": "Stewart",
+        "lastName": "Johnson",
+        "parentEmail": "sally@gmail.com",
+        "fundingNeeded": 10000
+    },
+    {
+        "firstName": "Harry",
+        "lastName": "Henderson",
+        "parentEmail": "johnhenderon@gmail.com",
+        "fundingNeeded": 12000
+    },
+    {
+        "firstName": "Francis",
+        "lastName": "McGee",
+        "parentEmail": "mcgee@gmail.com",
+        "fundingNeeded": 5000
+    },
+    {
+        "firstName": "Gina",
+        "lastName": "Knight",
+        "parentEmail": "knightfamily@gmail.com",
+        "fundingNeeded": 8000
+    }
+]
