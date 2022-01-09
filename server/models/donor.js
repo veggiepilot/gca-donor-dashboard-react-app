@@ -7,7 +7,7 @@ const donorSchema = new Schema({
         trim: true,
         required: "Enter a donor first name"
     }, 
-    LastName: {
+    lastName: {
         type: String,
         trim: true,
         required: "Enter a donor last name"
