@@ -1,16 +1,18 @@
 import { Outlet, Link } from "react-router-dom";
-import {Accordion,Nav,Button } from "react-bootstrap";
+import { Accordion, Nav, Button } from "react-bootstrap";
 
 const SideBar = () => {
   return (
     <>
-      <Link to="/dashboard"><Button className="w-100 mb-4 mt-4">Home</Button></Link>
+      <Link to="/dashboard">
+        <Button className="w-100 mb-4 mt-4">Home</Button>
+      </Link>
       <Accordion className="d-flex justify-content-center align-content-center">
         <Accordion.Item eventKey="0" className="w-100 mb-4 mt-4">
           <Accordion.Header>Student</Accordion.Header>
           <Accordion.Body>
-           <Link to="/student">Student Overveiw</Link>
-            <Nav.Link >New Student</Nav.Link>
+            <Link to="/student">Student Overveiw</Link>
+            <Nav.Link>New Student</Nav.Link>
           </Accordion.Body>
         </Accordion.Item>
       </Accordion>
@@ -25,7 +27,7 @@ const SideBar = () => {
         </Accordion.Item>
       </Accordion>
 
-        <Accordion className="nav nav-sidebar">
+      <Accordion className="nav nav-sidebar">
         <Accordion.Item eventKey="2" className="w-100 mb-4 mt-4">
           <Accordion.Header>Account</Accordion.Header>
           <Accordion.Body>
@@ -33,10 +35,9 @@ const SideBar = () => {
           </Accordion.Body>
         </Accordion.Item>
       </Accordion>
-      <Outlet/>
+      <Outlet />
     </>
   );
 };
 
 export default SideBar;
-

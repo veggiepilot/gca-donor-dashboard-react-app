@@ -1,13 +1,10 @@
-import SignIn from "./components/signIn";
-import Header from "./components/header";
-
-function App() {
+function App(SignIn, Header) {
   return (
     <>
-    <Header />
-    <SignIn/>
+      <Header />
+      <SignIn />
     </>
-  )
+  );
 }
 
 export default App;
