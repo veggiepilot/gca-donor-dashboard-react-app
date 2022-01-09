@@ -7,11 +7,12 @@ import {
 } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import App from './App';
-import Dashboard from './veiws/dashboard';
-import StudentVeiw from './veiws/studentVeiw';
-import DonorVeiw from './veiws/donorVeiw';
-import AccountVeiw from './veiws/accountVeiw';
+import Dashboard from './views/dashboard';
+import StudentVeiw from './views/studentView';
+import DonorVeiw from './views/donorView';
+import AccountVeiw from './views/accountView';
 import SignIn from './components/signIn'
+import SignUp from './components/signUp'
 
 const rootElement = document.getElementById("root");
 render (
@@ -19,6 +20,7 @@ render (
     <Routes>
       <Route path="/" element={<App/>}/>,
       <Route path="SignIn" element={<SignIn/>}/>,
+      <Route path="SignUp" element={<SignUp/>}/>,
       <Route path="Dashboard" element={<Dashboard/>}/>,
       <Route path="Student" element={<StudentVeiw/>}/>,
       <Route path="Donor" element={<DonorVeiw/>}/>,

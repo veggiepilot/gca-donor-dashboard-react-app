@@ -1,8 +1,10 @@
 import React from "react";
+import { Container } from "react-bootstrap";
 import { Outlet,Link } from 'react-router-dom'
 
 const SignIn = () => {
   return (
+  <Container className="bg-light p-4 d-flex justify-content-center align-content-center" fluid="true">
     <div class="col-xl-4 col-md-5 col-12">
       <div>
         <h1 class="text-center">Sign In</h1>
@@ -19,12 +21,13 @@ const SignIn = () => {
         <Link to="/dashboard"><button type="button" class="w-100 mb-3 btn btn-primary btn-lrg">Sign In</button></Link>
         <p class="text-center">
           <small class="text-muted text-center">
-            Don't have an account yet? <a href="./signUp">Sign Up</a>.
+            Don't have an account yet?<Link to="/signup">Sign Up</Link>.
           </small>
         </p>
       </form>
       <Outlet />
     </div>
+  </Container>
   );
 };
 

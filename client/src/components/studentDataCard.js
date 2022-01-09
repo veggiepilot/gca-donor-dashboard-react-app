@@ -1,7 +1,7 @@
 import React from "react";
 import { Card, Table } from "react-bootstrap";
 
-export default function App() {
+const StudentDataCard = ()=> {
   return (
     <Card>
       <Card.Body>
@@ -53,3 +53,4 @@ export default function App() {
     </Card>
   );
 }
+export default StudentDataCard

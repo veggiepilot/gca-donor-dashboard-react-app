@@ -1,22 +1,23 @@
 import SideBar from "../components/dropDownComponents/sideBar";
 import StudentDashboard from "../components/studentDashboard";
-import Col from "react-bootstrap/Col";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
+import {Col,Container,Row} from "react-bootstrap";
+import Header from "../components/header";
 
 const StudentVeiws = () => {
   return (
-    <Container className="m-3" fluid="true">
+    <>
+    <Header />
+    <Container className="p-1" fluid="true">
       <Row>
-        <Col lg={2} className="bg-primary">
+        <Col lg={1} className="bg-primary-outline p-4">
           <SideBar />
         </Col>
-        <Col lg={10} className="bg-primary">
+        <Col lg={11} className="bg-primary p-4">
           <StudentDashboard />
         </Col>
       </Row>
     </Container>
+    </>
   );
 };
-
 export default StudentVeiws;
