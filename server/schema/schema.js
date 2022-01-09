@@ -110,7 +110,17 @@ const Mutation = new GraphQLObjectType({
                 zip: {type: new GraphQLNonNull(GraphQLInt)},
                 email: {type: new GraphQLNonNull(GraphQLString)},
                 phone: {type: new GraphQLNonNull(GraphQLString)},
-                students: {type: new GraphQLNonNull(GraphQLString)},
+                // students: 
+                //     [
+                //         { studentId: {type: new GraphQLNonNull(GraphQLString)} },
+                //         { amount: {type: GraphQLInt} }
+                //     ],
+            },
+            resolve(parent, args){
+                console.log(args)
+                // const donor = new Donor({
+        
+                // })
             }
         },
         addStudent: {
@@ -120,7 +130,10 @@ const Mutation = new GraphQLObjectType({
                 lastName: {type: new GraphQLNonNull(GraphQLString)},
                 parentEmail: {type: new GraphQLNonNull(GraphQLString)},
                 fundingNeeded: {type: new GraphQLNonNull(GraphQLString)},
-                donors: {type: GraphQLString},
+                // donors: 
+                //     [
+                //         { donorId: {type: GraphQLString} }
+                //     ],
             }
         },
         addUser: {
@@ -129,6 +142,14 @@ const Mutation = new GraphQLObjectType({
                 firstName: {type: new GraphQLNonNull(GraphQLString)},
                 lastName: {type: new GraphQLNonNull(GraphQLString)},
                 email: {type: new GraphQLNonNull(GraphQLString)},
+            },
+            resolve(parent, args){
+                const user = new User({
+                    firstName: args.firstName,
+                    lastName: args.lastName,
+                    email: args.email
+                });
+                return user.save();
             }
         }
     }
