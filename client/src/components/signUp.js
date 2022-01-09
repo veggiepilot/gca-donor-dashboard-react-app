@@ -1,4 +1,5 @@
 import React from "react";
+import { Outlet, Link } from "react-router-dom"
 
 const SignUp = () => {
   return (
@@ -18,10 +19,11 @@ const SignUp = () => {
         <button type="button" class="w-100 mb-3 btn btn-primary btn-lrg">Sign Up</button>
         <p class="text-center">
           <small class="text-muted text-center">
-            Already have an account? <a href="./signIn">Sign In</a>.
+            Already have an account? <Link to="/signin">Sign In</Link>.
           </small>
         </p>
       </form>
+      <Outlet />
     </div>
   );
 };

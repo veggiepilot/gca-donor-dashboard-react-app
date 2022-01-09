@@ -1,10 +1,8 @@
 import { Outlet, Link } from "react-router-dom";
-import Accordion from "react-bootstrap/Accordion";
-import Nav from "react-bootstrap/Nav";
-import Button from "react-bootstrap/Button"
+import {Accordion,Nav,Button } from "react-bootstrap";
+
 const SideBar = () => {
   return (
-
     <div>
       <Link to="/"><Button className="w-100 mb-4 mt-4">Home</Button></Link>
       <Accordion className="nav nav-sidebar">

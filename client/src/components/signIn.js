@@ -19,7 +19,7 @@ const SignIn = () => {
         <Link to="/dashboard"><button type="button" class="w-100 mb-3 btn btn-primary btn-lrg">Sign In</button></Link>
         <p class="text-center">
           <small class="text-muted text-center">
-            Don't have an account yet? <a href="./signUp">Sign Up</a>.
+            Don't have an account yet?<Link to="/signup">Sign Up</Link>.
           </small>
         </p>
       </form>
