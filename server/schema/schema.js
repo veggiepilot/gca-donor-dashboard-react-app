@@ -48,6 +48,26 @@ const RootQuery = new GraphQLObjectType({
             resolve(parent, args) {
                 return Donor.find({});
             }
+        },
+        students: {
+            type: new GraphQLList(StudentType),
+            resolve(parent, args) {
+                return Student.find({})
+            }
+        }, 
+        donor: {
+            type: DonorType,
+            args: { id: {type: GraphQLID}},
+            resolve(parent, args){
+                return Donor.findById(args.id);
+            }
+        }, 
+        student: {
+            type: StudentType,
+            args: {id: {type: GraphQLID}},
+            resolve(parent, args){
+                return Student.findById(args.id);
+            }
         }
     }
 });
