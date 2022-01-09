@@ -1,6 +1,9 @@
 import { Container, Col, Row } from "react-bootstrap";
+import Header from "../components/header";
+import SideBar from "../components/dropDownComponents/sideBar";
+import AccountForm from "../components/accountForm";
 
-const AccountVeiw = (SideBar, AccountForm, Header) => {
+const AccountView = () => {
   return (
     <>
       <Header />
@@ -17,4 +20,4 @@ const AccountVeiw = (SideBar, AccountForm, Header) => {
     </>
   );
 };
-export default AccountVeiw;
+export default AccountView;

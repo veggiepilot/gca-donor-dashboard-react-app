@@ -1,6 +1,9 @@
 import { Col, Row, Container } from "react-bootstrap";
+import Header from "../components/header";
+import DonorsCard from "../components/donorsCard";
+import SideBar from "../components/dropDownComponents/sideBar";
 
-const DonorVeiw = (Header, DonorsCards, SideBar) => {
+const DonorView = () => {
   return (
     <>
       <Header />
@@ -10,11 +13,11 @@ const DonorVeiw = (Header, DonorsCards, SideBar) => {
             <SideBar />
           </Col>
           <Col lg={11} className="bg-primary p-4">
-            <DonorsCards />
+            <DonorsCard />
           </Col>
         </Row>
       </Container>
     </>
   );
 };
-export default DonorVeiw;
+export default DonorView;
