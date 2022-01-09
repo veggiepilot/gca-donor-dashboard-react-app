@@ -8,7 +8,7 @@ import { Container, Form, Table } from "react-bootstrap";
 
 const StudentDashboard = () => {
   return (
-      <Container>
+      <>
         <Tabs defaultActiveKey="home" id="tab" className="mb-3 userTabs">
           <Tab eventKey="home" title="Notes">
             <Row>
@@ -98,7 +98,7 @@ const StudentDashboard = () => {
     </Card>
               </Tab>
         </Tabs>
-      </Container>
+      </>
   );
 };
 

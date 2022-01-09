@@ -3,9 +3,9 @@ import {Accordion,Nav,Button } from "react-bootstrap";
 
 const SideBar = () => {
   return (
-    <div>
+    <>
       <Link to="/dashboard"><Button className="w-100 mb-4 mt-4">Home</Button></Link>
-      <Accordion className="nav nav-sidebar">
+      <Accordion className="d-flex justify-content-center align-content-center">
         <Accordion.Item eventKey="0" className="w-100 mb-4 mt-4">
           <Accordion.Header>Student</Accordion.Header>
           <Accordion.Body>
@@ -34,7 +34,7 @@ const SideBar = () => {
         </Accordion.Item>
       </Accordion>
       <Outlet/>
-    </div>
+    </>
   );
 };
 
