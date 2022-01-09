@@ -8,9 +8,10 @@
     "state": "Texas",
     "zip": 45632,
     "email": "jonsmith@apple.com",
-    "phone": 5550235555,
-    "donation": [
+    "phone": "5550235555",
+    "students": [
       {
+        "studentId": "",
         "amount": 4000
       }
     ]
@@ -24,9 +25,10 @@
     "state": "California",
     "zip": 90210,
     "email": "donna.summer@gmail.com",
-    "phone": 5554325555,
-    "donation": [
+    "phone": "5554325555",
+    "students": [
       {
+        "studentId": "",
         "amount": 5000
       }
     ]
@@ -40,9 +42,10 @@
     "state": "California",
     "zip": 90234,
     "email": "jeff@amazon.com",
-    "phone": 5556355555,
-    "donation": [
+    "phone": "5556355555",
+    "students": [
       {
+        "studentId": "",
         "amount": 1000
       }
     ]
@@ -56,9 +59,10 @@
     "state": "Michigan",
     "zip": 45632,
     "email": "kat@gmail.com",
-    "phone": 5554785555,
-    "donation": [
+    "phone": "5554785555",
+    "students": [
       {
+        "studentId": "",
         "amount": 300
       }
     ]
@@ -72,9 +76,10 @@
     "state": "Georgia",
     "zip": 35428,
     "email": "",
-    "phone": 5554895555,
-    "donation": [
+    "phone": "5554895555",
+    "students": [
       {
+        "studentId": "",
         "amount": 1000
       }
     ]
@@ -88,9 +93,10 @@
     "state": "Georgia",
     "zip": 30805,
     "email": "jane@gmail.com",
-    "phone": 5556585555,
-    "donation": [
+    "phone": "5556585555",
+    "students": [
       {
+        "studentId": "",
         "amount": 6000
       }
     ]
@@ -104,9 +110,10 @@
     "state": "Georgia",
     "zip": 30872,
     "email": "don@gmail.com",
-    "phone": 5558962145,
-    "donation": [
+    "phone": "5558962145",
+    "students": [
       {
+        "studentId": "",
         "amount": 300
       }
     ]
@@ -120,9 +127,10 @@
     "state": "Georgia",
     "zip": 30265,
     "email": "stephanie@gmail.com",
-    "phone": 5553624856,
-    "donation": [
+    "phone": "5553624856",
+    "students": [
       {
+        "studentId": "",
         "amount": 2000
       }
     ]

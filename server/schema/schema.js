@@ -24,7 +24,7 @@ const DonorType = new GraphQLObjectType({
         state: {type: GraphQLString},
         zip: {type: GraphQLInt},
         email: {type: GraphQLString},
-        phone: {type: GraphQLInt},
+        phone: {type: GraphQLString},
         donations: {type: GraphQLInt},
     })
 });
