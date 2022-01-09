@@ -9,7 +9,8 @@ const {
     GraphQLString,
     GraphQLInt,
     GraphQLList,
-    GraphQLSchema
+    GraphQLSchema, 
+    GraphQLNonNull
 } = graphql;
 
 const DonorType = new GraphQLObjectType({
@@ -25,7 +26,7 @@ const DonorType = new GraphQLObjectType({
         zip: {type: GraphQLInt},
         email: {type: GraphQLString},
         phone: {type: GraphQLString},
-        donations: {type: GraphQLInt},
+        students: {type: GraphQLInt},
     })
 });
 
@@ -94,6 +95,46 @@ const RootQuery = new GraphQLObjectType({
     }
 });
 
+const Mutation = new GraphQLObjectType({
+    name: "Mutation",
+    fields: {
+        addDonor: {
+            type: DonorType,
+            args: {
+                firstName: {type: new GraphQLNonNull(GraphQLString)},
+                lastName: {type: new GraphQLNonNull(GraphQLString)},
+                address1: {type: new GraphQLNonNull(GraphQLString)},
+                address2: {type: new GraphQLNonNull(GraphQLString)},
+                city: {type: new GraphQLNonNull(GraphQLString)},
+                state: {type: new GraphQLNonNull(GraphQLString)},
+                zip: {type: new GraphQLNonNull(GraphQLInt)},
+                email: {type: new GraphQLNonNull(GraphQLString)},
+                phone: {type: new GraphQLNonNull(GraphQLString)},
+                students: {type: new GraphQLNonNull(GraphQLString)},
+            }
+        },
+        addStudent: {
+            type: StudentType,
+            args: {
+                firstName: {type: new GraphQLNonNull(GraphQLString)},
+                lastName: {type: new GraphQLNonNull(GraphQLString)},
+                parentEmail: {type: new GraphQLNonNull(GraphQLString)},
+                fundingNeeded: {type: new GraphQLNonNull(GraphQLString)},
+                donors: {type: GraphQLString},
+            }
+        },
+        addUser: {
+            type: UserType,
+            args: {
+                firstName: {type: new GraphQLNonNull(GraphQLString)},
+                lastName: {type: new GraphQLNonNull(GraphQLString)},
+                email: {type: new GraphQLNonNull(GraphQLString)},
+            }
+        }
+    }
+});
+
 module.exports = new GraphQLSchema({
-    query: RootQuery
+    query: RootQuery,
+    mutation: Mutation
 });
