@@ -41,11 +41,15 @@ const donorSchema = new Schema({
         unique: true,
     },
     phone: {
-        type: Number,
+        type: String,
         required: "Phone number is required"
     },
-    donations: [
+    students: [
         {
+            studentId: {
+                type: String,
+                required: "Student required"
+            },
             amount: {
                 type: Number,
                 trim: true
@@ -53,13 +57,6 @@ const donorSchema = new Schema({
             date: {
                 type: Date,
                 default: Date.now
-            }
-        }
-    ], 
-    students: [
-        {
-            studentId: {
-                type: String
             }
         }
     ]

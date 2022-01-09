@@ -21,6 +21,11 @@
         "firstName": "Gina",
         "lastName": "Knight",
         "parentEmail": "knightfamily@gmail.com",
-        "fundingNeeded": 8000
+        "fundingNeeded": 8000,
+        "donors": [
+            {
+                "donorId": "61da4f9f2fbe8ce5b0da66f1"
+            } 
+        ]
     }
 ]

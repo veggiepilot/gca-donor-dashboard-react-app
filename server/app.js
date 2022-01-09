@@ -16,7 +16,7 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
-//connect to mlab database
+//connect to mongodb
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/gca-dashboard', {
     useNewUrlParser: true,
     // useFindAndModify: false,
