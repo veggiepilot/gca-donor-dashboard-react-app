@@ -4,7 +4,7 @@ import {Accordion,Nav,Button } from "react-bootstrap";
 const SideBar = () => {
   return (
     <div>
-      <Link to="/"><Button className="w-100 mb-4 mt-4">Home</Button></Link>
+      <Link to="/dashboard"><Button className="w-100 mb-4 mt-4">Home</Button></Link>
       <Accordion className="nav nav-sidebar">
         <Accordion.Item eventKey="0" className="w-100 mb-4 mt-4">
           <Accordion.Header>Student</Accordion.Header>

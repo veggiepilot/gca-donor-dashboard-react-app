@@ -18,7 +18,7 @@ const SignUp = () => {
           <lable class="form-lable">Password</lable>
           <input placeholder="Enter Your Password" class="form-control"></input>
         </div>
-        <button type="button" class="w-100 mb-3 btn btn-primary btn-lrg">Sign Up</button>
+        <Link to="/dashboard"><button type="button" class="w-100 mb-3 btn btn-primary btn-lrg">Sign Up</button></Link>
         <p class="text-center">
           <small class="text-muted text-center">
             Already have an account? <Link to="/signin">Sign In</Link>.
