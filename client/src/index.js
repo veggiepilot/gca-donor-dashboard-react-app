@@ -7,8 +7,8 @@ import Dashboard from "./views/dashboard";
 import StudentVeiw from "./views/studentView";
 import DonorVeiw from "./views/donorView";
 import AccountView from "./views/accountView";
-import SignIn from "./components/signIn";
-import SignUp from "./components/signUp";
+import SignIn from "./components/forms/signIn";
+import SignUp from "./components/forms/signUp";
 
 const rootElement = document.getElementById("root");
 render(

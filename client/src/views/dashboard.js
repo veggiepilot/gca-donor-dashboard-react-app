@@ -1,5 +1,5 @@
 import { Container, Row, Col } from "react-bootstrap";
-import SideBar from "../components/dropDownComponents/sideBar";
+import SideBar from "../sideBar";
 import Header from "../components/header";
 import CardComponent from "../components/cardComponent"
 

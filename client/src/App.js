@@ -1,4 +1,4 @@
-import SignIn from "./components/signIn";
+import SignIn from "./components/forms/signIn";
 import Header from "./components/header";
 
 function App() {

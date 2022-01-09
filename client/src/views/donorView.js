@@ -1,7 +1,7 @@
 import { Col, Row, Container } from "react-bootstrap";
 import Header from "../components/header";
 import DonorsCard from "../components/donorsCard";
-import SideBar from "../components/dropDownComponents/sideBar";
+import SideBar from "../sideBar";
 
 const DonorView = () => {
   return (
