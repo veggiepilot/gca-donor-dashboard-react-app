@@ -40,6 +40,15 @@ const StudentType = new GraphQLObjectType({
     })
 });
 
+const UserType = new GraphQLObjectType({
+    name: "User",
+    fields: () => ({
+        firstName: {type: GraphQLString},
+        lastName: {type: GraphQLString},
+        email: {type: GraphQLString},
+    })
+});
+
 const RootQuery = new GraphQLObjectType({
     name: "RootQueryType",
     fields: {
@@ -55,6 +64,12 @@ const RootQuery = new GraphQLObjectType({
                 return Student.find({})
             }
         }, 
+        users: {
+            type: new GraphQLList(UserType),
+            resolve(parent, args) {
+                return User.find({})
+            }
+        },
         donor: {
             type: DonorType,
             args: { id: {type: GraphQLID}},
@@ -68,6 +83,13 @@ const RootQuery = new GraphQLObjectType({
             resolve(parent, args){
                 return Student.findById(args.id);
             }
+        },
+        user: {
+            type: UserType,
+            args: {id: {type: GraphQLID}},
+            resolve(parent, args){
+                return User.findById(args.id);
+            } 
         }
     }
 });
