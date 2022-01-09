@@ -117,10 +117,18 @@ const Mutation = new GraphQLObjectType({
                 //     ],
             },
             resolve(parent, args){
-                console.log(args)
-                // const donor = new Donor({
-        
-                // })
+                const donor = new Donor({
+                    firstName: args.firstName,
+                    lastName: args.lastName,
+                    address1: args.address1,
+                    address2: args.address2,
+                    city: args.city,
+                    state: args.state,
+                    zip: args.zip,
+                    email: args.email,
+                    phone: args.phone,
+                });
+                return donor.save();
             }
         },
         addStudent: {
@@ -134,6 +142,15 @@ const Mutation = new GraphQLObjectType({
                 //     [
                 //         { donorId: {type: GraphQLString} }
                 //     ],
+            },
+            resolve(parent, args){
+                const student = new Student({
+                    firstName: args.firstName,
+                    lastName: args.lastName,
+                    parentEmail: args.email,
+                    fundingNeeded: args.fundingNeeded
+                });
+                return student.save();
             }
         },
         addUser: {
