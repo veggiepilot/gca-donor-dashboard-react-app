@@ -1,13 +1,14 @@
 import SignIn from "./components/signIn";
 import Header from "./components/header";
+import { Container } from "react-bootstrap";
 
 function App() {
   return (
-    <div>
-      <Header />
-      <SignIn/>
-    </div>
-  );
+    <>
+    <Header />
+    <SignIn/>
+    </>
+  )
 }
 
 export default App;

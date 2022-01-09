@@ -1,8 +1,10 @@
 import React from "react";
+import { Container } from "react-bootstrap";
 import { Outlet,Link } from 'react-router-dom'
 
 const SignIn = () => {
   return (
+  <Container className="bg-light p-4 d-flex justify-content-center align-content-center" fluid="true">
     <div class="col-xl-4 col-md-5 col-12">
       <div>
         <h1 class="text-center">Sign In</h1>
@@ -25,6 +27,7 @@ const SignIn = () => {
       </form>
       <Outlet />
     </div>
+  </Container>
   );
 };
 

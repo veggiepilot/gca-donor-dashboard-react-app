@@ -7,12 +7,12 @@ const AccountVeiw = () => {
   return (
 <>
 <Header/>
-<Container className="m-3" fluid="true">
+<Container className="p-1" fluid="true">
   <Row>
-    <Col lg={2} className="bg-primary">
+    <Col lg={1} className="bg-primary p-4">
       <SideBar />
     </Col>
-    <Col lg={10} className="bg-primary">
+    <Col lg={11} className="bg-primary p-4">
       <AccountForm />
     </Col>
   </Row>
