@@ -11,13 +11,15 @@ import Dashboard from './veiws/dashboard';
 import StudentVeiw from './veiws/studentVeiw';
 import DonorVeiw from './veiws/donorVeiw';
 import AccountVeiw from './veiws/accountVeiw';
+import SignIn from './components/signIn'
 
 const rootElement = document.getElementById("root");
 render (
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<App/>}/>,
-      <Route path="Dashbaord" element={<Dashboard/>}/>,
+      <Route path="SignIn" element={<SignIn/>}/>,
+      <Route path="Dashboard" element={<Dashboard/>}/>,
       <Route path="Student" element={<StudentVeiw/>}/>,
       <Route path="Donor" element={<DonorVeiw/>}/>,
       <Route path="Account" element={<AccountVeiw/>}/>,

@@ -15,7 +15,7 @@ const Dashboard = () => {
         </Col>
         <Col lg={10} className="bg-primary">
          <StudentDataCard/>
-         <DonorsCard/>
+          <DonorsCard/>
          <PledgeCard/>
         </Col>
       </Row>
