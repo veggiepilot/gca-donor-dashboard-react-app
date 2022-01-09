@@ -6,7 +6,7 @@ import App from "./App";
 import Dashboard from "./views/dashboard";
 import StudentVeiw from "./views/studentView";
 import DonorVeiw from "./views/donorView";
-import AccountVeiw from "./views/accountView";
+import AccountView from "./views/accountView";
 import SignIn from "./components/signIn";
 import SignUp from "./components/signUp";
 
@@ -20,7 +20,7 @@ render(
       <Route path="Dashboard" element={<Dashboard />} />,
       <Route path="Student" element={<StudentVeiw />} />,
       <Route path="Donor" element={<DonorVeiw />} />,
-      <Route path="Account" element={<AccountVeiw />} />,
+      <Route path="Account" element={<AccountView />} />,
     </Routes>
   </BrowserRouter>,
   rootElement

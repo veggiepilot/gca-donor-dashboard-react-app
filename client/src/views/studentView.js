@@ -1,6 +1,9 @@
 import { Col, Container, Row } from "react-bootstrap";
+import Header from "../components/header"
+import SideBar from "../components/dropDownComponents/sideBar"
+import StudentDashboard from "../components/studentDashboard"
 
-const StudentVeiws = (Header, SideBar, StudentDashboard) => {
+const StudentView = () => {
   return (
     <>
       <Header />
@@ -17,4 +20,4 @@ const StudentVeiws = (Header, SideBar, StudentDashboard) => {
     </>
   );
 };
-export default StudentVeiws;
+export default StudentView;

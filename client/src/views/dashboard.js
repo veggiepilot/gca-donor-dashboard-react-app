@@ -1,6 +1,9 @@
 import { Container, Row, Col } from "react-bootstrap";
+import SideBar from "../components/dropDownComponents/sideBar";
+import Header from "../components/header";
+import CardComponent from "../components/cardComponent"
 
-const Dashboard = (SideBar, CardComponent, Header) => {
+const Dashboard = () => {
   return (
     <>
       <Header />
