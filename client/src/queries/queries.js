@@ -109,3 +109,42 @@ export const addDonorMutation = gql`
         }
     }
 `
+
+export const addStudentMutation = gql`
+    mutation(
+        $firstName: String!, 
+        $lastName: String!, 
+        $parentEmail: String!, 
+        $address2: String!, 
+        $fundingNeeded: String!, 
+        $donors: String!, 
+        ){
+        addStudent(
+            firstName: $firstName, 
+            lastName: $lastName,
+            parentEmail: $parentEmail,
+            fundingNeeded: $fundingNeeded,
+            donors: $donors,
+            ){
+            firstName
+            lastName
+        }
+    }
+`
+
+export const addUserMutation = gql`
+    mutation(
+        $firstName: String!, 
+        $lastName: String!, 
+        $email: String!, 
+        ){
+        addUser(
+            firstName: $firstName, 
+            lastName: $lastName,
+            email: $email,
+            ){
+            firstName
+            lastName
+        }
+    }
+`
