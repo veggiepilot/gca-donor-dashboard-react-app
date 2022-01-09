@@ -7,15 +7,15 @@ import Row from "react-bootstrap/Row";
 const StudentVeiws = () => {
   return (
     <Container className="m-3" fluid="true">
-    <Row>
-      <Col lg={2} className="bg-primary">
-          <SideBar/>
-      </Col>
-      <Col lg={10} className="bg-primary">
-         <StudentDashboard />
-      </Col>
+      <Row>
+        <Col lg={2} className="bg-primary">
+          <SideBar />
+        </Col>
+        <Col lg={10} className="bg-primary">
+          <StudentDashboard />
+        </Col>
       </Row>
-    </Container>  
+    </Container>
   );
 };
 

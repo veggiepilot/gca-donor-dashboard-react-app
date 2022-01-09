@@ -12,8 +12,8 @@ const StudentDashboard = () => {
       <Container>
         <Tabs defaultActiveKey="home" id="tab" className="mb-3 userTabs">
           <Tab eventKey="home" title="Notes">
-            <Row lg={8}>
-              <Col sm={6}>
+            <Row>
+              <Col sm={5}>
                 <Form>
                   <Form.Group
                     className="mb-3"
@@ -48,7 +48,23 @@ const StudentDashboard = () => {
               </Col>
             </Row>
           </Tab>
-          <Tab eventKey="profile" title="Donors"></Tab>
+          <Tab eventKey="profile" title="Donors">
+            <Row md={1} className="g-4">
+                    {Array.from({ length: 4 }).map((_, idx) => (
+                      <Col>
+                        <Card>
+                          <Card.Body>
+                            <Card.Title>Previous Notes</Card.Title>
+                            <Card.Text>
+                              This will hold prior notes. perhaps we could modal these as well. 
+                              logic is ready for array of past inputs.
+                            </Card.Text>
+                          </Card.Body>
+                        </Card>
+                      </Col>
+                    ))}
+              </Row>
+              </Tab>
         </Tabs>
       </Container>
   );

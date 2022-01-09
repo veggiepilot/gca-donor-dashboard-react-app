@@ -1,10 +1,10 @@
-import Dashboard from "./veiws/dashboard";
+import SignIn from "./components/signIn";
 import Header from "./components/header";
 function App() {
   return (
     <div>
-    <Header/>
-    <Dashboard/>
+      <Header />
+      <SignIn/>
     </div>
   );
 }
