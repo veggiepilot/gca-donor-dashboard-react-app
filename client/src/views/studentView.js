@@ -1,6 +1,6 @@
 import { Col, Container, Row } from "react-bootstrap";
 import Header from "../components/header"
-import SideBar from "../components/dropDownComponents/sideBar"
+import SideBar from "../sideBar"
 import StudentDashboard from "../components/studentDashboard"
 
 const StudentView = () => {
