@@ -55,6 +55,13 @@ const donorSchema = new Schema({
                 default: Date.now
             }
         }
+    ], 
+    students: [
+        {
+            studentId: {
+                type: String
+            }
+        }
     ]
 });
 

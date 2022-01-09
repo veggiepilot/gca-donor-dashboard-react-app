@@ -20,7 +20,14 @@ const studentSchema = new Schema({
     },
     fundingNeeded: {
         type: Number
-    }
+    }, 
+    donors: [
+        {
+           donorId: {
+               type: String
+           } 
+        }
+    ]
 });
 
 const Student = mongoose.model('Student', studentSchema);
