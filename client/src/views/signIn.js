@@ -2,15 +2,15 @@ import React from "react";
 import { Container } from "react-bootstrap";
 import { Outlet, Link } from "react-router-dom";
 
-const SignUp = () => {
+const SignIn = () => {
   return (
     <Container
-      className="bg-light p-4 d-flex justify-content-center align-content-center"
+      className="bg-dark bg-gradient text-white p-4 d-flex justify-content-center align-content-center"
       fluid="true"
     >
       <div class="col-xl-4 col-md-5 col-12">
         <div>
-          <h1 class="text-center">Sign Up</h1>
+          <h1 class="text-center">Sign In</h1>
         </div>
         <form>
           <div class="form-group">
@@ -29,12 +29,12 @@ const SignUp = () => {
           </div>
           <Link to="/dashboard">
             <button type="button" class="w-100 mb-3 btn btn-primary btn-lrg">
-              Sign Up
+              Sign In
             </button>
           </Link>
           <p class="text-center">
             <small class="text-muted text-center">
-              Already have an account? <Link to="/signin">Sign In</Link>.
+              Don't have an account yet?<Link to="/signup">Sign Up</Link>.
             </small>
           </p>
         </form>
@@ -44,4 +44,4 @@ const SignUp = () => {
   );
 };
 
-export default SignUp;
+export default SignIn;

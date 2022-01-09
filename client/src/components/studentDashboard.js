@@ -12,22 +12,22 @@ import {
 const StudentDashboard = () => {
   return (
     <>
-      <Tabs defaultActiveKey="home" id="tab" className="mb-3 userTabs">
+      <Tabs defaultActiveKey="home" id="tab" className="mb-3 userTabs ">
         <Tab eventKey="home" title="Notes">
           <Row>
             <Col sm={5}>
               <Form>
                 <Form.Group
-                  className="mb-3"
+                  className="mb-3 text-dark"
                   controlId="Form.ControlTextarea1 resize: none"
                 >
                   <Form.Label>
-                    <h1>Notes</h1>
+                    <h1  className="mb-3text-dark">Notes</h1>
                   </Form.Label>
                   <Form.Control as="textarea" rows={10} />
                 </Form.Group>
               </Form>
-              <Button variant="light">Button white</Button>
+              <Button variant="light">Submit</Button>
             </Col>
             <Col>
               <div>

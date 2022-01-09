@@ -1,20 +1,20 @@
 import { Container, Row, Col } from "react-bootstrap";
-import SideBar from "../sideBar";
+import SideBar from "../components/sideBar";
 import Header from "../components/header";
-import CardComponent from "../components/cardComponent"
+import CardComponent from "../components/cards/cardComponent"
 
-const Dashboard = () => {
+const DashboardView = () => {
   return (
     <>
       <Header />
-      <Container className="p-1" fluid="true">
+      <Container fluid="true">
         <Row>
-          <Col lg={1} className="bg-primary-outline p-4">
+          <Col lg={1} className="bg-dark bg-gradient text-white p-4 ">
             <SideBar />
           </Col>
           <Col
             lg={11}
-            className="bg-primary p-4 justify-content-center align-content-center"
+            className="bg-primary bg-gradient p-4 justify-content-center align-content-center p-4"
           >
             <CardComponent />
             <CardComponent />
@@ -26,4 +26,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default DashboardView;
