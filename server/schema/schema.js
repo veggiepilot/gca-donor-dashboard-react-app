@@ -10,7 +10,7 @@ const {
     GraphQLInt,
     GraphQLList,
     GraphQLSchema, 
-    GraphQLNonNull
+    GraphQLNonNull,
 } = graphql;
 
 const DonorType = new GraphQLObjectType({
@@ -110,11 +110,12 @@ const Mutation = new GraphQLObjectType({
                 zip: {type: new GraphQLNonNull(GraphQLInt)},
                 email: {type: new GraphQLNonNull(GraphQLString)},
                 phone: {type: new GraphQLNonNull(GraphQLString)},
-                // students: 
-                //     [
+                // students: {
+                //    type: [
                 //         { studentId: {type: new GraphQLNonNull(GraphQLString)} },
                 //         { amount: {type: GraphQLInt} }
-                //     ],
+                //     ]
+                // }     
             },
             resolve(parent, args){
                 const donor = new Donor({
