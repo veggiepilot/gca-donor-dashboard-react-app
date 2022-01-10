@@ -12,7 +12,8 @@ const SideBar = () => {
           <Accordion.Header>Student</Accordion.Header>
           <Accordion.Body>
             <Link to="/student" >Student Overveiw</Link>
-            <Nav.Link>New Student</Nav.Link>
+            <br></br>
+            <Link to="/newstudent">New Student</Link>
           </Accordion.Body>
         </Accordion.Item>
       </Accordion>
