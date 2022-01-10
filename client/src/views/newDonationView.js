@@ -12,8 +12,8 @@ const NewDonationView = () => {
           <Col lg={1} className="bg-dark bg-gradient text-white p-4">
             <SideBar />
           </Col>
-          <Col lg={11} className="bg-primary bg-gradient text-dark p-4">
-            <DonationForm /> 
+          <Col lg={11} className="bg-primary bg-gradient text-dark p-4 ">
+            <DonationForm />
           </Col>
         </Row>
       </Container>

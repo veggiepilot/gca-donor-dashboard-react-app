@@ -7,10 +7,10 @@ import DashboardView from "./views/dashboardView";
 import StudentVeiw from "./views/studentView";
 import DonorView from "./views/donorView";
 import AccountView from "./views/accountView";
-import NewDonationView from "./components/views/newDonationView";
+import NewDonationView from "./views/newDonationView";
 import SignIn from "./views/signIn";
 import SignUp from "./views/signUp";
-import NewStudentForm from "./components/forms/newStudentForm";
+import CreateStudentForm from "./components/forms/createStudentForm";
 
 
 const rootElement = document.getElementById("root");
@@ -26,10 +26,10 @@ render(
       <Route path="Dashboard" element={<DashboardView />} />,
       {/* Students View  Links */}
       <Route path="Student" element={<StudentVeiw />} />,
-      <Route path="NewStudent" element={<NewStudentForm/>} />,
+      <Route path="CreateStudent" element={<CreateStudentForm/>} />,
       {/* Donor View Links */}
       <Route path="Donor" element={<DonorView />} />,
-      <Route path="NewDonoation" element={<NewDonationView/>}/>,
+      <Route path="NewDonation" element={<NewDonationView/>}/>,
       {/* Update Account */}
       <Route path="Account" element={<AccountView />} />,
     </Routes>

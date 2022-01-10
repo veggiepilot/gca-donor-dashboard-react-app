@@ -1,7 +1,7 @@
 import { Col, Container, Row } from "react-bootstrap";
 import Header from "../components/header";
 import SideBar from "../components/sideBar";
-import NewStudentForm from "../components/forms/newStudentForm";
+import CreateStudentForm from "../components/forms/createStudentForm";
 
 const StudentCreationView = () => {
   return (
@@ -13,7 +13,7 @@ const StudentCreationView = () => {
             <SideBar />
           </Col>
           <Col lg={11} className="bg-primary bg-gradient text-dark p-4">
-            <NewStudentForm />
+            <CreateStudentForm /> 
           </Col>
         </Row>
       </Container>

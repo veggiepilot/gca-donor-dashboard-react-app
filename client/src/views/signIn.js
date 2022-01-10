@@ -8,16 +8,16 @@ const SignIn = () => {
       className="bg-dark bg-gradient text-white p-4 d-flex justify-content-center align-content-center"
       fluid="true"
     >
-      <div class="col-xl-4 col-md-5 col-12">
+      <div className="col-xl-4 col-md-5 col-12">
         <div>
-          <h1 class="text-center">Sign In</h1>
+          <h1 className="text-center">Sign In</h1>
         </div>
         <form>
-          <div class="form-group">
-            <lable class="form-lable">Email Address</lable>
+          <div className="form-group">
+            <lable className="form-lable">Email Address</lable>
             <input
               placeholder="example@example.com"
-              class="form-control"
+              className="form-control"
             ></input>
           </div>
           <div class="form-group">

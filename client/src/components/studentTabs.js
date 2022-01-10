@@ -9,7 +9,7 @@ import {
   Tabs,
 } from "react-bootstrap";
 
-const StudentDashboard = () => {
+const StudentTabs = () => {
   return (
     <>
       <Tabs defaultActiveKey="home" id="tab" className="mb-3 userTabs ">
@@ -105,4 +105,4 @@ const StudentDashboard = () => {
   );
 };
 
-export default StudentDashboard;
+export default StudentTabs;
