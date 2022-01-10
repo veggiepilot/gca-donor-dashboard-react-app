@@ -10,7 +10,7 @@ import AccountView from "./views/accountView";
 import NewDonationView from "./views/newDonationView";
 import SignIn from "./views/signIn";
 import SignUp from "./views/signUp";
-import CreateStudentForm from "./components/forms/createStudentForm";
+import StudentCreationView from "./views/studentCreationView";
 
 
 const rootElement = document.getElementById("root");
@@ -26,7 +26,7 @@ render(
       <Route path="Dashboard" element={<DashboardView />} />,
       {/* Students View  Links */}
       <Route path="Student" element={<StudentVeiw />} />,
-      <Route path="CreateStudent" element={<CreateStudentForm/>} />,
+      <Route path="CreateStudent" element={<StudentCreationView/>} />,
       {/* Donor View Links */}
       <Route path="Donor" element={<DonorView />} />,
       <Route path="NewDonation" element={<NewDonationView/>}/>,
