@@ -2,7 +2,7 @@ import SignIn from "./views/signIn";
 import Header from "./components/header";
 //import { library } from '@fortawesome/fontawesome-svg-core'
 //import { fab } from '@fortawesome/free-brands-svg-icons'
-//import { fa-solid fa-user-graduate } from '@fortawesome/free-solid-svg-icons'
+//import { faUserGraduate } from '@fortawesome/free-solid-svg-icons'
 
 
 import { 
