@@ -3,7 +3,7 @@ import { Container } from "react-bootstrap";
 import { Outlet, Link } from "react-router-dom";
 import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
-import { ADD_USER } from '../utils/mutations';
+import { addUserMutation } from '../queries/queries';
 import Auth from '../utils/auth';
 
 const SignUp = () => {
@@ -13,7 +13,7 @@ const SignUp = () => {
       email: '',
       password: '',
     });
-    const [addUser, { error, data }] = useMutation(ADD_USER);
+    const [addUser, { error, data }] = useMutation(addUserMutation);
   
     // update state based on form input changes
     const handleChange = (event) => {
@@ -95,11 +95,10 @@ const SignUp = () => {
               onChange={handleChange}
             ></input>
           </div>
-          <Link to="/dashboard">
             <button type="submit" className="w-100 mb-3 btn btn-primary btn-lrg">
               Sign Up
             </button>
-          </Link>
+        
           <p className="text-center">
             <small className="text-muted text-center">
               Already have an account? <Link to="/signin">Sign In</Link>.
