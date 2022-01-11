@@ -7,7 +7,7 @@ import DashboardView from "./views/dashboardView";
 import StudentVeiw from "./views/studentView";
 import DonorView from "./views/donorView";
 import AccountView from "./views/accountView";
-import NewDonationView from "./components/views/newDonationView";
+import NewDonationView from "./views/newDonationView";
 import SignIn from "./views/signIn";
 import SignUp from "./views/signUp";
 import NewStudentForm from "./components/forms/newStudentForm";
