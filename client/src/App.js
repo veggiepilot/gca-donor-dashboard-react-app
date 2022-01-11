@@ -4,11 +4,7 @@ import Header from "./components/header";
 //import { fab } from '@fortawesome/free-brands-svg-icons'
 //import { faUserGraduate } from '@fortawesome/free-solid-svg-icons'
 
-
-import { 
-  ApolloClient, 
-  InMemoryCache, 
-  ApolloProvider 
+ 
 import {
   ApolloClient,
   InMemoryCache,
@@ -27,19 +23,9 @@ import SignUp from "./views/signUp";
 import NewStudentForm from "./components/forms/newStudentForm";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-<<<<<<< HEAD
-//library.add(fab, faUserGraduate)
-
-
-//Apollo client setup
-const client = new ApolloClient({
-  uri: "http://localhost:4000/graphql",
-  cache: new InMemoryCache()
-=======
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
   uri: "/graphql",
->>>>>>> main
 });
 
 // Construct request middleware that will attach the JWT token to every request as an `authorization` header
