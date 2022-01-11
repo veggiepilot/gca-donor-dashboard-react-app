@@ -1,39 +1,107 @@
-import React from "react";
+/* eslint-disable no-unused-vars */
 import { Container } from "react-bootstrap";
 import { Outlet, Link } from "react-router-dom";
+import React, { useState } from 'react';
+import { useMutation } from '@apollo/client';
+import { ADD_USER } from '../utils/mutations';
+import Auth from '../utils/auth';
 
 const SignUp = () => {
+    const [formState, setFormState] = useState({
+      firstName: '',
+      lastName: '',
+      email: '',
+      password: '',
+    });
+    const [addUser, { error, data }] = useMutation(ADD_USER);
+  
+    // update state based on form input changes
+    const handleChange = (event) => {
+      const { name, value } = event.target;
+  
+      setFormState({
+        ...formState,
+        [name]: value,
+      });
+    };
+  
+    // submit form
+    const handleFormSubmit = async (event) => {
+      event.preventDefault();
+      console.log(formState);
+  
+      try {
+        const { data } = await addUser({
+          variables: { ...formState },
+        });
+  
+        Auth.login(data.addUser.token);
+      } catch (e) {
+        console.error(e);
+      }
+    };
+
   return (
     <Container
       className="bg-dark bg-gradient text-white p-4 d-flex justify-content-center align-content-center"
       fluid="true"
     >
-      <div class="col-xl-4 col-md-5 col-12">
+      <div className="col-xl-4 col-md-5 col-12">
         <div>
-          <h1 class="text-center">Sign Up</h1>
+          <h1 className="text-center">Sign Up</h1>
         </div>
-        <form>
-          <div class="form-group">
-            <lable class="form-lable">Email Address</lable>
+        <form onSubmit={handleFormSubmit}>
+        <div className="form-group">
+            <label className="form-label">First Name</label>
             <input
-              placeholder="example@example.com"
-              class="form-control"
+              placeholder="First Name"
+              className="form-control"
+              name="firstName"
+              type="text"
+              value={formState.firstName}
+              onChange={handleChange}
             ></input>
           </div>
-          <div class="form-group">
-            <lable class="form-lable">Password</lable>
+          <div className="form-group">
+            <label className="form-label">Last Name</label>
+            <input
+              placeholder="Last Name"
+              className="form-control"
+              name="lastName"
+              type="text"
+              value={formState.lastName}
+              onChange={handleChange}
+            ></input>
+          </div>
+          <div className="form-group">
+            <label className="form-label">Email Address</label>
+            <input
+              placeholder="example@example.com"
+              className="form-control"
+              name="email"
+              type="email"
+              value={formState.email}
+              onChange={handleChange}
+            ></input>
+          </div>
+          <div className="form-group">
+            <label className="form-label">Password</label>
             <input
               placeholder="Enter Your Password"
-              class="form-control"
+              className="form-control"
+              name="password"
+              type="password"
+              value={formState.password}
+              onChange={handleChange}
             ></input>
           </div>
           <Link to="/dashboard">
-            <button type="button" class="w-100 mb-3 btn btn-primary btn-lrg">
+            <button type="submit" className="w-100 mb-3 btn btn-primary btn-lrg">
               Sign Up
             </button>
           </Link>
-          <p class="text-center">
-            <small class="text-muted text-center">
+          <p className="text-center">
+            <small className="text-muted text-center">
               Already have an account? <Link to="/signin">Sign In</Link>.
             </small>
           </p>
