@@ -20,7 +20,7 @@ import AccountView from "./views/accountView";
 import NewDonationView from "./views/newDonationView";
 import SignIn from "./views/signIn";
 import SignUp from "./views/signUp";
-import NewStudentForm from "./components/forms/newStudentForm";
+import createStudentForm from "./components/forms/createStudentForm";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 // Construct our main GraphQL API endpoint
@@ -61,7 +61,7 @@ function App() {
           <Route path="Dashboard" element={<DashboardView />} />,
           {/* Students View  Links */}
           <Route path="Student" element={<StudentVeiw />} />,
-          <Route path="NewStudent" element={<NewStudentForm />} />,
+          <Route path="NewStudent" element={<createStudentForm />} />,
           {/* Donor View Links */}
           <Route path="Donor" element={<DonorView />} />,
           <Route path="NewDonoation" element={<NewDonationView />} />,
