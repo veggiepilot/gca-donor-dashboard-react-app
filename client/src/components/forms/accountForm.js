@@ -1,4 +1,4 @@
-import { Form, Row, Col, Button } from "react-bootstrap";
+import { Form, Row, Col, Button,Stack } from "react-bootstrap";
 import { Link, Outlet } from "react-router-dom";
 
 const AccountForm = () => {
@@ -47,11 +47,10 @@ const AccountForm = () => {
           </Form.Group>
         </Row>
 
-        <Link to="/dashboard">
-          <Button variant="primary" type="submit">
-            Submit
-          </Button>
-        </Link>
+          <Stack gap={2} className="col-md-5 mx-auto">
+             <Link to="/dashboard"><Button variant="secondary">Save changes</Button></Link>
+            <Button variant="outline-secondary">Cancel</Button>
+          </Stack>
       </Form>
       <Outlet />
     </>

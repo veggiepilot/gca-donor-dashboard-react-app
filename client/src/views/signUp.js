@@ -44,7 +44,7 @@ const SignUp = () => {
   return (
     <Container
       className="bg-dark bg-gradient text-white p-4 d-flex justify-content-center align-content-center"
-      fluid="true"
+      fluid
     >
       <div className="col-xl-4 col-md-5 col-12">
         <div>
