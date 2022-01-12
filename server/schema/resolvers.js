@@ -1,43 +1,43 @@
-const { AuthenticationError } = require('apollo-server-express');
-const { User } = require('../models');
-const { signToken } = require('../utils/auth');
+// const { AuthenticationError } = require('apollo-server-express');
+// const { User } = require('../models');
+// const { signToken } = require('../utils/auth');
 
-const resolvers = {
-  Query: {
-    users: async () => {
-      return User.find();
-    },
+// const resolvers = {
+//   Query: {
+//     users: async () => {
+//       return User.find();
+//     },
 
-    profile: async (parent, { userId }) => {
-      return User.findOne({ _id: userId });
-    },
-  },
+//     profile: async (parent, { userId }) => {
+//       return User.findOne({ _id: userId });
+//     },
+//   },
 
-  Mutation: {
-    addUser: async (parent, { firstName, lastName, email, password }) => {
-      const user = await User.create({ firstName, lastName, email, password });
-      const token = signToken(user);
+//   Mutation: {
+//     addUser: async (parent, { firstName, lastName, email, password }) => {
+//       const user = await User.create({ firstName, lastName, email, password });
+//       const token = signToken(user);
 
-      return { token, user };
-    },
-    login: async (parent, { email, password }) => {
-      const user = await User.findOne({ email });
+//       return { token, user };
+//     },
+//     login: async (parent, { email, password }) => {
+//       const user = await User.findOne({ email });
 
-      if (!user) {
-        throw new AuthenticationError('No user with this email found!');
-      }
+//       if (!user) {
+//         throw new AuthenticationError('No user with this email found!');
+//       }
 
-      const correctPw = await User.isCorrectPassword(password);
+//       const correctPw = await User.isCorrectPassword(password);
 
-      if (!correctPw) {
-        throw new AuthenticationError('Incorrect password!');
-      }
+//       if (!correctPw) {
+//         throw new AuthenticationError('Incorrect password!');
+//       }
 
-      const token = signToken(user);
-      return { token, user };
-    },
+//       const token = signToken(user);
+//       return { token, user };
+//     },
 
-  },
-};
+//   },
+// };
 
-module.exports = resolvers;
+// module.exports = resolvers;
