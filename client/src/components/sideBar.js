@@ -1,52 +1,33 @@
-import { Link } from "react-router-dom";
-import { Accordion, Nav, Navbar, Col, Row } from "react-bootstrap";
+import { Outlet, Link } from "react-router-dom";
+import { Accordion, Button } from "react-bootstrap";
 
 const SideBar = () => {
   return (
-    <Row>
-      <Col lg={12}>
-        <Navbar>
-          <Nav className="d-flex flex-column justify-content-center align-content-center">
-            <Accordion>
-              <Accordion.Item eventKey="0">
-                <Accordion.Header className="w-100">Student</Accordion.Header>
-                <Accordion.Body>
-                  <Link
-                    to="/student"
-                    className="text-decoration-none text-dark"
-                  >
-                    Student Overveiw
-                  </Link>
-                  <br />
-                  <br />
-                  <Link
-                    to="/newstudent"
-                    className="text-decoration-none text-dark"
-                  >
-                    New Student
-                  </Link>
-                </Accordion.Body>
-              </Accordion.Item>
-            </Accordion>
+    <>
+      <Link to="/dashboard">
+        <Button className="w-100 mb-4 mt-4 btn-sm">Home</Button>
+      </Link>
+      <Accordion>
+        <Accordion.Item eventKey="0" className="w-100 mb-4 mt-4">
+          <Accordion.Header>Student</Accordion.Header>
+          <Accordion.Body>
+            <Link to="/student" >Student Overveiw</Link>
+            <br></br>
+            <Link to="/createstudent">New Student</Link>
+          </Accordion.Body>
+        </Accordion.Item>
+      </Accordion>
 
-            <Accordion>
-              <Accordion.Item eventKey="1">
-                <Accordion.Header>Donor</Accordion.Header>
-                <Accordion.Body>
-                  <Link to="/donor" className="text-decoration-none text-dark">
-                    Donor Overveiw
-                  </Link>
-                  <br />
-                  <br />
-                  <Link
-                    to="/newdonation"
-                    className="text-decoration-none text-dark"
-                  >
-                    New Donation
-                  </Link>
-                </Accordion.Body>
-              </Accordion.Item>
-            </Accordion>
+      <Accordion>
+        <Accordion.Item eventKey="1" className="w-100 mb-4 mt-4">
+          <Accordion.Header>Donor</Accordion.Header>
+          <Accordion.Body>
+            <Link to="/donor">Donor Overveiw</Link>
+            <br></br>
+            <Link to="/newdonation">New Donation</Link>
+          </Accordion.Body>
+        </Accordion.Item>
+      </Accordion>
 
             <Accordion>
               <Accordion.Item eventKey="2">

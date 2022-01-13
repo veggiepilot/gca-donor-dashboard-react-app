@@ -23,5 +23,10 @@
   "bugs": {
     "url": "https://github.com/veggiepilot/gca-donor-dashboard-react-app/issues"
   },
-  "homepage": "https://github.com/veggiepilot/gca-donor-dashboard-react-app#readme"
+  "homepage": "https://github.com/veggiepilot/gca-donor-dashboard-react-app#readme",
+  "dependencies": {
+    "bootstrap-icons": "^1.7.2",
+    "jwt-decode": "^3.1.2",
+    "react-bootstrap-icons": "^1.7.2"
+  }
 }
