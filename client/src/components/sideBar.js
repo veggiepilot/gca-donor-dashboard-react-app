@@ -3,7 +3,7 @@ import { Accordion, Nav, Navbar, Col, Row, Button } from "react-bootstrap";
 
 const SideBar = () => {
   return (
-    <Navbar>
+    <Navbar className="fixed">
       <Nav className="d-flex flex-column justify-content-center align-content-center w-100 p-2">
         <Row>
           <Col>
