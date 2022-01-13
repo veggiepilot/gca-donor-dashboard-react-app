@@ -23,8 +23,5 @@
   "bugs": {
     "url": "https://github.com/veggiepilot/gca-donor-dashboard-react-app/issues"
   },
-  "homepage": "https://github.com/veggiepilot/gca-donor-dashboard-react-app#readme",
-  "dependencies": {
-    "apollo-server-express": "^3.6.1"
-  }
+  "homepage": "https://github.com/veggiepilot/gca-donor-dashboard-react-app#readme"
 }
