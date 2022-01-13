@@ -1,6 +1,6 @@
 import React from "react";
 import { Card, Container, } from "react-bootstrap";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 
 
 
@@ -13,7 +13,7 @@ const CardComponent = () => {
 <Card className="text-center w-100 d-flex flex-column justify-content-center align-content-center m-2">
   <Card.Header>Students</Card.Header>
   <Card.Body>
-    <Card.Title><i class="fas fa-user-graduate"></i></Card.Title>
+    <Card.Title><i class="bi bi-person-circle"></i></Card.Title>
     <Card.Text className="d-flex flex-row justify-content-between p-4">
     <h1 className="d-flex flex-start justify-content-start align-content-center">23</h1>
     <p className= "d-flex flex-end justify-content-end align-content-center">Total Students</p>
