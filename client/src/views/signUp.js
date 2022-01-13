@@ -43,10 +43,10 @@ const SignUp = () => {
 
   return (
     <Container
-      className=" signup  d-flex flex-column w-25 justify-content-center align-content-center min-vh-100 text-dark col-xl-12"
+      className=" d-flex flex-column w-50 justify-content-center align-content-center min-vh-100"
       fluid
     >
-      <div>
+      <div className=" signup d-flex flex-column justify-content-center align-content-center p-4">
         <div>
           <h1 className="text-center m-3">Sign Up</h1>
         </div>
