@@ -33,8 +33,8 @@ const StudentTabs = () => {
               <div>
                 <Row md={1} className="g-4">
                   {Array.from({ length: 4 }).map((_, idx) => (
-                    <Col>
-                      <Card>
+                   <Col className=" d-flex flex-row justify-content-center align-content-center w-50 ">
+                   <Card className="text-center d-flex flex-row justify-content-center align-content-center content-box">
                         <Card.Body>
                           <Card.Title>Previous Notes</Card.Title>
                           <Card.Text>

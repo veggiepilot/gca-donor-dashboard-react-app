@@ -3,7 +3,7 @@ import { Link, Outlet } from "react-router-dom";
 
 const AccountForm = () => {
   return (
-    <>
+    <div className="w-50 d-flex flex-column justify-content-center align-content-center">
       <Form>
         <Row className="mb-3">
           <Form.Group as={Col} controlId="formGridEmail">
@@ -53,7 +53,7 @@ const AccountForm = () => {
           </Stack>
       </Form>
       <Outlet />
-    </>
+    </div>
   );
 };
 

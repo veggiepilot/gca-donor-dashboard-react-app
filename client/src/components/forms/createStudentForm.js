@@ -1,7 +1,7 @@
 import { Form, Row, Col, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-const NewStudentForm = () => {
+const CreateStudentForm = () => {
   return (
     <>
       <Form>
@@ -57,4 +57,4 @@ const NewStudentForm = () => {
   );
 };
 
-export default NewStudentForm;
+export default CreateStudentForm;

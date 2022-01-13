@@ -1,55 +1,54 @@
-import { Card, Table } from "react-bootstrap";
+import React from "react";
+import { Card, Container, } from "react-bootstrap";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-const StudentDataCard = ()=> {
+
+
+
+const StudentDataCard = () => {
   return (
-    <Card>
-      <Card.Body>
-        <Card.Title>Student Data</Card.Title>
-        <Table>
-          <thead>
-            <tr>
-              <th>#</th>
-              <th>First Name</th>
-              <th>Last Name</th>
-              <th>Username</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td>Rebecca</td>
-              <td>Sundquist </td>
-              <td>@Sund</td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>Adam</td>
-              <td>Olsey</td>
-              <td>@Olse</td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>sarah</td>
-              <td>Maskill</td>
-              <td>@Maski</td>
-            </tr>
-            <tr>
-              <td>4</td>
-              <td>Johannes</td>
-              <td>Chitura</td>
-              <td>@Chitu</td>
-            </tr>
-            <tr>
-            </tr> 
-            <tr>
-              <td>5</td>
-              <td colSpan="2">Johannes Chitura</td>
-              <td>@twitter</td>
-            </tr>
-          </tbody>
-        </Table>
-      </Card.Body>
-    </Card>
+    <>
+<Container className=" d-flex flex-row justify-content-center align-content-center">
+  
+<Card className="text-center w-100 d-flex flex-column justify-content-center align-content-center m-2">
+  <Card.Header>Students</Card.Header>
+  <Card.Body>
+    <Card.Title><i class="fas fa-user-graduate"></i></Card.Title>
+    <Card.Text className="d-flex flex-row justify-content-between p-4">
+    <h1 className="d-flex flex-start justify-content-start align-content-center">23</h1>
+    <p className= "d-flex flex-end justify-content-end align-content-center">Total Students</p>
+    </Card.Text>
+  </Card.Body>
+</Card>
+
+
+<Card className="text-center w-100 d-flex flex-column justify-content-center align-content-center m-2">
+  <Card.Header>Donor Total</Card.Header>
+  <Card.Body>
+  <Card.Title><i class="fas fa-user-graduate"></i></Card.Title>
+    <Card.Text className="d-flex flex-row justify-content-between p-4">
+    <h1 className="d-flex flex-start justify-content-start align-content-center">13</h1>
+    <p className= "d-flex flex-end justify-content-end align-content-center">Total Donors</p>
+    </Card.Text>
+  </Card.Body>.
+</Card>
+
+
+
+<Card className="text-center w-100 d-flex flex-column justify-content-center align-content-center m-2">
+  <Card.Header>Pledge Fund Summary</Card.Header>
+  <Card.Body>
+  <Card.Title><i class="fas fa-user-graduate"></i></Card.Title>
+    <Card.Text className="d-flex flex-row justify-content-between p-4">
+    <h1 className="d-flex flex-start justify-content-start align-content-center">$34,506</h1>
+    <p className= "d-flex flex-end justify-content-end align-content-center">Total Pledge</p>
+    </Card.Text>
+  </Card.Body>
+</Card>
+</Container>
+
+</>
   );
 }
+
 export default StudentDataCard
