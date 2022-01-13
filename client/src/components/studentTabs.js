@@ -7,11 +7,20 @@ import {
   Col,
   Tab,
   Tabs,
+  Container,
+  Stack
 } from "react-bootstrap";
 
 const StudentTabs = () => {
   return (
-    <>
+ <>
+    <Container className="d-flex flex-column justify-content-start align-content-start p-3 w-25 ">
+        <Stack direction="horizontal" gap={3}>
+          <Form.Control className="me-auto" placeholder="Search..." />
+          <Button variant="primary">Find</Button>
+          <div className="vr" />
+        </Stack>
+    </Container>
       <Tabs defaultActiveKey="home" id="tab" className="mt-5 userTabs ">
         <Tab eventKey="home" title="Notes">
           <Row>
@@ -100,7 +109,7 @@ const StudentTabs = () => {
             </Card.Body>
           </Card>
         </Tab>
-      </Tabs>
+      </Tabs> 
     </>
   );
 };
