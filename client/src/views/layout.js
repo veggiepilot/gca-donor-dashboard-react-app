@@ -1,6 +1,9 @@
 import { Container, Row, Col } from "react-bootstrap";
-import SideBar from "../components/sideBar";
 import { Outlet } from "react-router-dom";
+import SideBar from "../components/sideBar";
+import Header from "../components/header"
+
+
 
 const Layout = () => {
   return (
@@ -10,6 +13,7 @@ const Layout = () => {
             <SideBar />
           </Col>
           <Col lg={11} md={10} sm={12} className="bg-primary bg-gradient"> 
+            <Header/>
             <Outlet/>
           </Col>
         </Row>

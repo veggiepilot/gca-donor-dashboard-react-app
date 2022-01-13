@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 import { Container } from "react-bootstrap";
-import { Outlet, Link } from "react-router-dom";
+import {  Link } from "react-router-dom";
 import { useMutation } from "@apollo/client";
 import { LOGIN_USER } from "../utils/mutations";
 import Auth from "../utils/auth";
@@ -95,7 +95,6 @@ const SignIn = () => {
             {error.message}
           </div>
         )}
-        <Outlet />
       </div>
     </Container>
   );
