@@ -1,18 +1,18 @@
+import { Stack, Form, Button, Row, Col } from "react-bootstrap";
+
 const Header = () => {
   return (
-    <header>
-        <p>asdasdasd</p>
-    </header>
+    <Row className="justify-self-end p-2 m-3">
+      <Col>
+        <h1>GAC dashboard</h1>
+        <Stack direction="horizontal" gap={3} className="w-25">
+          <Form.Control className="me-auto" placeholder="Search..." />
+          <Button variant="light">Find</Button>
+          <div className="vr" />
+        </Stack>
+      </Col>
+    </Row>
   );
 };
 
 export default Header;
-
-
-// <div className="bg-primary bg-gradient d-flex justify-content-end align-content-center fixed-top w-25 m-4 p-4">
-// <Stack direction="horizontal" gap={3}>
-//   <Form.Control className="me-auto" placeholder="Search..." />
-//   <Button variant="light">Find</Button>
-//   <div className="vr" />
-// </Stack>
-// </div>

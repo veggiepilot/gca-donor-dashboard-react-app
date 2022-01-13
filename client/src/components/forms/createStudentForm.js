@@ -1,10 +1,10 @@
-import { Form, Row, Col, Button } from "react-bootstrap";
+import { Form, Stack, Row, Col, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 const NewStudentForm = () => {
   return (
     <>
-      <Form>
+      <Form className="col-xl-4 col-md-5 col-12 ">
         <Row className="mb-3">
           <Form.Group as={Col} controlId="formGridEmail">
             <Form.Label>Email</Form.Label>
@@ -47,11 +47,9 @@ const NewStudentForm = () => {
           </Form.Group>
         </Row>
 
-        <Link to="/dashboard">
-          <Button variant="primary" type="submit">
-            Submit
-          </Button>
-        </Link>
+        <Stack gap={2} className="col-md-5 mx-auto">
+        <Link to="/dashboard"><Button variant="light">Submit</Button></Link>
+        </Stack>
       </Form>
     </>
   );

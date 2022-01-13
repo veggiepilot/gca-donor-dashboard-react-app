@@ -3,13 +3,13 @@ import { Accordion, Nav, Navbar, Col, Row } from "react-bootstrap";
 
 const SideBar = () => {
   return (
-    <Row>
-      <Col lg={12}>
         <Navbar>
-          <Nav className="d-flex flex-column justify-content-center align-content-center">
+          <Nav className="d-flex flex-column justify-content-center align-content-center w-100">
+            <Row>
+              <Col className="py-2">
             <Accordion>
-              <Accordion.Item eventKey="0">
-                <Accordion.Header className="w-100">Student</Accordion.Header>
+              <Accordion.Item eventKey="0"className="w-100">
+                <Accordion.Header >Student</Accordion.Header>
                 <Accordion.Body>
                   <Link
                     to="/student"
@@ -28,9 +28,13 @@ const SideBar = () => {
                 </Accordion.Body>
               </Accordion.Item>
             </Accordion>
+            </Col>
+            </Row>
 
+            <Row>
+              <Col className="py-2">
             <Accordion>
-              <Accordion.Item eventKey="1">
+              <Accordion.Item eventKey="1"className="w-100" >
                 <Accordion.Header>Donor</Accordion.Header>
                 <Accordion.Body>
                   <Link to="/donor" className="text-decoration-none text-dark">
@@ -47,9 +51,13 @@ const SideBar = () => {
                 </Accordion.Body>
               </Accordion.Item>
             </Accordion>
-
+            </Col>
+            </Row>
+              
+            <Row>
+              <Col className="py-2">
             <Accordion>
-              <Accordion.Item eventKey="2">
+              <Accordion.Item eventKey="2"className="w-100">
                 <Accordion.Header>Account</Accordion.Header>
                 <Accordion.Body>
                   <Link
@@ -61,10 +69,10 @@ const SideBar = () => {
                 </Accordion.Body>
               </Accordion.Item>
             </Accordion>
+            </Col>
+            </Row>
           </Nav>
         </Navbar>
-      </Col>
-    </Row>
   );
 };
 

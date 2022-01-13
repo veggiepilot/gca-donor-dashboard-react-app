@@ -4,7 +4,7 @@ import { Link, Outlet } from "react-router-dom";
 const AccountForm = () => {
   return (
     <>
-      <Form>
+      <Form className="col-xl-4 col-md-5 col-12">
         <Row className="mb-3">
           <Form.Group as={Col} controlId="formGridEmail">
             <Form.Label>Email</Form.Label>
@@ -48,8 +48,7 @@ const AccountForm = () => {
         </Row>
 
           <Stack gap={2} className="col-md-5 mx-auto">
-             <Link to="/dashboard"><Button variant="secondary">Save changes</Button></Link>
-            <Button variant="outline-secondary">Cancel</Button>
+             <Link to="/dashboard"><Button variant="light">Save changes</Button></Link>
           </Stack>
       </Form>
       <Outlet />
