@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from "react";
-import { Container } from "react-bootstrap";
+import { Container ,Row} from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { useMutation } from "@apollo/client";
 import { LOGIN_USER } from "../utils/mutations";
@@ -41,10 +41,10 @@ const SignIn = () => {
   };
   return (
     <Container
-      className="signin d-flex flex-column w-25 justify-content-center align-content-center min-vh-100 text-dark col-xl-12"
+      className="d-flex flex-column w-50 justify-content-center align-content-center min-vh-100"
       fluid={true}
     >
-      <div>
+      <div className="signin d-flex flex-column justify-content-center align-content-center p-4">
         <div>
           <h1 className="text-center m-3">Sign In</h1>
         </div>
@@ -54,7 +54,8 @@ const SignIn = () => {
           </p>
         ) : (
           <form onSubmit={handleFormSubmit}>
-            <div className="form-group d-flex flex-column justify-center align-center">
+            <Row className="d-flex flex-row justify-content-center align-content-center">
+            <div className="form-group d-flex flex-column justify-content-center align-content-center w-25">
               <label className="form-label text-muted m-2">Email Address</label>
               <input
                 placeholder="example@example.com"
@@ -65,7 +66,7 @@ const SignIn = () => {
                 onChange={handleChange}
               ></input>
             </div>
-            <div className="form-group  d-flex flex-column justify-center align-center">
+            <div className="form-group d-flex flex-column justify-content-center align-content-center w-25">
               <label className="form-label text-muted m-2">Password</label>
               <input
                 placeholder="Enter Your Password"
@@ -89,6 +90,7 @@ const SignIn = () => {
                 Don't have an account yet?<Link to="/signup">Sign Up</Link>.
               </small>
             </p>
+            </Row>
           </form>
         )}
 

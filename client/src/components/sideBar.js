@@ -13,7 +13,7 @@ const SideBar = () => {
               </Button>
             </Link>
             <Accordion>
-              <Accordion.Item eventKey="0" className="py-1 m-1">
+              <Accordion.Item eventKey="0">
                 <Accordion.Header>Student</Accordion.Header>
                 <Accordion.Body>
                   <Link
@@ -32,7 +32,7 @@ const SideBar = () => {
                   </Link>
                 </Accordion.Body>
               </Accordion.Item>
-              <Accordion.Item eventKey="1" className="py-1 m-1">
+              <Accordion.Item eventKey="1">
                 <Accordion.Header>Donor</Accordion.Header>
                 <Accordion.Body>
                   <Link to="/donor" className="text-decoration-none text-dark">
@@ -48,7 +48,7 @@ const SideBar = () => {
                   </Link>
                 </Accordion.Body>
               </Accordion.Item>
-              <Accordion.Item eventKey="2" className="py-1 m-1">
+              <Accordion.Item eventKey="2">
                 <Accordion.Header>Account</Accordion.Header>
                 <Accordion.Body>
                   <Link

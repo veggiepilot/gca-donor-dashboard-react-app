@@ -1,3 +1,8 @@
+html,Body, #root {
+    background: linear-gradient(90deg, rgba(174,177,184,0.6951155462184874) 0%, rgba(222,228,233,1) 0%, rgba(238,239,241,1) 33%, rgba(232,238,244,1) 43%, rgba(239,240,241,1) 56%, rgba(207,213,221,1) 100%);
+}
+
+
 .main {
     display:flex;
     flex-direction: column;
@@ -13,6 +18,7 @@
 
 
 .sidenav {
+    background-color: rgb(244, 244, 250);
     border-style: solid;
     border-width: 1px;
     border-color:  rgba(242, 245, 251, 0.695);
@@ -20,10 +26,27 @@
     box-shadow: 2px 2px 2px 2px rgb(213, 213, 216);
 }
 
+.accordion {
+    background-color: transparent;
+    border-style: none;
+}
+.accordion-button {
+    background-color: transparent;
+    transform: none;
+}
+.accordion-item, 
+.accordion-header {
+    background-color: transparent;
+    transform: none;
+    border-style: none;
+}
+
+
+
 .card {
     border-style: solid;
     border-width: 1px;
-    border-color:  rgba(242, 245, 251, 0.695);
+    border-color:  rgba(248, 249, 251, 0.695);
     border-radius: 10px;
     box-shadow: 2px 2px 2px 2px rgb(213, 213, 216);
     
@@ -60,9 +83,19 @@
 }
 
 .signin {
-    box-sizing: content-box;
+    border-style: solid;
+    border-width: 1px;
+    background-color: rgb(244, 244, 250);
+    border-color:  rgba(242, 245, 251, 0.695);
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px rgb(213, 213, 216);
 }
 
 .signup {
-    box-sizing: content-box;
+    border-style: solid;
+    border-width: 1px;
+    background-color: rgb(244, 244, 250);
+    border-color:  rgba(242, 245, 251, 0.695);
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px rgb(213, 213, 216);
 }
