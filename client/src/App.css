@@ -6,6 +6,8 @@
     background-color:rgb(239, 242, 248);
 }
 
+
+
 .header {
         box-sizing: content-box;
         border-color: rgb(244, 244, 245);
@@ -36,4 +38,12 @@ font-size: xx-small;
     border-width: 1px;
     text-align: center;
     border-style: outset;
+}
+
+.signin {
+    box-sizing: content-box;
+}
+
+.signup {
+    box-sizing: content-box;
 }

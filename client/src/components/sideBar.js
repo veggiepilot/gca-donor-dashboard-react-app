@@ -8,7 +8,9 @@ const SideBar = () => {
         <Row>
           <Col>
             <Link to="/dashboard">
-              <Button variant="light" className="w-100 mb-4 mt-4 btn-sm">Home</Button>
+              <Button variant="light" className="w-100 mb-4 mt-4 btn-sm">
+                Home
+              </Button>
             </Link>
             <Accordion>
               <Accordion.Item eventKey="0" className="py-1 m-1">

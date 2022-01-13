@@ -1,13 +1,13 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 import { Container } from "react-bootstrap";
-import {  Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useMutation } from "@apollo/client";
 import { LOGIN_USER } from "../utils/mutations";
 import Auth from "../utils/auth";
 
 const SignIn = () => {
-  const [formState, setFormState] = useState({ email: '', password: '' });
+  const [formState, setFormState] = useState({ email: "", password: "" });
   const [login, { error, data }] = useMutation(LOGIN_USER);
 
   // update state based on form input changes
@@ -35,65 +35,65 @@ const SignIn = () => {
 
     // clear form values
     setFormState({
-      email: '',
-      password: '',
+      email: "",
+      password: "",
     });
   };
   return (
     <Container
-      className="bg-light bg-gradient text-dark d-flex justify-content-center align-content-center min-vh-100 m-0"
+      className="signin d-flex flex-column w-25 justify-content-center align-content-center min-vh-100 text-dark col-xl-12"
       fluid={true}
     >
-      <div className="col-xl-4 col-md-5 col-12">
+      <div>
         <div>
-          <h1 className="text-center">Sign In</h1>
+          <h1 className="text-center m-3">Sign In</h1>
         </div>
         {data ? (
-              <p>
-                Success! You may now head{' '}
-                <Link to="/">back to the homepage.</Link>
-              </p>
-            ) : (
-        <form onSubmit={handleFormSubmit}>
-          <div className="form-group">
-            <label className="form-label">Email Address</label>
-            <input
-              placeholder="example@example.com"
-              className="form-input"
-              name="email"
-              type="email"
-              value={formState.email}
-              onChange={handleChange}
-            ></input>
-          </div>
-          <div className="form-group">
-            <label className="form-label">Password</label>
-            <input
-              placeholder="Enter Your Password"
-              className="form-input"
-              name="password"
-              type="password"
-              value={formState.password}
-              onChange={handleChange}
-            ></input>
-          </div>
-          <Link to="/dashboard">
-            <button type="submit" className="w-100 mb-3 btn btn-primary btn-lrg">
-              Sign In
-            </button>
-          </Link>
-          <p className="text-center">
-            <small className="text-muted text-center">
-              Don't have an account yet?<Link to="/signup">Sign Up</Link>.
-            </small>
+          <p>
+            Success! You may now head <Link to="/">back to the homepage.</Link>
           </p>
-        </form>
+        ) : (
+          <form onSubmit={handleFormSubmit}>
+            <div className="form-group d-flex flex-column justify-center align-center">
+              <label className="form-label text-muted m-2">Email Address</label>
+              <input
+                placeholder="example@example.com"
+                className="form-input"
+                name="email"
+                type="email"
+                value={formState.email}
+                onChange={handleChange}
+              ></input>
+            </div>
+            <div className="form-group  d-flex flex-column justify-center align-center">
+              <label className="form-label text-muted m-2">Password</label>
+              <input
+                placeholder="Enter Your Password"
+                className="form-input"
+                name="password"
+                type="password"
+                value={formState.password}
+                onChange={handleChange}
+              ></input>
+            </div>
+            <Link to="/dashboard">
+              <button
+                type="submit"
+                className="w-100 mb-3 mt-3 btn btn-primary btn-lrg"
+              >
+                Sign In
+              </button>
+            </Link>
+            <p className="text-center">
+              <small className="text-muted text-center">
+                Don't have an account yet?<Link to="/signup">Sign Up</Link>.
+              </small>
+            </p>
+          </form>
         )}
 
         {error && (
-          <div className="my-3 p-3 bg-danger text-white">
-            {error.message}
-          </div>
+          <div className="my-3 p-3 bg-danger text-white">{error.message}</div>
         )}
       </div>
     </Container>
