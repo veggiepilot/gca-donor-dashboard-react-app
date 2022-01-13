@@ -7,7 +7,6 @@ const userSeed = require("./userData.json");
 
 mongoose.connect(process.env.MONGODB_URI, {
     useNewUrlParser: true,
-    // useFindAndModify: false,
     useUnifiedTopology: true,
 });
 
