@@ -1,9 +1,8 @@
-import React from "react";
 import { Card, Table } from "react-bootstrap";
 
-const DonorsCard = ()=>{
+const DonorsCard = ()=> {
   return (
-    <Card>
+    <Card className="donor">
       <Card.Body>
         <Card.Title>Donors Data</Card.Title>
         <Table>

@@ -1,7 +1,6 @@
-import React from "react";
 import { Card, Table } from "react-bootstrap";
 
- const PledgeCard = ()=>{
+ const PledgeCard = ()=> {
   return (
     <Card>
       <Card.Body>
