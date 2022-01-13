@@ -56,7 +56,7 @@ const SignIn = () => {
         <>
           <form onSubmit={handleFormSubmit}>
             <Row className="d-flex flex-row justify-content-center align-content-center">
-            <div className="form-group d-flex flex-column justify-content-center align-content-center w-25">
+            <div className="form-group d-flex flex-column justify-content-center align-content-center w-50">
               <label className="form-label text-muted m-2">Email Address</label>
               <input
                 placeholder="example@example.com"
@@ -67,7 +67,7 @@ const SignIn = () => {
                 onChange={handleChange}
               ></input>
             </div>
-            <div className="form-group d-flex flex-column justify-content-center align-content-center w-25">
+            <div className="form-group d-flex flex-column justify-content-center align-content-center w-50">
               <label className="form-label text-muted m-2">Password</label>
               <input
                 placeholder="Enter Your Password"
