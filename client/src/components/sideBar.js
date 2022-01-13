@@ -4,14 +4,14 @@ import { Accordion, Nav, Navbar, Col, Row, Button } from "react-bootstrap";
 const SideBar = () => {
   return (
     <Navbar>
-      <Nav className="d-flex flex-column justify-content-center align-content-center w-100">
+      <Nav className="d-flex flex-column justify-content-center align-content-center w-100 p-2">
         <Row>
           <Col>
             <Link to="/dashboard">
               <Button className="w-100  mb-4 mt-4 btn-sm">Home</Button>
             </Link>
             <Accordion>
-              <Accordion.Item eventKey="0">
+              <Accordion.Item eventKey="0" className="py-1 m-1">
                 <Accordion.Header>Student</Accordion.Header>
                 <Accordion.Body>
                   <Link
@@ -37,7 +37,7 @@ const SideBar = () => {
         <Row>
           <Col>
             <Accordion>
-              <Accordion.Item eventKey="1">
+              <Accordion.Item eventKey="1" className="py-1 m-1">
                 <Accordion.Header>Donor</Accordion.Header>
                 <Accordion.Body>
                   <Link to="/donor" className="text-decoration-none text-dark">
@@ -60,7 +60,7 @@ const SideBar = () => {
         <Row>
           <Col>
             <Accordion>
-              <Accordion.Item eventKey="2">
+              <Accordion.Item eventKey="2" className="py-1 m-1">
                 <Accordion.Header>Account</Accordion.Header>
                 <Accordion.Body>
                   <Link

@@ -3,7 +3,7 @@ import { Icon } from '@iconify/react';
     
     const CardComponent = () => {
       return (
-        <main className=" d-flex flex-row justify-content-around align-content-center">
+        <main className=" d-flex flex-row justify-content-around align-content-center m-3 p-5">
           <Card className="text-center d-flex flex-column justify-content-center align-content-center">
             <Card.Body>
               <Card.Title className="d-flex flex-row justify-content-start m-1 p-4">
