@@ -42,7 +42,7 @@ const SignIn = () => {
   return (
     <Container
       className="bg-dark bg-gradient text-white d-flex justify-content-center align-content-center"
-      fluid
+      fluid={true}
     >
       <div className="col-xl-4 col-md-5 col-12 ">
         <div>
