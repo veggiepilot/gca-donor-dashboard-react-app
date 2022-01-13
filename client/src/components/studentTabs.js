@@ -53,26 +53,6 @@ const StudentTabs = () => {
               <Button variant="light">Submit</Button>
             </Col>
           </Row>
-          <Row>
-            <Container>
-              <Row md={1} className="g-4 py-4">
-                {Array.from({ length: 4 }).map((_, idx) => (
-                  <Col className=" d-flex flex-row justify-content-center align-content-center w-50 ">
-                    <Card className="text-center d-flex flex-row justify-content-center align-content-center content-box">
-                      <Card.Body>
-                        <Card.Title>Previous Notes</Card.Title>
-                        <Card.Text>
-                          This will hold prior notes. perhaps we could modal
-                          these as well. logic is ready for array of past
-                          inputs.
-                        </Card.Text>
-                      </Card.Body>
-                    </Card>
-                  </Col>
-                ))}
-              </Row>
-            </Container>
-          </Row>
         </Tab>
 
         <Tab eventKey="profile" title="Donors">
@@ -123,6 +103,26 @@ const StudentTabs = () => {
               </Table>
             </Card.Body>
           </Card>
+          <Row>
+            <Container>
+              <Row md={1} className="g-4 py-4">
+                {Array.from({ length: 4 }).map((_, idx) => (
+                  <Col className=" d-flex flex-row justify-content-center align-content-center w-50 ">
+                    <Card className="text-center d-flex flex-row justify-content-center align-content-center content-box">
+                      <Card.Body>
+                        <Card.Title>Previous Notes</Card.Title>
+                        <Card.Text>
+                          This will hold prior notes. perhaps we could modal
+                          these as well. logic is ready for array of past
+                          inputs.
+                        </Card.Text>
+                      </Card.Body>
+                    </Card>
+                  </Col>
+                ))}
+              </Row>
+            </Container>
+          </Row>
         </Tab>
       </Tabs>
     </>

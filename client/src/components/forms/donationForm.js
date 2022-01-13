@@ -69,7 +69,7 @@ const donationForm = (props) => {
 
           <Stack gap={2} className="col-md-5 mx-auto">
             <Link to="/dashboard">
-              <Button variant="secondary">Donate</Button>
+              <Button variant="light">Donate</Button>
             </Link>
           </Stack>
         </Form>

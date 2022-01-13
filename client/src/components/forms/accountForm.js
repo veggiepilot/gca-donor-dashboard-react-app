@@ -36,7 +36,7 @@ const AccountForm = () => {
 
          <Stack gap={2} className="col-md-5 mt-3 mx-auto">
             <Link to="/dashboard">
-              <Button variant="secondary">Save changes</Button>
+              <Button variant="light">Save changes</Button>
             </Link>
         </Stack>
 
