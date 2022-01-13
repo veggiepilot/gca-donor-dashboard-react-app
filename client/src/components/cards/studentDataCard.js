@@ -1,10 +1,6 @@
-<<<<<<< HEAD
 import React from "react";
 import { Card, Container, } from "react-bootstrap";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-=======
-import { Card, Table } from "react-bootstrap";
->>>>>>> 63ca410ec2c7792a1a11d08b4bbdfc657dc09c57
 
 
 
