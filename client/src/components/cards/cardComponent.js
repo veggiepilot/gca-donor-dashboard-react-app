@@ -1,53 +1,52 @@
 import React from "react";
 import { Card, Container, } from "react-bootstrap";
-
-
-
-
-
-const CardComponent = () => {
-  return (
-    <>
-<Container className=" d-flex flex-row justify-content-center align-content-center">
-  
-<Card className="text-center w-100 d-flex flex-column justify-content-center align-content-center m-2">
-  <Card.Header>Students</Card.Header>
-  <Card.Body>
-    <Card.Title><i class="bi bi-person-circle"></i></Card.Title>
-    <Card.Text className="d-flex flex-row justify-content-between p-4">
-    <h1 className="d-flex flex-start justify-content-start align-content-center">23</h1>
-    <p className= "d-flex flex-end justify-content-end align-content-center">Total Students</p>
-    </Card.Text>
-  </Card.Body>
-</Card>
-
-
-<Card className="text-center w-100 d-flex flex-column justify-content-center align-content-center m-2">
-  <Card.Header>Donor Total</Card.Header>
-  <Card.Body>
-  <Card.Title><i class="fas fa-user-graduate"></i></Card.Title>
-    <Card.Text className="d-flex flex-row justify-content-between p-4">
-    <h1 className="d-flex flex-start justify-content-start align-content-center">13</h1>
-    <p className= "d-flex flex-end justify-content-end align-content-center">Total Donors</p>
-    </Card.Text>
-  </Card.Body>.
-</Card>
-
-
-
-<Card className="text-center w-100 d-flex flex-column justify-content-center align-content-center m-2">
-  <Card.Header>Pledge Fund Summary</Card.Header>
-  <Card.Body>
-  <Card.Title><i class="fas fa-user-graduate"></i></Card.Title>
-    <Card.Text className="d-flex flex-row justify-content-between p-4">
-    <h1 className="d-flex flex-start justify-content-start align-content-center">$34,506</h1>
-    <p className= "d-flex flex-end justify-content-end align-content-center">Total Pledge</p>
-    </Card.Text>
-  </Card.Body>
-</Card>
-</Container>
-
-</>
-  );
-}
-export default CardComponent;
+import { Icon } from '@iconify/react';
+    
+    const CardComponent = () => {
+      return (
+        <main className=" d-flex flex-row justify-content-around align-content-center">
+          <Card className="text-center d-flex flex-column justify-content-center align-content-center">
+            <Card.Body>
+              <Card.Title className="d-flex flex-row justify-content-start m-1 p-4">
+                Total Students
+              </Card.Title>
+              <Card.Text className="d-flex flex-row justify-content-around p-2">
+                <h3>23</h3>
+              </Card.Text>
+              <h3>
+                <Icon icon="ph:student-fill" width="50" height="50" />
+              </h3>
+            </Card.Body>
+          </Card>
+    
+          <Card className="text-center d-flex flex-column justify-content-center align-content-center">
+            <Card.Body>
+              <Card.Title className="d-flex flex-row justify-content-start m-1 p-4">
+                Total Donors
+              </Card.Title>
+              <Card.Text className="d-flex flex-row justify-content-around p-2">
+                <h3>13</h3>
+              </Card.Text>
+              <h3>
+                <Icon icon="iconoir:donate" width="50" height="50" />
+              </h3>
+            </Card.Body>
+          </Card>
+    
+          <Card className="text-center d-flex flex-column justify-content-center align-content-center">
+            <Card.Body>
+              <Card.Title className="d-flex flex-row justify-content-start m-1 p-4">
+                Pledge Total
+              </Card.Title>
+              <Card.Text className="d-flex flex-row justify-content-around p-2">
+                <h3>13</h3>
+              </Card.Text>
+              <h3>
+                <Icon icon="fa-solid:donate" width="50" height="50" />
+              </h3>
+            </Card.Body>
+          </Card>
+        </main>
+      );
+    };
+    export default CardComponent;
