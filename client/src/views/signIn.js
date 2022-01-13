@@ -41,7 +41,7 @@ const SignIn = () => {
   };
   return (
     <Container
-      className="d-flex flex-column w-50 justify-content-center align-content-center min-vh-100"
+      className="d-flex flex-column justify-content-center align-content-center min-vh-100 w-50 "
       fluid={true}
     >
       <div className="signin d-flex flex-column justify-content-center align-content-center p-4">
@@ -53,6 +53,7 @@ const SignIn = () => {
             Success! You may now head <Link to="/">back to the homepage.</Link>
           </p>
         ) : (
+        <>
           <form onSubmit={handleFormSubmit}>
             <Row className="d-flex flex-row justify-content-center align-content-center">
             <div className="form-group d-flex flex-column justify-content-center align-content-center w-25">
@@ -75,23 +76,28 @@ const SignIn = () => {
                 type="password"
                 value={formState.password}
                 onChange={handleChange}
-              ></input>
+              ></input>            
             </div>
-            <Link to="/dashboard">
+            </Row>              
+          </form> 
+          <br/>
+          <div className="w-50 d-flex flex-row justify-content-end align-content-end">
+          <Link to="/dashboard">
               <button
                 type="submit"
-                className="w-100 mb-3 mt-3 btn btn-primary btn-lrg"
+                className="btn btn-secondary btn-lrg"
               >
                 Sign In
               </button>
-            </Link>
-            <p className="text-center">
+          </Link>
+          </div>
+          <br/>         
+           <p className="text-center">
               <small className="text-muted text-center">
                 Don't have an account yet?<Link to="/signup">Sign Up</Link>.
               </small>
-            </p>
-            </Row>
-          </form>
+          </p>
+          </>
         )}
 
         {error && (
