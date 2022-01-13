@@ -41,12 +41,12 @@ const SignIn = () => {
   };
   return (
     <Container
-      className="bg-light bg-gradient text-dark d-flex justify-content-center align-content-center min-vh-100 m-0"
+      className="signin d-flex flex-column w-25 justify-content-center align-content-center min-vh-100 text-dark col-xl-12"
       fluid={true}
     >
-      <div className="col-xl-4 col-md-5 col-12">
+      <div>
         <div>
-          <h1 className="text-center">Sign In</h1>
+          <h1 className="text-center m-3">Sign In</h1>
         </div>
         {data ? (
               <p>
@@ -55,8 +55,8 @@ const SignIn = () => {
               </p>
             ) : (
         <form onSubmit={handleFormSubmit}>
-          <div className="form-group">
-            <label className="form-label">Email Address</label>
+          <div className="form-group d-flex flex-column justify-center align-center">
+            <label className="form-label text-muted m-2">Email Address</label>
             <input
               placeholder="example@example.com"
               className="form-input"
@@ -66,8 +66,8 @@ const SignIn = () => {
               onChange={handleChange}
             ></input>
           </div>
-          <div className="form-group">
-            <label className="form-label">Password</label>
+          <div className="form-group  d-flex flex-column justify-center align-center">
+            <label className="form-label text-muted m-2">Password</label>
             <input
               placeholder="Enter Your Password"
               className="form-input"
@@ -78,7 +78,7 @@ const SignIn = () => {
             ></input>
           </div>
           <Link to="/dashboard">
-            <button type="submit" className="w-100 mb-3 btn btn-primary btn-lrg">
+            <button type="submit" className="w-100 mb-3 mt-3 btn btn-primary btn-lrg">
               Sign In
             </button>
           </Link>

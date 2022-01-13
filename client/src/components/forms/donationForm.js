@@ -1,7 +1,14 @@
 import { Form, Row, Col, Button,Stack,Container } from "react-bootstrap";
-import { Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
-const donationForm = () => {
+const donationForm = (props) => {
+
+
+
+
+
+  
+
   return (
     <>
     <Container className=" header d-flex flex-column justify-content-center align-content-center p-3 w-25 fixed-top">
@@ -13,12 +20,12 @@ const donationForm = () => {
         <Row className="mb-3">
           <Form.Group as={Col} controlId="formGridFirstName">
             <Form.Label>Student First Name</Form.Label>
-            <Form.Control type="firstname" placeholder="First Name" />
+            <Form.Control type="firstname" placeholder="John" />
           </Form.Group>
 
           <Form.Group as={Col} controlId="formGridLastName">
             <Form.Label>Student Last Name</Form.Label>
-            <Form.Control type="lastname" placeholder="Last Name" />
+            <Form.Control type="lastname" placeholder="Wick" />
           </Form.Group>
         </Row>
 
@@ -35,21 +42,21 @@ const donationForm = () => {
         <Row className="mb-3">
           <Form.Group as={Col} controlId="formGridCity">
             <Form.Label>City</Form.Label>
-            <Form.Control />
+            <Form.Control placeholder="Padhorje"/>
           </Form.Group>
 
           <Form.Group as={Col} controlId="formGridState">
             <Form.Label>State</Form.Label>
-            <Form.Control />
+            <Form.Control placeholder="Belarus"/>
           </Form.Group>
 
           <Form.Group as={Col} controlId="formGridZip">
             <Form.Label>Zip</Form.Label>
-            <Form.Control />
+            <Form.Control placeholder="55505"/>
           </Form.Group>
 
-          <Form.Group as={Col} controlId="formGridDonor">
-            <Form.Label>Donor</Form.Label>
+          <Form.Group as={Col} controlId="formGridStudent">
+            <Form.Label>Student(s)</Form.Label>
             <Form.Select defaultValue="Choose...">
               <option>Choose...</option>
               <option>...</option>

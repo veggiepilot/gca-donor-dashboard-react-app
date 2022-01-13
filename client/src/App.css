@@ -37,3 +37,7 @@ font-size: xx-small;
     text-align: center;
     border-style: outset;
 }
+
+.signin{
+    box-sizing: content-box;
+}

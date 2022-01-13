@@ -7,22 +7,22 @@ const CreateStudentForm = () => {
     <Container className=" header d-flex flex-column justify-content-start align-content-start p-3 w-25 fixed-top">
     <h1 className="py-2 ">New Student Form</h1>
   </Container>
-    <Container className="d-flex flex-column justify-center align-center mt-5">
+  <Container className="d-flex flex-column justify-center align-center mt-5">
       <Form>
         <Row className="mb-3">
-          <Form.Group as={Col} controlId="formGridEmail">
-            <Form.Label>First Name</Form.Label>
+          <Form.Group as={Col} controlId="formGridFirstName">
+            <Form.Label>Student First Name</Form.Label>
             <Form.Control type="firstname" placeholder="First Name" />
           </Form.Group>
 
-          <Form.Group as={Col} controlId="formGridPassword">
-            <Form.Label>Last Name</Form.Label>
+          <Form.Group as={Col} controlId="formGridLastName">
+            <Form.Label>Student Last Name</Form.Label>
             <Form.Control type="lastname" placeholder="Last Name" />
           </Form.Group>
         </Row>
 
         <Form.Group className="mb-3" controlId="formGridAddress1">
-          <Form.Label>Address</Form.Label>
+          <Form.Label>Student Address</Form.Label>
           <Form.Control placeholder="1234 Main St" />
         </Form.Group>
 
@@ -39,15 +39,20 @@ const CreateStudentForm = () => {
 
           <Form.Group as={Col} controlId="formGridState">
             <Form.Label>State</Form.Label>
-            <Form.Select defaultValue="Choose...">
-              <option>Choose...</option>
-              <option>...</option>
-            </Form.Select>
+            <Form.Control />
           </Form.Group>
 
           <Form.Group as={Col} controlId="formGridZip">
             <Form.Label>Zip</Form.Label>
             <Form.Control />
+          </Form.Group>
+
+          <Form.Group as={Col} controlId="formGridDonor">
+            <Form.Label>Donor</Form.Label>
+            <Form.Select defaultValue="Choose...">
+              <option>Choose...</option>
+              <option>...</option>
+            </Form.Select>
           </Form.Group>
         </Row>
 
@@ -55,7 +60,7 @@ const CreateStudentForm = () => {
              <Link to="/dashboard"><Button variant="light">Create</Button></Link>
         </Stack>
       </Form>
-      </Container>
+    </Container>
       </>
   );
 };
