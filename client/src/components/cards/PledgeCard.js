@@ -1,10 +1,6 @@
 import React from "react";
 import { Card, Container, } from "react-bootstrap";
 
-
-
-
-
 const PledgeCard = () => {
   return (
     <>
