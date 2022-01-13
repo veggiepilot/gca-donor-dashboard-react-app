@@ -7,7 +7,7 @@ import { LOGIN_USER } from "../utils/mutations";
 import Auth from "../utils/auth";
 
 const SignIn = () => {
-  const [formState, setFormState] = useState({ email: "", password: "" });
+  const [formState, setFormState] = useState({ email: '', password: '' });
   const [login, { error, data }] = useMutation(LOGIN_USER);
 
   // update state based on form input changes
@@ -35,8 +35,8 @@ const SignIn = () => {
 
     // clear form values
     setFormState({
-      email: "",
-      password: "",
+      email: '',
+      password: '',
     });
   };
   return (
@@ -48,12 +48,18 @@ const SignIn = () => {
         <div>
           <h1 className="text-center">Sign In</h1>
         </div>
+        {data ? (
+              <p>
+                Success! You may now head{' '}
+                <Link to="/">back to the homepage.</Link>
+              </p>
+            ) : (
         <form onSubmit={handleFormSubmit}>
           <div className="form-group">
             <label className="form-label">Email Address</label>
             <input
               placeholder="example@example.com"
-              className="form-control"
+              className="form-input"
               name="email"
               type="email"
               value={formState.email}
@@ -64,7 +70,7 @@ const SignIn = () => {
             <label className="form-label">Password</label>
             <input
               placeholder="Enter Your Password"
-              className="form-control"
+              className="form-input"
               name="password"
               type="password"
               value={formState.password}
@@ -82,6 +88,13 @@ const SignIn = () => {
             </small>
           </p>
         </form>
+        )}
+
+        {error && (
+          <div className="my-3 p-3 bg-danger text-white">
+            {error.message}
+          </div>
+        )}
         <Outlet />
       </div>
     </Container>
