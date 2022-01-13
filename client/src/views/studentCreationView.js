@@ -1,6 +1,6 @@
-import NewStudentForm from "../components/forms/newStudentForm";
+import CreateStudentForm from "../components/forms/createStudentForm";
 
 const StudentCreationView = () => {
-  return <NewStudentForm />;
+  return <CreateStudentForm />;
 };
 export default StudentCreationView;
