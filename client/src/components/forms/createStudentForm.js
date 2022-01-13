@@ -20,31 +20,15 @@ const CreateStudentForm = () => {
               <Form.Control type="lastname" placeholder="Last Name" />
             </Form.Group>
           </Row>
-
-          <Form.Group className="mb-3" controlId="formGridAddress1">
-            <Form.Label>Student Address</Form.Label>
-            <Form.Control placeholder="1234 Main St" />
-          </Form.Group>
-
-          <Form.Group className="mb-3" controlId="formGridAddress2">
-            <Form.Label>Address 2</Form.Label>
-            <Form.Control placeholder="Apartment, studio, or floor" />
-          </Form.Group>
-
-          <Row className="mb-3">
-            <Form.Group as={Col} controlId="formGridCity">
-              <Form.Label>City</Form.Label>
-              <Form.Control />
+          <Row>
+            <Form.Group as={Col} controlId="formGridEmail">
+              <Form.Label>Parent Email</Form.Label>
+              <Form.Control type="email" placeholder="Enter email" />
             </Form.Group>
 
-            <Form.Group as={Col} controlId="formGridState">
-              <Form.Label>State</Form.Label>
-              <Form.Control />
-            </Form.Group>
-
-            <Form.Group as={Col} controlId="formGridZip">
-              <Form.Label>Zip</Form.Label>
-              <Form.Control />
+            <Form.Group as={Col} className="mb-3" controlId="formGridFunding">
+              <Form.Label>Funding Needed</Form.Label>
+              <Form.Control data-type="currency" placeholder="$ 12,000" />
             </Form.Group>
 
             <Form.Group as={Col} controlId="formGridDonor">
@@ -55,13 +39,12 @@ const CreateStudentForm = () => {
               </Form.Select>
             </Form.Group>
           </Row>
-
-          <Stack gap={2} className="col-md-5 mx-auto">
-            <Link to="/dashboard">
-              <Button variant="light">Create</Button>
-            </Link>
-          </Stack>
         </Form>
+        <Stack className="col-md-5 p-2 m-2 mx-auto ">
+          <Link to="/dashboard">
+            <Button variant="light">Create</Button>
+          </Link>
+        </Stack>
       </Container>
     </>
   );

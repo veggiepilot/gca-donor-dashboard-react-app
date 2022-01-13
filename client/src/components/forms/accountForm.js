@@ -11,6 +11,17 @@ const AccountForm = () => {
       <Container>
         <Form>
           <Row className="mb-3">
+            <Form.Group as={Col} controlId="formGridFirstName">
+              <Form.Label>First Name</Form.Label>
+              <Form.Control type="firstname" placeholder="John" />
+            </Form.Group>
+
+            <Form.Group as={Col} controlId="formGridLastName">
+              <Form.Label>Last Name</Form.Label>
+              <Form.Control type="lastname" placeholder="Doe" />
+            </Form.Group>
+          </Row>
+          <Row>
             <Form.Group as={Col} controlId="formGridEmail">
               <Form.Label>Email</Form.Label>
               <Form.Control type="email" placeholder="Enter email" />
@@ -21,43 +32,14 @@ const AccountForm = () => {
               <Form.Control type="password" placeholder="Password" />
             </Form.Group>
           </Row>
+        </Form> 
 
-          <Form.Group className="mb-3" controlId="formGridAddress1">
-            <Form.Label>Address</Form.Label>
-            <Form.Control placeholder="1234 Main St" />
-          </Form.Group>
-
-          <Form.Group className="mb-3" controlId="formGridAddress2">
-            <Form.Label>Address 2</Form.Label>
-            <Form.Control placeholder="Apartment, studio, or floor" />
-          </Form.Group>
-
-          <Row className="mb-3">
-            <Form.Group as={Col} controlId="formGridCity">
-              <Form.Label>City</Form.Label>
-              <Form.Control />
-            </Form.Group>
-
-            <Form.Group as={Col} controlId="formGridState">
-              <Form.Label>State</Form.Label>
-              <Form.Select defaultValue="Choose...">
-                <option>Choose...</option>
-                <option>...</option>
-              </Form.Select>
-            </Form.Group>
-
-            <Form.Group as={Col} controlId="formGridZip">
-              <Form.Label>Zip</Form.Label>
-              <Form.Control />
-            </Form.Group>
-          </Row>
-
-          <Stack gap={2} className="col-md-5 mx-auto">
+         <Stack gap={2} className="col-md-5 mt-3 mx-auto">
             <Link to="/dashboard">
               <Button variant="light">Save changes</Button>
             </Link>
-          </Stack>
-        </Form>
+        </Stack>
+
       </Container>
     </>
   );
