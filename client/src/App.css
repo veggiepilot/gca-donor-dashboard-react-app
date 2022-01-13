@@ -29,6 +29,36 @@
     
 }
 
+.accountform {
+    padding: 30px;
+    border-style: solid;
+    border-width: 1px;
+    background-color: rgb(244, 244, 250);
+    border-color:  rgba(242, 245, 251, 0.695);
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px rgb(213, 213, 216);
+}
+
+.studentform{
+    padding: 30px;
+    border-style: solid;
+    border-width: 1px;
+    background-color: rgb(244, 244, 250);
+    border-color:  rgba(242, 245, 251, 0.695);
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px rgb(213, 213, 216);
+}
+
+.donorform {
+    padding: 30px;
+    border-style: solid;
+    border-width: 1px;
+    background-color: rgb(244, 244, 250);
+    border-color:  rgba(242, 245, 251, 0.695);
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px rgb(213, 213, 216);
+}
+
 .signin {
     box-sizing: content-box;
 }

@@ -8,7 +8,7 @@ const donationForm = (props) => {
         <h1 className="py-2">New Donor Form</h1>
       </Container>
 
-      <Container className="d-flex flex-column justify-center align-center mt-5">
+      <Container className="donorform d-flex flex-column justify-center align-center mt-5">
         <Form>
           <Row className="mb-3">
             <Form.Group as={Col} controlId="formGridFirstName">
