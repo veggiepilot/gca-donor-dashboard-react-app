@@ -1,0 +1,39 @@
+.main {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    color:rgb(18, 38, 63);
+    background-color:rgb(239, 242, 248);
+}
+
+.header {
+        box-sizing: content-box;
+        border-color: rgb(244, 244, 245);
+        border-radius: 20px;
+        border-width: 1px;
+        text-align: center;
+        border-style: outset;
+        box-shadow:80px rgb(67, 67, 68);
+}
+
+.accordion.item {
+border: hidden;
+font-size: xx-small;
+}
+
+.sidenav {
+        box-sizing: border-box;
+        border-color: rgb(22,45,78);
+        border-width: 1px;
+        text-align: center;
+        border-style: outset;
+}
+
+.card {
+    box-sizing: border-box;
+    border-color: rgb(22,45,78);
+    border-radius: 10px;
+    border-width: 1px;
+    text-align: center;
+    border-style: outset;
+}

@@ -3,7 +3,11 @@ import { Link } from "react-router-dom";
 
 const CreateStudentForm = () => {
   return (
-    <Container className="d-flex flex-column justify-center align-center col-xl-4 col-md-5 col-12 mt-5">
+    <>
+    <Container className=" header d-flex flex-column justify-content-start align-content-start p-3 w-25 fixed-top">
+    <h1 className="py-2 ">New Student Form</h1>
+  </Container>
+    <Container className="d-flex flex-column justify-center align-center mt-5">
       <Form>
         <Row className="mb-3">
           <Form.Group as={Col} controlId="formGridEmail">
@@ -52,6 +56,7 @@ const CreateStudentForm = () => {
         </Stack>
       </Form>
       </Container>
+      </>
   );
 };
 

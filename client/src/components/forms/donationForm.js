@@ -3,7 +3,12 @@ import { Link} from "react-router-dom";
 
 const donationForm = () => {
   return (
-    <Container className="d-flex flex-column justify-center align-center col-xl-4 col-md-5 col-12 mt-5">
+    <>
+    <Container className=" header d-flex flex-column justify-content-center align-content-center p-3 w-25 fixed-top">
+    <h1 className="py-2">New Donor Form</h1>
+    </Container>
+
+    <Container className="d-flex flex-column justify-center align-center mt-5">
       <Form>
         <Row className="mb-3">
           <Form.Group as={Col} controlId="formGridEmail">
@@ -52,6 +57,7 @@ const donationForm = () => {
         </Stack>
       </Form>
     </Container>
+    </>
   );
 };
 
