@@ -102,11 +102,10 @@ const SignUp = () => {
             </div>
             <button
               type="submit"
-              className="w-100 mb-3 mt-3 btn btn-primary btn-lrg"
+              className="w-100 mb-3 mt-3 btn btn-secondary btn-lrg"
             >
               Sign Up
             </button>
-
             <p className="text-center">
               <small className="text-muted text-center">
                 Already have an account? <Link to="/signin">Sign In</Link>.

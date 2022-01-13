@@ -42,7 +42,7 @@ const CreateStudentForm = () => {
         </Form>
         <Stack className="col-md-5 p-2 m-2 mx-auto ">
           <Link to="/dashboard">
-            <Button variant="light">Create</Button>
+            <Button variant="secondary">Create</Button>
           </Link>
         </Stack>
       </Container>
