@@ -7,7 +7,7 @@ const CreateStudentForm = () => {
       <Container className=" header d-flex flex-column justify-content-start align-content-start p-3 w-25 fixed-top">
         <h1 className="py-2 ">New Student Form</h1>
       </Container>
-      <Container className="d-flex flex-column justify-center align-center mt-5">
+      <Container className="studentform d-flex flex-column justify-center align-center mt-5 ">
         <Form>
           <Row className="mb-3">
             <Form.Group as={Col} controlId="formGridFirstName">

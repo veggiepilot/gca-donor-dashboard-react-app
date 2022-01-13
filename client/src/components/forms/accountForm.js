@@ -8,7 +8,7 @@ const AccountForm = () => {
         <h1 className="py-2">Update Account Information</h1>
       </Container>
 
-      <Container>
+      <Container className="accountform">
         <Form>
           <Row className="mb-3">
             <Form.Group as={Col} controlId="formGridFirstName">
