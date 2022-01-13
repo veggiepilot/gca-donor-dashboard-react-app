@@ -10,28 +10,32 @@ const CardComponent = () => {
 
       <Container className="d-flex flex-column justify-content-center align-content-center">
         <Row>
-          <Col lg={4}>
-            <Card className="text-center d-flex flex-row justify-content-start align-content-start">
+          <Col lg={3}>
+            <Card className="text-center d-flex flex-column justify-content-center align-content-center">
               <Card.Body>
-                <Card.Title className="d-flex flex-row justify-content-start m-1 p-4">
-                  <h3>Total Students</h3>
+                <Col>
+                <Card.Title>
+                  <h5>Total Students</h5>
                 </Card.Title>
-                <Card.Text className="d-flex flex-row justify-content-around p-2">
+                </Col>
+                <Col>
+                <Card.Text>
                   <h3>23</h3>
                 </Card.Text>
                 <h3>
                   <Icon icon="ph:student-fill" width="50" height="50" />
                 </h3>
+                </Col>
               </Card.Body>
             </Card>
           </Col>
-          <Col lg={4}>
+          <Col lg={3}>
             <Card className="text-center d-flex flex-column justify-content-center align-content-center">
               <Card.Body>
-                <Card.Title className="d-flex flex-row justify-content-start m-1 p-4">
-                  <h3>Total Donors</h3>
+                <Card.Title>
+                  <h5>Total Donors</h5>
                 </Card.Title>
-                <Card.Text className="d-flex flex-row justify-content-around p-2">
+                <Card.Text>
                   <h3>13</h3>
                 </Card.Text>
                 <h3>
@@ -40,13 +44,13 @@ const CardComponent = () => {
               </Card.Body>
             </Card>
           </Col>
-          <Col lg={4}>
+          <Col lg={3}>
             <Card className="text-center d-flex flex-column justify-content-center align-content-center">
               <Card.Body>
-                <Card.Title className="d-flex flex-row justify-content-start m-1 p-4">
-                  <h3>Pledge Total YTD</h3>
+                <Card.Title>
+                  <h5>Pledge Total YTD</h5>
                 </Card.Title>
-                <Card.Text className="d-flex flex-row justify-content-around p-2">
+                <Card.Text>
                   <h3>$65,232</h3>
                 </Card.Text>
                 <h3>
@@ -55,10 +59,25 @@ const CardComponent = () => {
               </Card.Body>
             </Card>
           </Col>
+          <Col lg={3}>
+            <Card className="text-center d-flex flex-column justify-content-center align-content-center">
+              <Card.Body>
+                <Card.Title>
+                  <h5>Avg Donation YTD</h5>
+                </Card.Title>
+                <Card.Text>
+                  <h3>$600</h3>
+                </Card.Text>
+                <h3>
+                  <Icon icon="fa-solid:donate" width="50" height="50" />
+                </h3>
+              </Card.Body>
+            </Card>
+          </Col>
         </Row>
-    </Container>
+      </Container>
 
-    <Container className=" mt-2 d-flex flex-column justify-content-center align-content-center">
+      <Container className=" mt-2 d-flex flex-column justify-content-center align-content-center">
         <Row>
           <Col lg={4}>
             <Card className="text-center d-flex flex-row justify-content-start align-content-start">
@@ -69,8 +88,6 @@ const CardComponent = () => {
                 <Card.Text className="d-flex flex-row justify-content-around p-2">
                   <h3>23</h3>
                 </Card.Text>
-                <h3>
-                </h3>
               </Card.Body>
             </Card>
           </Col>
@@ -83,15 +100,12 @@ const CardComponent = () => {
                 <Card.Text className="d-flex flex-row justify-content-center p-2">
                   <h3>$150,000</h3>
                 </Card.Text>
-                <h3>
-                  
-                </h3>
               </Card.Body>
             </Card>
           </Col>
         </Row>
-    </Container>
-    <Container className="mt-2">
+      </Container>
+      <Container className="mt-2">
         <Row>
           <Col lg={12}>
             <Card className="text-center d-flex flex-column justify-content-center align-content-center">
@@ -102,10 +116,68 @@ const CardComponent = () => {
                 <Card.Text className="d-flex flex-row justify-content-around p-2">
                   <h3>9/12/2022</h3>
                 </Card.Text>
-                <p>
-                Section 1.10.33 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC
-"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias us saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."
-                </p>
+                <article>
+                  Section 1.10.33 of "de Finibus Bonorum et Malorum", written by
+                  Cicero in 45 BC "At vero eos et accusamus et iusto odio
+                  dignissimos ducimus qui blanditiis praesentium voluptatum
+                  deleniti atque corrupti quos dolores et quas molestias us
+                  saepe eveniet ut et voluptates repudiandae sint et molestiae
+                  non recusandae. Itaque earum rerum hic tenetur a sapiente
+                  delectus, ut aut reiciendis voluptatibus maiores alias
+                  consequatur aut perferendis doloribus asperiores repellat."
+                </article>
+              </Card.Body>
+            </Card>
+          </Col>
+        </Row>
+      </Container>
+      <Container className="mt-2">
+        <Row>
+          <Col lg={12}>
+            <Card className="text-center d-flex flex-column justify-content-center align-content-center">
+              <Card.Body>
+                <Card.Title className="d-flex flex-row justify-content-start m-1 p-4">
+                  <h1>Announcements</h1>
+                </Card.Title>
+                <Card.Text className="d-flex flex-row justify-content-around p-2">
+                  <h3>9/09/2022</h3>
+                </Card.Text>
+                <article>
+                  Section 1.10.33 of "de Finibus Bonorum et Malorum", written by
+                  Cicero in 45 BC "At vero eos et accusamus et iusto odio
+                  dignissimos ducimus qui blanditiis praesentium voluptatum
+                  deleniti atque corrupti quos dolores et quas molestias us
+                  saepe eveniet ut et voluptates repudiandae sint et molestiae
+                  non recusandae. Itaque earum rerum hic tenetur a sapiente
+                  delectus, ut aut reiciendis voluptatibus maiores alias
+                  consequatur aut perferendis doloribus asperiores repellat."
+                </article>
+              </Card.Body>
+            </Card>
+          </Col>
+        </Row>
+      </Container>
+      <Container className="mt-2">
+        <Row>
+          <Col lg={12}>
+            <Card className="text-center d-flex flex-column justify-content-center align-content-center">
+              <Card.Body>
+                <Card.Title className="d-flex flex-row justify-content-start m-1 p-4">
+                  <h1>Announcements</h1>
+                </Card.Title>
+                <Card.Text className="d-flex flex-row justify-content-around p-2">
+                  <h3>8/26/2022</h3>
+                </Card.Text>
+                <article>
+                  Section 1.10.33 of "de Finibus Bonorum et Malorum", written by
+                  Cicero in 45 BC "At vero eos et accusamus et iusto odio
+                  dignissimos ducimus qui blanditiis praesentium voluptatum
+                  deleniti atque corrupti quos dolores et quas molestias us
+                  saepe eveniet ut et voluptates repudiandae sint et molestiae
+                  non recusandae. Itaque earum rerum hic tenetur a sapiente
+                  delectus, ut aut reiciendis voluptatibus maiores alias
+                  consequatur aut perferendis doloribus asperiores repellat."
+                </article>
               </Card.Body>
             </Card>
           </Col>

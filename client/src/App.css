@@ -1,6 +1,6 @@
 html,Body, #root {
     color:rgb(20, 22, 51);
-    background: linear-gradient(90deg, rgba(174,177,184,0.6951155462184874) 0%, rgba(222,228,233,1) 0%, rgba(238,239,241,1) 33%, rgba(232,238,244,1) 43%, rgba(239,240,241,1) 56%, rgba(207,213,221,1) 100%);
+    background: linear-gradient(90deg, rgb(245, 243, 243) 0%, rgba(239, 240, 241, 0.966) 0%, rgb(238, 239, 241) 33%, rgb(251, 251, 251) 43%, rgba(250, 253, 255, 0.945) 56%, rgb(245, 248, 253) 100%);
 }
 
 .header {
@@ -13,17 +13,18 @@ html,Body, #root {
     display:flex;
     flex-direction: column;
     justify-content: center;
-    background: linear-gradient(90deg, rgba(174,177,184,0.6951155462184874) 0%, rgba(222,228,233,1) 0%, rgba(238,239,241,1) 33%, rgba(232,238,244,1) 43%, rgba(239,240,241,1) 56%, rgba(207,213,221,1) 100%);
+    background: linear-gradient(90deg, rgba(251, 253, 255, 0.966) 0%, rgba(222,228,233,1) 0%, rgb(235, 238, 245) 33%, rgba(232,238,244,1) 43%, rgba(239,240,241,1) 56%, rgb(233, 235, 238) 100%);
 }
 
 .sidenav {
+    font-size: medium;
     font-family: 'Montserrat', sans-serif;
     background-color: rgb(244, 244, 250);
     border-style: solid;
     border-width: 1px;
     border-color:  rgba(242, 245, 251, 0.695);
     border-radius: 10px;
-    box-shadow: 2px 2px 2px 2px rgb(213, 213, 216);
+    box-shadow: 2px 2px 2px 2px rgb(232, 232, 235);
 }
 .accordion {
     background-color: transparent;
@@ -44,11 +45,12 @@ html,Body, #root {
     font-family: 'Montserrat', sans-serif;
     border-style: solid;
     border-width: 1px;
-    border-color:  rgba(248, 249, 251, 0.695);
-    border-radius: 10px;
-    box-shadow: 2px 2px 2px 2px rgb(213, 213, 216);
+    border-color:  rgba(248, 249, 251, 0.911);
+    border-radius: 5px;
+    box-shadow: 2px 6px 6px 2px rgb(232, 232, 235);
     
 }
+
 
 .accountform {
     font-family: 'Lato',sans-serif;

@@ -36,18 +36,18 @@ const StudentTabs = () => {
                   controlId="Form.ControlTextarea1 resize: none"
                 >
                   <Form.Label>
-                  <Form.Control
-                    type="text"
-                    id="title"
-                    aria-describedby="title"
-                    placeholder="Title Here.."
-                  />
+                    <Form.Control
+                      type="text"
+                      id="title"
+                      aria-describedby="title"
+                      placeholder="Title Here.."
+                    />
                   </Form.Label>
                   <Form.Control
                     as="textarea"
                     rows={10}
                     placeholder="Leave Notes Here...."
-                  />        
+                  />
                 </Form.Group>
               </Form>
               <Button variant="light">Submit</Button>
@@ -56,49 +56,41 @@ const StudentTabs = () => {
         </Tab>
 
         <Tab eventKey="profile" title="Donors">
-          <Card>
+          <Card className="w-25 m-3">
             <Card.Body>
-              <Card.Title>Donors Data</Card.Title>
+              <h1>John Doe</h1>
+              <Card.Title>Donor List</Card.Title>
               <Table>
                 <thead>
                   <tr>
-                    <th>#</th>
                     <th>First Name</th>
                     <th>Last Name</th>
-                    <th>Username</th>
+                    <th>Contribution</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td>1</td>
                     <td>Rebecca</td>
                     <td>Sundquist </td>
-                    <td>@Sund</td>
+                    <td>$ 250</td>
                   </tr>
                   <tr>
-                    <td>2</td>
                     <td>Adam</td>
                     <td>Olsey</td>
-                    <td>@Olse</td>
+                    <td>$ 500</td>
                   </tr>
                   <tr>
-                    <td>3</td>
                     <td>sarah</td>
                     <td>Maskill</td>
-                    <td>@Maski</td>
+                    <td>$ 1,500</td>
                   </tr>
                   <tr>
-                    <td>4</td>
+                 
                     <td>Johannes</td>
                     <td>Chitura</td>
-                    <td>@Chitu</td>
+                    <td>$1,750</td>
                   </tr>
                   <tr></tr>
-                  <tr>
-                    <td>5</td>
-                    <td colSpan="2">Johannes Chitura</td>
-                    <td>@twitter</td>
-                  </tr>
                 </tbody>
               </Table>
             </Card.Body>

@@ -32,14 +32,13 @@ const AccountForm = () => {
               <Form.Control type="password" placeholder="Password" />
             </Form.Group>
           </Row>
-        </Form> 
+        </Form>
 
-         <Stack gap={2} className="col-md-5 mt-3 mx-auto">
-            <Link to="/dashboard">
-              <Button variant="light">Save changes</Button>
-            </Link>
+        <Stack gap={2} className="col-md-5 mt-3 mx-auto">
+          <Link to="/dashboard">
+            <Button variant="light">Save changes</Button>
+          </Link>
         </Stack>
-
       </Container>
     </>
   );
