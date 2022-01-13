@@ -32,13 +32,6 @@ const SideBar = () => {
                   </Link>
                 </Accordion.Body>
               </Accordion.Item>
-            </Accordion>
-          </Col>
-        </Row>
-
-        <Row>
-          <Col>
-            <Accordion>
               <Accordion.Item eventKey="1" className="py-1 m-1">
                 <Accordion.Header>Donor</Accordion.Header>
                 <Accordion.Body>
@@ -55,13 +48,6 @@ const SideBar = () => {
                   </Link>
                 </Accordion.Body>
               </Accordion.Item>
-            </Accordion>
-          </Col>
-        </Row>
-
-        <Row>
-          <Col>
-            <Accordion>
               <Accordion.Item eventKey="2" className="py-1 m-1">
                 <Accordion.Header>Account</Accordion.Header>
                 <Accordion.Body>
