@@ -22,44 +22,56 @@ const StudentTabs = () => {
         </Stack>
       </Container>
 
-      <Tabs defaultActiveKey="home" id="tab" className="userTabs ">
+      <Tabs
+        defaultActiveKey="home"
+        id="tab"
+        className="userTabs d-flex flex-row justify-content-center align-content-center"
+      >
         <Tab eventKey="home" title="Notes">
-          <Row>
-            <Col sm={6}>
+          <Row className="d-flex flex-row justify-content-center align-content-center">
+            <Col sm={8}>
               <Form>
                 <Form.Group
                   className="mb-3 text-dark"
                   controlId="Form.ControlTextarea1 resize: none"
                 >
                   <Form.Label>
-                    <h1 className="mb-3text-dark">Notes</h1>
+                  <Form.Control
+                    type="text"
+                    id="title"
+                    aria-describedby="title"
+                    placeholder="Title Here.."
+                  />
                   </Form.Label>
-                  <Form.Control as="textarea" rows={10} />
+                  <Form.Control
+                    as="textarea"
+                    rows={10}
+                    placeholder="Leave Notes Here...."
+                  />        
                 </Form.Group>
               </Form>
               <Button variant="light">Submit</Button>
             </Col>
-
-            <Col>
-              <Container>
-                <Row md={1} className="g-4 py-4">
-                  {Array.from({ length: 4 }).map((_, idx) => (
-                    <Col className=" d-flex flex-row justify-content-center align-content-center w-50 ">
-                      <Card className="text-center d-flex flex-row justify-content-center align-content-center content-box">
-                        <Card.Body>
-                          <Card.Title>Previous Notes</Card.Title>
-                          <Card.Text>
-                            This will hold prior notes. perhaps we could modal
-                            these as well. logic is ready for array of past
-                            inputs.
-                          </Card.Text>
-                        </Card.Body>
-                      </Card>
-                    </Col>
-                  ))}
-                </Row>
-              </Container>
-            </Col>
+          </Row>
+          <Row>
+            <Container>
+              <Row md={1} className="g-4 py-4">
+                {Array.from({ length: 4 }).map((_, idx) => (
+                  <Col className=" d-flex flex-row justify-content-center align-content-center w-50 ">
+                    <Card className="text-center d-flex flex-row justify-content-center align-content-center content-box">
+                      <Card.Body>
+                        <Card.Title>Previous Notes</Card.Title>
+                        <Card.Text>
+                          This will hold prior notes. perhaps we could modal
+                          these as well. logic is ready for array of past
+                          inputs.
+                        </Card.Text>
+                      </Card.Body>
+                    </Card>
+                  </Col>
+                ))}
+              </Row>
+            </Container>
           </Row>
         </Tab>
 

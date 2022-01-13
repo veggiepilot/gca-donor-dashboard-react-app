@@ -13,16 +13,20 @@
 
 
 .sidenav {
-        border-color: rgb(22,45,78);
-        border-width: 1px;
-        text-align: center;
-        border-style: outset;
+    border-style: solid;
+    border-width: 1px;
+    border-color:  rgba(242, 245, 251, 0.695);
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px rgb(213, 213, 216);
 }
 
 .card {
-    border-style: outset;
-    border-color:  rgb(22,45,78);
+    border-style: solid;
+    border-width: 1px;
+    border-color:  rgba(242, 245, 251, 0.695);
     border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px rgb(213, 213, 216);
+    
 }
 
 .signin {
