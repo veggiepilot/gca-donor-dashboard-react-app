@@ -1,12 +1,4 @@
 html,Body, #root {
-    background: linear-gradient(90deg, rgba(174,177,184,0.6951155462184874) 0%, rgba(222,228,233,1) 0%, rgba(238,239,241,1) 33%, rgba(232,238,244,1) 43%, rgba(239,240,241,1) 56%, rgba(207,213,221,1) 100%);
-}
-
-
-.main {
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
     color:rgb(20, 22, 51);
     background: linear-gradient(90deg, rgba(174,177,184,0.6951155462184874) 0%, rgba(222,228,233,1) 0%, rgba(238,239,241,1) 33%, rgba(232,238,244,1) 43%, rgba(239,240,241,1) 56%, rgba(207,213,221,1) 100%);
 }
@@ -17,6 +9,12 @@ html,Body, #root {
     text-align: center;
 }
 
+.main {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(90deg, rgba(174,177,184,0.6951155462184874) 0%, rgba(222,228,233,1) 0%, rgba(238,239,241,1) 33%, rgba(232,238,244,1) 43%, rgba(239,240,241,1) 56%, rgba(207,213,221,1) 100%);
+}
 
 .sidenav {
     font-family: 'Montserrat', sans-serif;
@@ -27,7 +25,6 @@ html,Body, #root {
     border-radius: 10px;
     box-shadow: 2px 2px 2px 2px rgb(213, 213, 216);
 }
-
 .accordion {
     background-color: transparent;
     border-style: none;
