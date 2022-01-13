@@ -29,17 +29,28 @@ const SideBar = () => {
         </Accordion.Item>
       </Accordion>
 
-      <Accordion>
-        <Accordion.Item eventKey="2" className="w-100 mb-4 mt-4">
-          <Accordion.Header>Account</Accordion.Header>
-          <Accordion.Body>
-            <Link to="/account">Account Overveiw</Link>
-          </Accordion.Body>
-        </Accordion.Item>
-      </Accordion>
-      <Outlet />
-    </>
+            <Accordion>
+              <Accordion.Item eventKey="2">
+                <Accordion.Header>Account</Accordion.Header>
+                <Accordion.Body>
+                  <Link
+                    to="/account"
+                    className="text-decoration-none text-dark"
+                  >
+                    Account Overveiw
+                  </Link>
+                </Accordion.Body>
+              </Accordion.Item>
+            </Accordion>
+          </Nav>
+        </Navbar>
+      </Col>
+    </Row>
   );
 };
 
 export default SideBar;
+
+// //       <Link to="/dashboard">
+// <Button className="w-100  mb-4 mt-4 btn-sm">Home</Button>
+// </Link> //

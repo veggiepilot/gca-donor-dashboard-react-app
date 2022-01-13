@@ -12,7 +12,7 @@ import {
 const StudentTabs = () => {
   return (
     <>
-      <Tabs defaultActiveKey="home" id="tab" className="mb-3 userTabs ">
+      <Tabs defaultActiveKey="home" id="tab" className="mt-5 userTabs ">
         <Tab eventKey="home" title="Notes">
           <Row>
             <Col sm={5}>

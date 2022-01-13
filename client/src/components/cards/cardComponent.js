@@ -1,5 +1,4 @@
-import React from "react";
-import { Card, Container, } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 import { Icon } from '@iconify/react';
     
     const CardComponent = () => {
@@ -49,4 +48,9 @@ import { Icon } from '@iconify/react';
         </main>
       );
     };
+<<<<<<< HEAD
     export default CardComponent;
+=======
+    export default CardComponent;
+    
+>>>>>>> 63ca410ec2c7792a1a11d08b4bbdfc657dc09c57

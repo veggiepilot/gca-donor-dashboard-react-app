@@ -1,8 +1,4 @@
 /* eslint-disable no-unused-vars */
-import Header from "./components/header";
-
-
- 
 import {
   ApolloClient,
   InMemoryCache,
@@ -11,6 +7,7 @@ import {
 } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import React from "react";
 import DashboardView from "./views/dashboardView";
 import StudentVeiw from "./views/studentView";
 import DonorView from "./views/donorView";
@@ -18,8 +15,10 @@ import AccountView from "./views/accountView";
 import NewDonationView from "./views/newDonationView";
 import SignIn from "./views/signIn";
 import SignUp from "./views/signUp";
-import createStudentForm from "./components/forms/createStudentForm";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import StudentCreationView from "./views/studentCreationView";
+import Layout from "./views/layout";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -53,23 +52,26 @@ function App() {
       <Router>
         <Routes>
           {/* Root */}
-          <Route path="/" element={<SignIn />} />,{/* Landing Page / Login  */}
-          <Route path="SignIn" element={<SignIn />} />,
-          <Route path="SignUp" element={<SignUp />} />,{/* Main Dashboard */}
-          <Route path="Dashboard" element={<DashboardView />} />,
-          {/* Students View  Links */}
-          <Route path="Student" element={<StudentVeiw />} />,
-          <Route path="NewStudent" element={<createStudentForm />} />,
-          {/* Donor View Links */}
-          <Route path="Donor" element={<DonorView />} />,
-          <Route path="NewDonoation" element={<NewDonationView />} />,
-          {/* Update Account */}
-          <Route path="Account" element={<AccountView />} />,
+          <Route path="/" element={<SignIn />} />
+          {/* Landing Page / Login  */}
+          <Route path="SignIn" element={<SignIn />} />
+          <Route path="SignUp" element={<SignUp />} />
+
+          <Route element={<Layout/>}>
+            {/* Main Dashboard */}
+            <Route path="Dashboard" element={<DashboardView />} />
+            {/* Students View  Links */}
+            <Route path="Student" element={<StudentVeiw />} />
+            <Route path="NewStudent" element={<StudentCreationView />} />
+            {/* Donor View Links */}
+            <Route path="Donor" element={<DonorView />} />
+            <Route path="NewDonation" element={<NewDonationView />} />
+            <Route path="Account" element={<AccountView />} />
+          </Route>
         </Routes>
       </Router>
     </ApolloProvider>
   );
 }
-
 
 export default App;

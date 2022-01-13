@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 import { Card, Container, } from "react-bootstrap";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -6,6 +7,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 
 const PledgeCard = () => {
+=======
+import { Card, Table } from "react-bootstrap";
+
+ const PledgeCard = ()=> {
+>>>>>>> 63ca410ec2c7792a1a11d08b4bbdfc657dc09c57
   return (
     <>
 <Container className=" d-flex flex-row justify-content-center align-content-center">
