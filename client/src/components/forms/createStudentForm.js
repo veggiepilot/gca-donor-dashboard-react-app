@@ -1,9 +1,9 @@
-import { Form, Row, Col, Button } from "react-bootstrap";
+import { Form, Row, Col, Button ,Stack,Container} from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 const CreateStudentForm = () => {
   return (
-    <>
+    <Container className="d-flex flex-column justify-center align-center col-xl-4 col-md-5 col-12 mt-5">
       <Form>
         <Row className="mb-3">
           <Form.Group as={Col} controlId="formGridEmail">
@@ -47,13 +47,11 @@ const CreateStudentForm = () => {
           </Form.Group>
         </Row>
 
-        <Link to="/dashboard">
-          <Button variant="primary" type="submit">
-            Submit
-          </Button>
-        </Link>
+        <Stack gap={2} className="col-md-5 mx-auto">
+             <Link to="/dashboard"><Button variant="light">Create</Button></Link>
+        </Stack>
       </Form>
-    </>
+      </Container>
   );
 };
 

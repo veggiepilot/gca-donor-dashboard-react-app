@@ -1,11 +1,19 @@
 import React from "react";
-import { Card, Container, } from "react-bootstrap";
+import { Card, Container, Stack, Form,Button } from "react-bootstrap";
 
 const DonorsCard = () => {
   return (
     <>
+
+<Container className="d-flex flex-column justify-content-start align-content-start p-3 w-25 ">
+        <Stack direction="horizontal" gap={3}>
+          <Form.Control className="me-auto" placeholder="Search..." />
+          <Button variant="primary">Find</Button>
+          <div className="vr" />
+        </Stack>
+</Container>
+
 <Container className=" d-flex flex-row justify-content-center align-content-center">
-  
 <Card className="text-center w-100 d-flex flex-column justify-content-center align-content-center m-2">
   <Card.Header>Students</Card.Header>
   <Card.Body>
