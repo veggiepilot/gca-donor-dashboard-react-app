@@ -102,13 +102,10 @@ const DonorsCard = () => {
             <Card.Title>
               <i class="fas fa-user-graduate"></i>
             </Card.Title>
-            <Card.Text className="d-flex flex-row justify-content-between p-4">
-              <h1 className="d-flex flex-start justify-content-start align-content-center">
-                $34,506
+            <Card.Text className="d-flex flex-row justify-content-center p-4">
+              <h1 className="d-flex flex-row justify-content-center align-content-center">
+                Coming Soon
               </h1>
-              <p className="d-flex flex-end justify-content-end align-content-center">
-                Total Pledge
-              </p>
             </Card.Text>
           </Card.Body>
         </Card>
