@@ -13,18 +13,19 @@ import {
 
 const StudentTabs = () => {
   return (
- <>
-    <Container className="d-flex flex-column justify-content-start align-content-start p-3 w-25 ">
-        <Stack direction="horizontal" gap={3}>
+ <>        
+  <Container className="d-flex flex-column justify-content-start align-content-start p-3 w-25 fixed-top"> 
+    <Stack direction="horizontal">
           <Form.Control className="me-auto" placeholder="Search..." />
-          <Button variant="primary">Find</Button>
           <div className="vr" />
-        </Stack>
-    </Container>
-      <Tabs defaultActiveKey="home" id="tab" className="mt-5 userTabs ">
+          <Button variant="light">Find</Button> 
+    </Stack>
+  </Container>
+
+      <Tabs defaultActiveKey="home" id="tab" className="userTabs ">
         <Tab eventKey="home" title="Notes">
           <Row>
-            <Col sm={5}>
+            <Col sm={6}>
               <Form>
                 <Form.Group
                   className="mb-3 text-dark"
@@ -38,9 +39,10 @@ const StudentTabs = () => {
               </Form>
               <Button variant="light">Submit</Button>
             </Col>
+
             <Col>
-              <div>
-                <Row md={1} className="g-4">
+              <Container>
+                <Row md={1} className="g-4 py-4">
                   {Array.from({ length: 4 }).map((_, idx) => (
                    <Col className=" d-flex flex-row justify-content-center align-content-center w-50 ">
                    <Card className="text-center d-flex flex-row justify-content-center align-content-center content-box">
@@ -54,12 +56,16 @@ const StudentTabs = () => {
                         </Card.Body>
                       </Card>
                     </Col>
+
                   ))}
                 </Row>
-              </div>
+              </Container>
             </Col>
+
           </Row>
         </Tab>
+
+
         <Tab eventKey="profile" title="Donors">
           <Card>
             <Card.Body>

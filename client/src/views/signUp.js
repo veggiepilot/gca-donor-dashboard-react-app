@@ -43,7 +43,7 @@ const SignUp = () => {
 
   return (
     <Container
-      className="bg-dark bg-gradient text-white p-4 d-flex justify-content-center align-content-center"
+      className="bg-light bg-gradient text-dark p-4 d-flex justify-content-center align-content-center min-vh-100 m-0"
       fluid
     >
       <div className="col-xl-4 col-md-5 col-12">
