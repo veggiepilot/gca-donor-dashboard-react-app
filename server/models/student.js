@@ -18,6 +18,29 @@ const studentSchema = new Schema({
         required: "Enter a parent email",
         unique: true
     },
+    address1: {
+        type: String,
+        trim: true,
+        required: "Enter an address" 
+    },
+    address2: {
+        type: String,
+        trim: true
+    },
+    city: {
+        type: String,
+        trim: true,
+        required: "Enter a city"
+    }, 
+    state: {
+        type: String,
+        required: "Please choose a state"
+    }, 
+    zip: {
+        type: Number,
+        trim: true,
+        required: "Please enter a zipcode"
+    },
     fundingNeeded: {
         type: Number
     }, 

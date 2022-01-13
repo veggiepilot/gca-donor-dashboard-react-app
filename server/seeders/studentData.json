@@ -3,24 +3,59 @@
         "firstName": "Stewart",
         "lastName": "Johnson",
         "parentEmail": "sally@gmail.com",
-        "fundingNeeded": 10000
+        "address1": "1234 Cherry Lane",
+        "address2": "",
+        "city": "Dallas",
+        "state": "Texas",
+        "zip": 45632,
+        "fundingNeeded": 10000,
+        "donors": [
+            {
+                "donorId": ""
+            } 
+        ]
     },
     {
         "firstName": "Harry",
         "lastName": "Henderson",
         "parentEmail": "johnhenderon@gmail.com",
-        "fundingNeeded": 12000
+        "address1": "324 Keystone Dr",
+        "address2": "",
+        "city": "Calabasas",
+        "state": "California",
+        "zip": 90234,
+        "fundingNeeded": 12000,
+        "donors": [
+            {
+                "donorId": ""
+            } 
+        ]
     },
     {
         "firstName": "Francis",
         "lastName": "McGee",
         "parentEmail": "mcgee@gmail.com",
-        "fundingNeeded": 5000
+        "address1": "566 Alberta Dr",
+        "address2": "",
+        "city": "luxington",
+        "state": "Alabama",
+        "zip": 42274,
+        "fundingNeeded": 5000,
+        "donors": [
+            {
+                "donorId": ""
+            } 
+        ]
     },
     {
         "firstName": "Gina",
         "lastName": "Knight",
         "parentEmail": "knightfamily@gmail.com",
+        "address1": "2391 Laggner Lane",
+        "address2": "",
+        "city": "Kingston",
+        "state": "Deleware",
+        "zip": 50534,
         "fundingNeeded": 8000,
         "donors": [
             {

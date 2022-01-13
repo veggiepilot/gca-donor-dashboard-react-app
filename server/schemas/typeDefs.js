@@ -20,6 +20,11 @@ const typeDefs = gql`
     firstName: String
     lastName: String
     parentEmail: String
+    address1: String
+    address2: String
+    city: String
+    state: String
+    zip: Int
     fundingNeeded: Int
   }
 

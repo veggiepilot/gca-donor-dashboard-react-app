@@ -23,6 +23,11 @@ export const QUERY_STUDENTS = gql`
       firstName
       lastName
       parentEmail
+      address1
+      address2
+      city
+      state
+      zip
       fundingNeeded
       donors
     }
@@ -65,6 +70,11 @@ export const getStudentQuery = gql`
       firstName
       lastName
       parentEmail
+      address1
+      address2
+      city
+      state
+      zip
       fundingNeeded
       donors
     }

@@ -68,7 +68,11 @@ export const ADD_STUDENT = gql`
     $firstName: String!
     $lastName: String!
     $parentEmail: String!
+    $address1: String!
     $address2: String!
+    $city: String!
+    $state: String!
+    $zip: Int!
     $fundingNeeded: String!
     $donors: String!
   ) {
@@ -76,6 +80,11 @@ export const ADD_STUDENT = gql`
       firstName: $firstName
       lastName: $lastName
       parentEmail: $parentEmail
+      address1: $address1
+      address2: $address2
+      city: $city:
+      state: $state
+      zip: $zip
       fundingNeeded: $fundingNeeded
       donors: $donors
     ) {
@@ -84,3 +93,4 @@ export const ADD_STUDENT = gql`
     }
   }
 `;
+
