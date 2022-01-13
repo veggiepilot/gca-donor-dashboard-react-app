@@ -8,19 +8,19 @@ import {
   Tab,
   Tabs,
   Container,
-  Stack
+  Stack,
 } from "react-bootstrap";
 
 const StudentTabs = () => {
   return (
- <>        
-  <Container className="d-flex flex-column justify-content-start align-content-start p-3 w-25 fixed-top"> 
-    <Stack direction="horizontal">
+    <>
+      <Container className="d-flex flex-column justify-content-start align-content-start p-3 w-25 fixed-top">
+        <Stack direction="horizontal">
           <Form.Control className="me-auto" placeholder="Search..." />
           <div className="vr" />
-          <Button variant="light">Find</Button> 
-    </Stack>
-  </Container>
+          <Button variant="light">Find</Button>
+        </Stack>
+      </Container>
 
       <Tabs defaultActiveKey="home" id="tab" className="userTabs ">
         <Tab eventKey="home" title="Notes">
@@ -32,7 +32,7 @@ const StudentTabs = () => {
                   controlId="Form.ControlTextarea1 resize: none"
                 >
                   <Form.Label>
-                    <h1  className="mb-3text-dark">Notes</h1>
+                    <h1 className="mb-3text-dark">Notes</h1>
                   </Form.Label>
                   <Form.Control as="textarea" rows={10} />
                 </Form.Group>
@@ -44,8 +44,8 @@ const StudentTabs = () => {
               <Container>
                 <Row md={1} className="g-4 py-4">
                   {Array.from({ length: 4 }).map((_, idx) => (
-                   <Col className=" d-flex flex-row justify-content-center align-content-center w-50 ">
-                   <Card className="text-center d-flex flex-row justify-content-center align-content-center content-box">
+                    <Col className=" d-flex flex-row justify-content-center align-content-center w-50 ">
+                      <Card className="text-center d-flex flex-row justify-content-center align-content-center content-box">
                         <Card.Body>
                           <Card.Title>Previous Notes</Card.Title>
                           <Card.Text>
@@ -56,15 +56,12 @@ const StudentTabs = () => {
                         </Card.Body>
                       </Card>
                     </Col>
-
                   ))}
                 </Row>
               </Container>
             </Col>
-
           </Row>
         </Tab>
-
 
         <Tab eventKey="profile" title="Donors">
           <Card>
@@ -115,7 +112,7 @@ const StudentTabs = () => {
             </Card.Body>
           </Card>
         </Tab>
-      </Tabs> 
+      </Tabs>
     </>
   );
 };
