@@ -1,5 +1,5 @@
 import { Form, Row, Col, Button,Stack } from "react-bootstrap";
-import { Link, Outlet } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const AccountForm = () => {
   return (
@@ -52,7 +52,6 @@ const AccountForm = () => {
             <Button variant="outline-secondary">Cancel</Button>
           </Stack>
       </Form>
-      <Outlet />
     </div>
   );
 };

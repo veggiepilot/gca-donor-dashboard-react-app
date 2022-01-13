@@ -1,5 +1,5 @@
 import { Form, Row, Col, Button } from "react-bootstrap";
-import { Link, Outlet } from "react-router-dom";
+import { Link} from "react-router-dom";
 
 const donationForm = () => {
   return (
@@ -53,7 +53,6 @@ const donationForm = () => {
           </Button>
         </Link>
       </Form>
-      <Outlet />
     </div>
   );
 };

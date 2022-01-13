@@ -1,9 +1,5 @@
 import React from "react";
 import { Card, Container, } from "react-bootstrap";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
-
-
 
 const PledgeCard = () => {
   return (
