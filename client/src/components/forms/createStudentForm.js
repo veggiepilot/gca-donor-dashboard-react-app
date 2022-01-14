@@ -106,7 +106,6 @@ const CreateStudentForm = () => {
               </Form.Select>
             </Form.Group>
           </Row>
-        </Form>
         <Stack className="col-md-5 p-2 m-2 mx-auto ">
           {/* <Link to="/dashboard"> */}
             <Button variant="light" type="submit">
@@ -114,6 +113,7 @@ const CreateStudentForm = () => {
             </Button>
           {/* </Link> */}
         </Stack>
+        </Form>
       </Container>
       </div>
        )}
