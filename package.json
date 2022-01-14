@@ -27,6 +27,7 @@
   "homepage": "https://github.com/veggiepilot/gca-donor-dashboard-react-app#readme",
   "dependencies": {
     "bootstrap-icons": "^1.7.2",
+    "chart.js": "^3.7.0",
     "jwt-decode": "^3.1.2",
     "react-bootstrap-icons": "^1.7.2"
   }
