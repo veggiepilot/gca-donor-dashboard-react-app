@@ -1,66 +1,73 @@
 import { Form, Row, Col, Button, Stack, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
-// import { useState } from "react";
-// import { useMutation } from "@apollo/client";
-// import { ADD_DONOR } from "../utils/mutations";
-
+import { useState } from "react";
+import { useMutation } from "@apollo/client";
+import { ADD_DONOR } from "../../utils/mutations";
 
 const donationForm = () => {
 
-//  const [donorFormState, setDonorFormState] = useState({
-//    firstName:"",
-//    lastName: "",
-//    address1: "",
-//    address2: "",
-//    city: "",
-//    state: "",
-//    zip: "",
-//    email:"",
-//    phone: ""
-//  })
-//  const [addDonor,{error, data}] = useMutation(ADD_DONOR)
+ const [formState, setFormState] = useState({
+   firstName:"",
+   lastName: "",
+   address1: "",
+   address2: "",
+   city: "",
+   state: "",
+   zip: "",
+   email:"",
+   phone: ""
+ })
+ const [addDonor,{error, data}] = useMutation(ADD_DONOR)
 
-//  const handleChange = (event) => {
-//   const { name, value } = event.target;
+ const handleChange = (event) => {
+  const { name, value } = event.target;
 
-//   setDonorFormState({
-//     ...donorFormState,
-//     [name]: value,
-//   });
-// }
+  setFormState({
+    ...formState,
+    [name]: value,
+  });
+}
 
-//   const handleDonorFormSubmit = (e) => {
-//     e.preventDefault();
-//     try {
-//       const {data} = addDonor({
-//         variables: { ...donorFormState },
-//       });
-//     } catch (e) {
-//       console.error(e);
-//     }
+  const handleDonorFormSubmit = async (event) => {
+    event.preventDefault();
+    try {
+      const {data} = await addDonor({
+        variables: { ...formState },
+      });
+    }
+    catch (e) {
+      console.error(e);
+    }
+  }
 
-    // clear form values
-    // setDonorFormState({
-    //   firstName:"",
-    //   lastName: "",
-    //   address1: "",
-    //   address2: "",
-    //   city: "",
-    //   state: "",
-    //   zip: "",
-    //   email:"",
-    //   phone: ""
-    // });
+    setFormState({
+      firstName:"",
+      lastName: "",
+      address1: "",
+      address2: "",
+      city: "",
+      state: "",
+      zip: "",
+      email:"",
+      phone: ""
+    });
   
 
   return (
-    <>
+  
+    <div>
       <Container className=" header d-flex flex-column justify-content-center align-content-center p-3 w-25 fixed-top">
         <h1 className="py-2">New Donor Form</h1>
       </Container>
-
+      {data ? (
+          <p>
+            Success! You may now head <Link to="/">back to the homepage.</Link>
+          </p>
+          
+        ) : (
+    <div>
       <Container className="donorform d-flex flex-column justify-center align-center mt-5">
-        <Form>
+        <Form onSubmit={handleFormSubmit}>
           <Row className="mb-3">
             <Form.Group as={Col} controlId="formGridFirstName">
               <Form.Label>First Name</Form.Label>
@@ -68,8 +75,8 @@ const donationForm = () => {
               placeholder="John"
               type="firstName" 
               name="firstName"
-              // value={donorFormState.firstName}
-              // onChange={handleChange}
+              value={formState.firstName}
+              onChange={handleChange}
               />
             </Form.Group>
 
@@ -79,8 +86,8 @@ const donationForm = () => {
               placeholder="Doe"
               type="lastName" 
               name="lastName"
-              // value={donorFormState.lastName}
-              // onChange={handleChange}
+              value={formState.lastName}
+              onChange={handleChange}
               />
             </Form.Group>
           </Row>
@@ -91,8 +98,8 @@ const donationForm = () => {
               placeholder="1234 Main St"
               type="address1"
               name="address1"
-              // value={donorFormState.address1}
-              // onChange={handleChange} 
+              value={formState.address1}
+              onChange={handleChange} 
               />
             </Form.Group>
 
@@ -102,8 +109,8 @@ const donationForm = () => {
               placeholder="Hollywood"
               type="city"
               name="city"
-              // value={donorFormState.city}
-              // onChange={handleChange} 
+              value={formState.city}
+              onChange={handleChange} 
               />
             </Form.Group>
           </Row>
@@ -114,8 +121,8 @@ const donationForm = () => {
               placeholder="Apartment, studio, or floor"
               type="address2"
               name="address2"
-              // value={donorFormState.address2}
-              // onChange={handleChange}
+              value={formState.address2}
+              onChange={handleChange}
               />
             </Form.Group>
             <Form.Group as={Col} controlId="formGridState">
@@ -124,8 +131,8 @@ const donationForm = () => {
               placeholder="CA"
               type="state"
               name="state"
-              // value={donorFormState.state}
-              // onChange={handleChange}
+              value={formState.state}
+              onChange={handleChange}
               />
             </Form.Group>
             <Form.Group as={Col} controlId="formGridZip">
@@ -134,8 +141,8 @@ const donationForm = () => {
               placeholder="55505"
               type="zip"
               name="zip"
-              // value={donorFormState.zip}
-              // onChange={handleChange} 
+              value={formState.zip}
+              onChange={handleChange} 
               />
             </Form.Group>
           </Row>
@@ -146,10 +153,9 @@ const donationForm = () => {
               <Form.Control 
               type="email" 
               placeholder="email@gmail.com"
-              type="email"
               name="email"
-              // value={donorFormState.email}
-              // onChange={handleChange} 
+              value={formState.email}
+              onChange={handleChange} 
               />
             </Form.Group>
 
@@ -158,10 +164,9 @@ const donationForm = () => {
               <Form.Control 
               type="phone" 
               placeholder="(123)456-7890"
-              type="phone"
               name="phone"
-              // value={donorFormState.phone}
-              // onChange={handleChange} 
+              value={formState.phone}
+              onChange={handleChange} 
               />
             </Form.Group>
 
@@ -179,14 +184,14 @@ const donationForm = () => {
               <Button variant="light">Donate</Button>
             </Link>
           </Stack>
-        </Form>
-
-        {/* {error && (
+        </Form>  
+        </Container>   
+      </div>
+        )}
+        {error && (
           <div className="my-3 p-3 bg-danger text-white">{error.message}</div>
-        )} */}
-
-      </Container>
-    </>
+        )}  
+      </div>
   );
 };
 

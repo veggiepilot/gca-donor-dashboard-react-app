@@ -49,12 +49,14 @@ const SignUp = () => {
       <div className=" signup d-flex flex-column justify-content-center align-content-center p-4">
         <div>
           <h1 className="text-center m-3">Sign Up</h1>
-        </div>
+      </div>
+
         {data ? (
           <p>
             Success! You may now head <Link to="/">back to the homepage.</Link>
           </p>
         ) : (
+          
           <form onSubmit={handleFormSubmit}>
             <div className="form-input d-flex flex-column justify-center align-center">
               <label className="form-label text-muted m-2">First Name</label>
