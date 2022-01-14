@@ -20,7 +20,7 @@ const SideBar = () => {
                     to="/student"
                     className="text-decoration-none text-dark"
                   >
-                    Student Overveiw
+                    Student Overview
                   </Link>
                   <br />
                   <br />

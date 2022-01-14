@@ -18,7 +18,7 @@ const userSchema = new Schema({
         trim: true,
         required: "Enter a user email",
         unique: true,
-        match: [/.+@'gcasda\.org'/, 'Must match a GCA email address!'],
+        // match: [/.+@'gcasda\.org'/, 'Must match a GCA email address!'],
     }, 
     password: {
         type: String,
