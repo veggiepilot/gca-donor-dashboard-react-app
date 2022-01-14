@@ -57,7 +57,7 @@ function App() {
           <Route path="SignIn" element={<SignIn />} />
           <Route path="SignUp" element={<SignUp />} />
 
-          <Route element={<Layout/>}>
+          <Route element={<Layout />}>
             {/* Main Dashboard */}
             <Route path="Dashboard" element={<DashboardView />} />
             {/* Students View  Links */}

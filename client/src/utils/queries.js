@@ -18,7 +18,7 @@ export const QUERY_DONORS = gql`
 `;
 
 export const QUERY_STUDENTS = gql`
-  query allStudents{
+  query allStudents {
     students {
       firstName
       lastName
@@ -30,10 +30,10 @@ export const QUERY_STUDENTS = gql`
 `;
 
 export const QUERY_SINGLE_USER = gql`
-  query singleUser ($userId: ID!) {
+  query singleUser($userId: ID!) {
     users(userId: userId) {
       _id
-        firstName
+      firstName
       lastName
       email
     }

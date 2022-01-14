@@ -7,98 +7,114 @@ import {
   Col,
   Tab,
   Tabs,
+  Container,
+  Stack,
 } from "react-bootstrap";
 
 const StudentTabs = () => {
   return (
     <>
-      <Tabs defaultActiveKey="home" id="tab" className="mt-5 userTabs ">
+      <Container className="d-flex flex-column justify-content-start align-content-start p-3 w-25 fixed-top">
+        <Stack direction="horizontal">
+          <Form.Control className="me-auto" placeholder="Search..." />
+          <div className="vr" />
+          <Button variant="light">Find</Button>
+        </Stack>
+      </Container>
+
+      <Tabs
+        defaultActiveKey="home"
+        id="tab"
+        className="userTabs d-flex flex-row justify-content-center align-content-center"
+      >
         <Tab eventKey="home" title="Notes">
-          <Row>
-            <Col sm={5}>
+          <Row className="d-flex flex-row justify-content-center align-content-center">
+            <Col sm={8}>
               <Form>
                 <Form.Group
                   className="mb-3 text-dark"
                   controlId="Form.ControlTextarea1 resize: none"
                 >
                   <Form.Label>
-                    <h1  className="mb-3text-dark">Notes</h1>
+                    <Form.Control
+                      type="text"
+                      id="title"
+                      aria-describedby="title"
+                      placeholder="Title Here.."
+                    />
                   </Form.Label>
-                  <Form.Control as="textarea" rows={10} />
+                  <Form.Control
+                    as="textarea"
+                    rows={10}
+                    placeholder="Leave Notes Here...."
+                  />
                 </Form.Group>
               </Form>
               <Button variant="light">Submit</Button>
             </Col>
-            <Col>
-              <div>
-                <Row md={1} className="g-4">
-                  {Array.from({ length: 4 }).map((_, idx) => (
-                   <Col className=" d-flex flex-row justify-content-center align-content-center w-50 ">
-                   <Card className="text-center d-flex flex-row justify-content-center align-content-center content-box">
-                        <Card.Body>
-                          <Card.Title>Previous Notes</Card.Title>
-                          <Card.Text>
-                            This will hold prior notes. perhaps we could modal
-                            these as well. logic is ready for array of past
-                            inputs.
-                          </Card.Text>
-                        </Card.Body>
-                      </Card>
-                    </Col>
-                  ))}
-                </Row>
-              </div>
-            </Col>
           </Row>
         </Tab>
+
         <Tab eventKey="profile" title="Donors">
-          <Card>
+          <Card className="w-25 m-3">
             <Card.Body>
-              <Card.Title>Donors Data</Card.Title>
+              <h1>John Doe</h1>
+              <Card.Title>Donor List</Card.Title>
               <Table>
                 <thead>
                   <tr>
-                    <th>#</th>
                     <th>First Name</th>
                     <th>Last Name</th>
-                    <th>Username</th>
+                    <th>Contribution</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td>1</td>
                     <td>Rebecca</td>
                     <td>Sundquist </td>
-                    <td>@Sund</td>
+                    <td>$ 250</td>
                   </tr>
                   <tr>
-                    <td>2</td>
                     <td>Adam</td>
                     <td>Olsey</td>
-                    <td>@Olse</td>
+                    <td>$ 500</td>
                   </tr>
                   <tr>
-                    <td>3</td>
                     <td>sarah</td>
                     <td>Maskill</td>
-                    <td>@Maski</td>
+                    <td>$ 1,500</td>
                   </tr>
                   <tr>
-                    <td>4</td>
+                 
                     <td>Johannes</td>
                     <td>Chitura</td>
-                    <td>@Chitu</td>
+                    <td>$1,750</td>
                   </tr>
                   <tr></tr>
-                  <tr>
-                    <td>5</td>
-                    <td colSpan="2">Johannes Chitura</td>
-                    <td>@twitter</td>
-                  </tr>
                 </tbody>
               </Table>
             </Card.Body>
           </Card>
+          <Row>
+            <Container>
+              <Row md={1} className="g-4 py-4">
+                {Array.from({ length: 4 }).map((_, idx) => (
+                  <Col className=" d-flex flex-row justify-content-center align-content-center w-50 ">
+                    <Card className="text-center d-flex flex-row justify-content-center align-content-center content-box">
+                      <Card.Body>
+                        <Card.Title>Previous Notes</Card.Title>
+                        <Card.Text>
+                          This will hold prior notes. perhaps we could modal
+                          these as well. logic is ready for array of past
+                          inputs.
+                        </Card.Text>
+                      </Card.Body>
+                    </Card>
+                  </Col>
+                ))}
+              </Row>
+            </Container>
+          </Row>
         </Tab>
       </Tabs>
     </>

@@ -1,8 +1,18 @@
-import { gql } from '@apollo/client';
+import { gql } from "@apollo/client";
 
 export const ADD_USER = gql`
-  mutation addUser($firstName: String!, $lastName: String!, $email: String!, $password: String!) {
-    addUser(firstName: $firstName, lastName: $lastName, email: $email, password: $password) {
+  mutation addUser(
+    $firstName: String!
+    $lastName: String!
+    $email: String!
+    $password: String!
+  ) {
+    addUser(
+      firstName: $firstName
+      lastName: $lastName
+      email: $email
+      password: $password
+    ) {
       token
       user {
         _id
@@ -25,15 +35,15 @@ export const LOGIN_USER = gql`
 `;
 
 export const ADD_DONOR = gql`
-  mutation addDonor (
-    $firstName: String!,
-    $lastName: String!,
-    $address1: String!,
-    $address2: String!,
-    $city: String!,
-    $state: String!,
-    $zip: Int!,
-    $email: String!,
+  mutation addDonor(
+    $firstName: String!
+    $lastName: String!
+    $address1: String!
+    $address2: String!
+    $city: String!
+    $state: String!
+    $zip: Int!
+    $email: String!
     $phone: String!
   ) {
     addDonor(
@@ -54,19 +64,19 @@ export const ADD_DONOR = gql`
 `;
 
 export const ADD_STUDENT = gql`
-  mutation addStudent (
-    $firstName: String!,
-    $lastName: String!,
-    $parentEmail: String!,
-    $address2: String!,
-    $fundingNeeded: String!,
+  mutation addStudent(
+    $firstName: String!
+    $lastName: String!
+    $parentEmail: String!
+    $address2: String!
+    $fundingNeeded: String!
     $donors: String!
   ) {
     addStudent(
-      firstName: $firstName,
-      lastName: $lastName,
-      parentEmail: $parentEmail,
-      fundingNeeded: $fundingNeeded,
+      firstName: $firstName
+      lastName: $lastName
+      parentEmail: $parentEmail
+      fundingNeeded: $fundingNeeded
       donors: $donors
     ) {
       firstName
