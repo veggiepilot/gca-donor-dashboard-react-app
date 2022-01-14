@@ -49,17 +49,7 @@ const SideBar = () => {
                   </Link>
                 </Accordion.Body>
               </Accordion.Item>
-<<<<<<< HEAD
-            </Accordion>
-          </Col>
-        </Row>
-        <Row>
-          <Col>
-            <Accordion>
-              <Accordion.Item eventKey="2" className="py-1 m-1">
-=======
               <Accordion.Item eventKey="2">
->>>>>>> 6466b3c1e857314a5ac842de95945e0daa6c9c04
                 <Accordion.Header>Account</Accordion.Header>
                 <Accordion.Body>
                   <Link
