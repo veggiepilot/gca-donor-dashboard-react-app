@@ -66,7 +66,6 @@ export const getStudentQuery = gql`
       lastName
       parentEmail
       fundingNeeded
-      donors
     }
   }
 `;

@@ -64,23 +64,18 @@ export const ADD_DONOR = gql`
 `;
 
 export const ADD_STUDENT = gql`
-  mutation addStudent(
-    $firstName: String!
-    $lastName: String!
-    $parentEmail: String!
-    $address2: String!
-    $fundingNeeded: String!
-    $donors: String!
-  ) {
+  mutation  {
     addStudent(
-      firstName: $firstName
-      lastName: $lastName
-      parentEmail: $parentEmail
+      firstName: $firstName,
+      lastName: $lastName,
+      parentEmail: $parentEmail,
       fundingNeeded: $fundingNeeded
-      donors: $donors
     ) {
+      _id
       firstName
       lastName
+      parentEmail
+      fundingNeeded
     }
   }
 `;
