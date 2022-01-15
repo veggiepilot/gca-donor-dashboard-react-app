@@ -14,7 +14,7 @@ const DonorForm = () => {
    address2: "",
    city: "",
    state: "",
-   zip: 0,
+   zip: "",
    email:"",
    phone: ""
  });
@@ -33,7 +33,13 @@ const DonorForm = () => {
     }
   };
     const handleChange = (event) => {
-      const { name, value } = event.target;
+      let { name, value } = event.target;
+      console.log(name,value)
+      console.log(typeof name,typeof value)
+    if(name === "zip"){
+      value = parseInt(value,10)
+      if(isNaN(value)) value=0 
+    }
     
       setDonorFormState({
         ...donorFormState,

@@ -1,4 +1,4 @@
-import DonorForm from "../components/forms/donationForm";
+import DonorForm from "../components/forms/donorForm";
 
 const NewDonorView = () => {
   return <DonorForm />;
