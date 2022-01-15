@@ -29,6 +29,8 @@
     "bootstrap-icons": "^1.7.2",
     "chart.js": "^3.7.0",
     "jwt-decode": "^3.1.2",
-    "react-bootstrap-icons": "^1.7.2"
+    "mdbreact": "^5.2.0",
+    "react-bootstrap-icons": "^1.7.2",
+    "react-chartjs-2": "^4.0.0"
   }
 }
