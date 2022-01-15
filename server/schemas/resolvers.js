@@ -59,6 +59,20 @@ const resolvers = {
       return {donor}
     },
 
+    addDonation: async (parent, {
+      donorId, studentId, amount, date
+    }) => {
+      return Donor.findOneAndUpdate(
+        { _id: donorId },
+        {
+          $addToSet: { donations: { studentId, amount, date } },
+        },
+        {
+          new: true, 
+          runValidators: true,
+        }
+      );
+    },
   },
 };
 

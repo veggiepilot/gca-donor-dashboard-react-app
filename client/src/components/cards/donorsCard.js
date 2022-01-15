@@ -10,8 +10,16 @@ import {
   Col,
 } from "react-bootstrap";
 import { Icon } from "@iconify/react";
+import { QUERY_DONORS } from "../../utils/queries";
+import { useQuery } from '@apollo/client';
 
 const DonorsCard = () => {
+  const { error, data } = useQuery(QUERY_DONORS);
+  const donors = data?.donors || [];
+  if (error) {return console.log(error) };
+  // if (!donors.length) {
+  //   return <h3>No Donors Yet</h3>;
+  // }
   return (
     <>
       <Container className="d-flex flex-column justify-content-start align-content-start p-3 w-25 fixed-top">
@@ -24,46 +32,32 @@ const DonorsCard = () => {
 
       <Container className=" d-flex flex-row justify-content-center align-content-center">
         <Card className="text-center w-100 d-flex flex-column justify-content-center align-content-center m-2">
-          <Card.Header>Donors Student List</Card.Header>
+          <Card.Header>Donor List</Card.Header>
+          
           <Card.Body>
             <Card.Title>
               <Icon icon="ph:student-fill" width="50" height="50" />
             </Card.Title>
+      
             <Table>
               <thead>
                 <tr>
                   <th>#</th>
                   <th>First Name</th>
                   <th>Last Name</th>
-                  <th>Amount</th>
+                  <th>Times Donated</th>
                 </tr>
               </thead>
-              <tbody>
+              {donors && donors.map((donor) =>(
+              <tbody key={donor._id}>
                 <tr>
-                  <td>1</td>
-                  <td>Rebecca</td>
-                  <td>Sundquist </td>
-                  <td>$ 150.00</td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td>Adam</td>
-                  <td>Olsey</td>
-                  <td>$65.00</td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td>sarah</td>
-                  <td>Maskill</td>
-                  <td>$1,230.00</td>
-                </tr>
-                <tr>
-                  <td>4</td>
-                  <td>Johannes</td>
-                  <td>Chitura</td>
-                  <td>$450.00</td>
+                  <td>{donor._id}</td>
+                  <td>{donor.firstName}</td>
+                  <td>{donor.lastName}</td>
+                  <td>N/A</td>
                 </tr>
               </tbody>
+              ))}
             </Table>
           </Card.Body>
         </Card>
@@ -109,7 +103,7 @@ const DonorsCard = () => {
           <Card.Header>Pledge Fund Graph</Card.Header>
           <Card.Body>
             <Card.Title>
-              <i class="fas fa-user-graduate"></i>
+              <i className="fas fa-user-graduate"></i>
             </Card.Title>
             <Card.Text className="d-flex flex-row justify-content-center p-4">
               <h1 className="d-flex flex-row justify-content-center align-content-center">

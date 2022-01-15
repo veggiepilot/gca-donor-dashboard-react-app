@@ -25,6 +25,7 @@ query all{
 export const QUERY_DONORS = gql`
   query allDonors {
     donors {
+      _id
       firstName
       lastName
       address1
@@ -34,7 +35,6 @@ export const QUERY_DONORS = gql`
       zip
       email
       phone
-      students
     }
   }
 `;
@@ -74,7 +74,7 @@ export const QUERY_SINGLE_DONOR = gql`
       zip
       email
       phone
-      students
+      donations
     }
   }
 `;

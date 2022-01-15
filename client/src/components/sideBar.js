@@ -37,15 +37,15 @@ const SideBar = () => {
                 <Accordion.Header>Donor</Accordion.Header>
                 <Accordion.Body>
                   <Link to="/donor" className="text-decoration-none text-dark">
-                    Donor Overveiw
+                    Donor Overview
                   </Link>
                   <br />
                   <br />
                   <Link
-                    to="/newdonation"
+                    to="/newdonor"
                     className="text-decoration-none text-dark"
                   >
-                    New Donation
+                    New Donor
                   </Link>
                 </Accordion.Body>
               </Accordion.Item>

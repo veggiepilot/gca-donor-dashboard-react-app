@@ -12,7 +12,7 @@ import DashboardView from "./views/dashboardView";
 import StudentVeiw from "./views/studentView";
 import DonorView from "./views/donorView";
 import AccountView from "./views/accountView";
-import NewDonationView from "./views/newDonationView";
+import NewDonorView from "./views/newDonorView";
 import SignIn from "./views/signIn";
 import SignUp from "./views/signUp";
 import StudentCreationView from "./views/studentCreationView";
@@ -65,7 +65,7 @@ function App() {
             <Route path="NewStudent" element={<StudentCreationView />} />
             {/* Donor View Links */}
             <Route path="Donor" element={<DonorView />} />
-            <Route path="NewDonation" element={<NewDonationView />} />
+            <Route path="NewDonor" element={<NewDonorView />} />
             <Route path="Account" element={<AccountView />} />
           </Route>
         </Routes>

@@ -85,6 +85,31 @@ export const ADD_STUDENT = gql`
   }
 `;
 
+// export const ADD_DONATION = gql `
+//  mutation addDonation(
+//    $donorId: ID!
+//    $amount: Int!
+//  ) {
+//    addDonation(
+//      donorId: $donorId
+//      amount: $amount
+//      studentId: $studentId
+//      date: $date
+//    ) {
+//      _id
+//      firstName
+//      lastName
+//      email
+//      donations {
+//        _id
+//        studentId
+//        amount
+//        date
+//      }
+//    }
+//  }
+// `
+
 // test mutation for graphql
 // mutation { addStudent( firstName: "Sophie", lastName: "Maskill", parentEmail: "sarah@gmail.com", fundingNeeded: 3123){
 //   firstName

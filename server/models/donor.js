@@ -44,7 +44,7 @@ const donorSchema = new Schema({
         type: String,
         required: "Phone number is required"
     },
-    students: [
+    donation: [
         {
             studentId: {
                 type: String,

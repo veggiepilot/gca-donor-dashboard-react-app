@@ -32,6 +32,7 @@ const CreateStudentForm = () => {
     setFormState({
       ...formState,
       [name]: value,
+    
     });
   };
   return (
@@ -87,7 +88,7 @@ const CreateStudentForm = () => {
             <Form.Group as={Col} className="mb-3" controlId="formGridFunding">
               <Form.Label>Funding Needed</Form.Label>
               <Form.Control
-                data-type="currency"
+                // data-type="currency"
                 placeholder="$ 12,000"
                 value={formState.fundingNeeded}
                 type="number"
