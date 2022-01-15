@@ -20,6 +20,6 @@ const DonationForm = () => {
     </DropdownButton>
     </Container>
   );
-};
+}
 
 export default DonationForm;
