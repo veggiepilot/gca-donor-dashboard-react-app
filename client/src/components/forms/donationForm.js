@@ -6,7 +6,7 @@ import { QUERY_STUDENTS } from "../../utils/queries"
 
 const DonationForm = () => {
   return(
-<DropdownButton id="dropdown-basic-button" title="Dropdown button">
+<DropdownButton id="dropdown-basic-button" title="Donation">
   <Dropdown.Item href="#/action-1">Students</Dropdown.Item>
     
 
