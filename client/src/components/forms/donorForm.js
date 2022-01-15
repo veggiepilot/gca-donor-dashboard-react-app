@@ -124,6 +124,7 @@ const DonorForm = () => {
               <Form.Label>Zip</Form.Label>
               <Form.Control 
               placeholder="55505"
+              type="zip"
               name="zip"
               type="number"
               value={donorFormState.zip}
