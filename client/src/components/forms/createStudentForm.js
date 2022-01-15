@@ -4,17 +4,6 @@ import { Link } from "react-router-dom";
 import React, { useState } from "react";
 import { useMutation } from "@apollo/client";
 import { ADD_STUDENT } from "../../utils/mutations";
-import { onError } from "@apollo/client/link/error";
-
-// const errorLink = onError(({ graphQLErrors, networkError }) => {
-//   if (graphQLErrors)
-//     graphQLErrors.forEach(({ message, locations, path }) =>
-//       console.log(
-//         `[GraphQL error]: Message: ${message}, Location: ${locations}, Path: ${path}`
-//       )
-//     );
-//   if (networkError) console.log(`[Network error]: ${networkError}`);
-// });
 
 const CreateStudentForm = () => {
   const [formState, setFormState] = useState({
@@ -50,7 +39,7 @@ const CreateStudentForm = () => {
     <div>
     {data ? (
           <p>
-            Success! You may now head <Link to="/">back to the homepage.</Link>
+            Success! You may now head <Link to="/dashboard">back to the homepage.</Link>
           </p>
         ) : (
       <div>
@@ -125,7 +114,6 @@ const CreateStudentForm = () => {
       </Container>
       </div>
        )}
-
        {error && (
          <div className="my-3 p-3 bg-danger text-white">{error.message}</div>
        )}
