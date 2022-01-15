@@ -10,7 +10,7 @@ const CreateStudentForm = () => {
     firstName: "",
     lastName: "",
     parentEmail: "",
-    fundingNeeded: 12000,
+    fundingNeeded: '',
   });
 
   const [addStudent, { error, data }] = useMutation(ADD_STUDENT);
@@ -27,12 +27,20 @@ const CreateStudentForm = () => {
     }
   };
   const handleChange = (event) => {
-    const { name, value } = event.target;
+    let { name, value } = event.target;
+      console.log(name,value)
+      console.log(typeof name,typeof value)
+    if(name === "fundingNeeded"){
+      value = parseInt(value,10)
+      if(isNaN(value)) value=0 
+    }
+
+    console.log(typeof name,typeof value)
 
     setFormState({
       ...formState,
       [name]: value,
-    
+      
     });
   };
   return (
@@ -90,7 +98,7 @@ const CreateStudentForm = () => {
               <Form.Control
                 // data-type="currency"
                 placeholder="$ 12,000"
-                value={formState.fundingNeeded}
+                value={formState.fundingNeeded} 
                 type="number"
                 onChange={handleChange}
                 name="fundingNeeded"
