@@ -14,7 +14,7 @@ const DonationForm = () => {
    address2: "",
    city: "",
    state: "",
-   zip: 90874,
+   zip: 0,
    email:"",
    phone: ""
  });
@@ -126,6 +126,7 @@ const DonationForm = () => {
               placeholder="55505"
               type="zip"
               name="zip"
+              type="number"
               value={donorFormState.zip}
               onChange={handleChange} 
               />

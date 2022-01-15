@@ -90,6 +90,7 @@ const CreateStudentForm = () => {
                 data-type="currency"
                 placeholder="$ 12,000"
                 value={formState.fundingNeeded}
+                type="number"
                 onChange={handleChange}
                 name="fundingNeeded"
               />
