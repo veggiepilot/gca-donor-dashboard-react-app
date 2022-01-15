@@ -17,6 +17,7 @@ import SignIn from "./views/signIn";
 import SignUp from "./views/signUp";
 import StudentCreationView from "./views/studentCreationView";
 import Layout from "./views/layout";
+import DonationForm from "./components/forms/donationForm";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
@@ -67,6 +68,8 @@ function App() {
             <Route path="Donor" element={<DonorView />} />
             <Route path="NewDonor" element={<NewDonorView />} />
             <Route path="Account" element={<AccountView />} />
+            <Route path="donor/newdonation/:donorId" element={ <DonationForm/>}/>
+             
           </Route>
         </Routes>
       </Router>

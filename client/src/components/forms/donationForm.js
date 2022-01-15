@@ -5,6 +5,7 @@ import { useQuery } from '@apollo/client';
 import { QUERY_STUDENTS } from "../../utils/queries"
 
 const DonationForm = () => {
+  return(
 <DropdownButton id="dropdown-basic-button" title="Dropdown button">
   <Dropdown.Item href="#/action-1">Students</Dropdown.Item>
     
@@ -16,6 +17,7 @@ const DonationForm = () => {
 
 
 </DropdownButton>
+  )
 }
 
 export default DonationForm;

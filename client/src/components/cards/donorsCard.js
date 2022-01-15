@@ -12,6 +12,7 @@ import {
 import { Icon } from "@iconify/react";
 import { QUERY_DONORS } from "../../utils/queries";
 import { useQuery } from '@apollo/client';
+import { Link } from 'react-router-dom';
 
 const DonorsCard = () => {
   const { error, data } = useQuery(QUERY_DONORS);
@@ -42,19 +43,22 @@ const DonorsCard = () => {
             <Table>
               <thead>
                 <tr>
-                  <th>#</th>
                   <th>First Name</th>
                   <th>Last Name</th>
                   <th>Times Donated</th>
+                  <th></th>
                 </tr>
               </thead>
               {donors && donors.map((donor) =>(
               <tbody key={donor._id}>
                 <tr>
-                  <td>{donor._id}</td>
                   <td>{donor.firstName}</td>
                   <td>{donor.lastName}</td>
                   <td>N/A</td>
+                  <td><Link to={`./newdonation/:${donor._id}`}>
+                  <Button>Donate</Button>
+                  </Link>
+                  </td>
                 </tr>
               </tbody>
               ))}
