@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-duplicate-props */
 import { Form, Row, Col, Button, Stack, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 // import { useState } from "react";

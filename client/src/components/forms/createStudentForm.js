@@ -4,7 +4,17 @@ import { Link } from "react-router-dom";
 import React, { useState } from "react";
 import { useMutation } from "@apollo/client";
 import { ADD_STUDENT } from "../../utils/mutations";
+import { onError } from "@apollo/client/link/error";
 
+// const errorLink = onError(({ graphQLErrors, networkError }) => {
+//   if (graphQLErrors)
+//     graphQLErrors.forEach(({ message, locations, path }) =>
+//       console.log(
+//         `[GraphQL error]: Message: ${message}, Location: ${locations}, Path: ${path}`
+//       )
+//     );
+//   if (networkError) console.log(`[Network error]: ${networkError}`);
+// });
 
 const CreateStudentForm = () => {
   const [formState, setFormState] = useState({
@@ -15,15 +25,6 @@ const CreateStudentForm = () => {
   });
 
   const [addStudent, { error, data }] = useMutation(ADD_STUDENT);
-
-  const handleChange = (event) => {
-    const { name, value } = event.target;
-
-    setFormState({
-      ...formState,
-      [name]: value,
-    });
-  };
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
@@ -36,7 +37,14 @@ const CreateStudentForm = () => {
       console.error(err);
     }
   };
-  
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+
+    setFormState({
+      ...formState,
+      [name]: value,
+    });
+  };
   return (
     <>
     <div>
@@ -98,13 +106,13 @@ const CreateStudentForm = () => {
               />
             </Form.Group>
 
-            <Form.Group as={Col} controlId="formGridDonor">
+            {/* <Form.Group as={Col} controlId="formGridDonor">
               <Form.Label>Donor</Form.Label>
               <Form.Select defaultValue="Choose...">
                 <option>Choose...</option>
                 <option>...</option>
               </Form.Select>
-            </Form.Group>
+            </Form.Group> */}
           </Row>
         <Stack className="col-md-5 p-2 m-2 mx-auto ">
           {/* <Link to="/dashboard"> */}
