@@ -67,7 +67,13 @@ const typeDefs = gql`
       email: String!,
       phone: String!
     ): Donor
+    
+    addDonation(
+      donorId: ID!
+      amount: Int!
+      ): Donor
+
+    
   }
 `;
-
 module.exports = typeDefs;

@@ -9,7 +9,7 @@ const PledgeCard = () => {
           <Card.Header>Students</Card.Header>
           <Card.Body>
             <Card.Title>
-              <i class="fas fa-user-graduate"></i>
+              <i className="fas fa-user-graduate"></i>
             </Card.Title>
             <Card.Text className="d-flex flex-row justify-content-between p-4">
               <h1 className="d-flex flex-start justify-content-start align-content-center">
@@ -26,7 +26,7 @@ const PledgeCard = () => {
           <Card.Header>Donor Total</Card.Header>
           <Card.Body>
             <Card.Title>
-              <i class="fas fa-user-graduate"></i>
+              <i className="fas fa-user-graduate"></i>
             </Card.Title>
             <Card.Text className="d-flex flex-row justify-content-between p-4">
               <h1 className="d-flex flex-start justify-content-start align-content-center">
@@ -44,7 +44,7 @@ const PledgeCard = () => {
           <Card.Header>Pledge Fund Summary</Card.Header>
           <Card.Body>
             <Card.Title>
-              <i class="fas fa-user-graduate"></i>
+              <i className="fas fa-user-graduate"></i>
             </Card.Title>
             <Card.Text className="d-flex flex-row justify-content-between p-4">
               <h1 className="d-flex flex-start justify-content-start align-content-center">

@@ -6,7 +6,7 @@ import { useState } from "react";
 import { useMutation } from "@apollo/client";
 import { ADD_DONOR } from "../../utils/mutations";
 
-const DonationForm = () => {
+const DonorForm = () => {
  const [donorFormState, setDonorFormState] = useState({
    firstName:"",
    lastName: "",
@@ -124,7 +124,6 @@ const DonationForm = () => {
               <Form.Label>Zip</Form.Label>
               <Form.Control 
               placeholder="55505"
-              type="zip"
               name="zip"
               type="number"
               value={donorFormState.zip}
@@ -183,4 +182,4 @@ const DonationForm = () => {
   );
 };
 
-export default DonationForm;
+export default DonorForm;

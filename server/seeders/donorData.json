@@ -9,7 +9,7 @@
     "zip": 45632,
     "email": "jonsmith@apple.com",
     "phone": "5550235555",
-    "students": [
+    "donation": [
       {
         "studentId": "",
         "amount": 4000
@@ -26,7 +26,7 @@
     "zip": 90210,
     "email": "donna.summer@gmail.com",
     "phone": "5554325555",
-    "students": [
+    "donation": [
       {
         "studentId": "",
         "amount": 5000
@@ -43,7 +43,7 @@
     "zip": 90234,
     "email": "jeff@amazon.com",
     "phone": "5556355555",
-    "students": [
+    "donation": [
       {
         "studentId": "",
         "amount": 1000
@@ -60,7 +60,7 @@
     "zip": 45632,
     "email": "kat@gmail.com",
     "phone": "5554785555",
-    "students": [
+    "donation": [
       {
         "studentId": "",
         "amount": 300
@@ -77,7 +77,7 @@
     "zip": 35428,
     "email": "",
     "phone": "5554895555",
-    "students": [
+    "donation": [
       {
         "studentId": "",
         "amount": 1000
@@ -94,7 +94,7 @@
     "zip": 30805,
     "email": "jane@gmail.com",
     "phone": "5556585555",
-    "students": [
+    "donation": [
       {
         "studentId": "",
         "amount": 6000
@@ -111,7 +111,7 @@
     "zip": 30872,
     "email": "don@gmail.com",
     "phone": "5558962145",
-    "students": [
+    "donation": [
       {
         "studentId": "",
         "amount": 300
@@ -128,7 +128,7 @@
     "zip": 30265,
     "email": "stephanie@gmail.com",
     "phone": "5553624856",
-    "students": [
+    "donation": [
       {
         "studentId": "",
         "amount": 2000
