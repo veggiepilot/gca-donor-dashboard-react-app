@@ -4,9 +4,9 @@ import { useQuery } from '@apollo/client';
 import { QUERY_STUDENTS } from '../../utils/queries'
 
 const CardComponent = () => {
-const { data } = useQuery(QUERY_STUDENTS);
+const { error, data } = useQuery(QUERY_STUDENTS);
 const students = data?.students || [];
-
+ if (error) {return console.log(error.networkError.result.errors) }
   return (
     <>
       <Container className="header d-flex flex-column justify-content-center align-content-center">

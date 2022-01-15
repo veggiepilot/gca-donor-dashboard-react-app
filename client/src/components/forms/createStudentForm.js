@@ -21,7 +21,7 @@ const CreateStudentForm = () => {
     firstName: "",
     lastName: "",
     parentEmail: "",
-    fundingNeeded: "",
+    fundingNeeded: 12000,
   });
 
   const [addStudent, { error, data }] = useMutation(ADD_STUDENT);
@@ -34,7 +34,7 @@ const CreateStudentForm = () => {
         variables: { ...formState },
       });
     } catch (err) {
-      console.error(err);
+      console.error(err.networkError.result.errors);
     }
   };
   const handleChange = (event) => {
