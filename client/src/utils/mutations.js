@@ -64,11 +64,16 @@ export const ADD_DONOR = gql`
 `;
 
 export const ADD_STUDENT = gql`
-  mutation  {
+  mutation addStudent(
+    $firstName: String!
+    $lastName: String!
+    $parentEmail: String!
+    $fundingNeeded: Int!
+  ) {
     addStudent(
-      firstName: $firstName,
-      lastName: $lastName,
-      parentEmail: $parentEmail,
+      firstName: $firstName
+      lastName: $lastName
+      parentEmail: $parentEmail
       fundingNeeded: $fundingNeeded
     ) {
       _id
@@ -79,3 +84,12 @@ export const ADD_STUDENT = gql`
     }
   }
 `;
+
+// test mutation for graphql
+// mutation { addStudent( firstName: "Sophie", lastName: "Maskill", parentEmail: "sarah@gmail.com", fundingNeeded: 3123){
+//   firstName
+//   lastName
+//   parentEmail
+//   fundingNeeded
+// }
+// }
