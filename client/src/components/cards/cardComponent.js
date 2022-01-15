@@ -1,7 +1,14 @@
 import { Card, Container, Col, Row } from "react-bootstrap";
 import { Icon } from "@iconify/react";
+import { useQuery } from '@apollo/client';
+import { QUERY_ALL } from '../../utils/queries'
 
 const CardComponent = () => {
+const { error, data } = useQuery(QUERY_ALL);
+const students = data?.students || [];
+const donors = data?.donors || [];
+ if (error) {return console.log(error.networkError.result.errors) };
+
   return (
     <>
       <Container className="header d-flex flex-column justify-content-center align-content-center">
@@ -20,7 +27,7 @@ const CardComponent = () => {
                 </Col>
                 <Col>
                 <Card.Text>
-                  <h3>23</h3>
+                  <h3>{students.length}</h3>
                 </Card.Text>
                 <h3>
                   <Icon icon="ph:student-fill" width="50" height="50" />
@@ -36,7 +43,7 @@ const CardComponent = () => {
                   <h5>Total Donors</h5>
                 </Card.Title>
                 <Card.Text>
-                  <h3>13</h3>
+                  <h3>{donors.length}</h3>
                 </Card.Text>
                 <h3>
                   <Icon icon="iconoir:donate" width="50" height="50" />

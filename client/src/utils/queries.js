@@ -1,5 +1,27 @@
 import { gql } from "@apollo/client";
 
+export const QUERY_ALL = gql`
+query all{
+  students {
+    firstName
+    lastName
+    parentEmail
+    fundingNeeded
+  }
+  donors {
+    firstName
+    lastName
+    address1
+    address2
+    city
+    state
+    zip
+    email
+    phone
+}
+}
+`
+
 export const QUERY_DONORS = gql`
   query allDonors {
     donors {
@@ -24,7 +46,6 @@ export const QUERY_STUDENTS = gql`
       lastName
       parentEmail
       fundingNeeded
-      donors
     }
   }
 `;
@@ -66,7 +87,6 @@ export const getStudentQuery = gql`
       lastName
       parentEmail
       fundingNeeded
-      donors
     }
   }
 `;

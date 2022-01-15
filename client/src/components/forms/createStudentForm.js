@@ -5,25 +5,15 @@ import React, { useState } from "react";
 import { useMutation } from "@apollo/client";
 import { ADD_STUDENT } from "../../utils/mutations";
 
-
 const CreateStudentForm = () => {
   const [formState, setFormState] = useState({
     firstName: "",
     lastName: "",
     parentEmail: "",
-    fundingNeeded: "",
+    fundingNeeded: 12000,
   });
 
   const [addStudent, { error, data }] = useMutation(ADD_STUDENT);
-
-  const handleChange = (event) => {
-    const { name, value } = event.target;
-
-    setFormState({
-      ...formState,
-      [name]: value,
-    });
-  };
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
@@ -33,16 +23,23 @@ const CreateStudentForm = () => {
         variables: { ...formState },
       });
     } catch (err) {
-      console.error(err);
+      console.error(err.networkError.result.errors);
     }
   };
-  
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+
+    setFormState({
+      ...formState,
+      [name]: value,
+    });
+  };
   return (
     <>
     <div>
     {data ? (
           <p>
-            Success! You may now head <Link to="/">back to the homepage.</Link>
+            Success! You may now head <Link to="/dashboard">back to the homepage.</Link>
           </p>
         ) : (
       <div>
@@ -93,18 +90,19 @@ const CreateStudentForm = () => {
                 data-type="currency"
                 placeholder="$ 12,000"
                 value={formState.fundingNeeded}
+                type="number"
                 onChange={handleChange}
                 name="fundingNeeded"
               />
             </Form.Group>
 
-            <Form.Group as={Col} controlId="formGridDonor">
+            {/* <Form.Group as={Col} controlId="formGridDonor">
               <Form.Label>Donor</Form.Label>
               <Form.Select defaultValue="Choose...">
                 <option>Choose...</option>
                 <option>...</option>
               </Form.Select>
-            </Form.Group>
+            </Form.Group> */}
           </Row>
         <Stack className="col-md-5 p-2 m-2 mx-auto ">
           {/* <Link to="/dashboard"> */}
@@ -117,7 +115,6 @@ const CreateStudentForm = () => {
       </Container>
       </div>
        )}
-
        {error && (
          <div className="my-3 p-3 bg-danger text-white">{error.message}</div>
        )}
