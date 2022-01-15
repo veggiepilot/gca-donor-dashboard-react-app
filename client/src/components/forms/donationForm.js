@@ -1,6 +1,7 @@
 import React from "react";
+import DropdownButton from 'react-bootstrap/DropdownButton';
+import Dropdown from 'react-bootstrap/Dropdown'
 import { useQuery } from '@apollo/client';
-import { QUERY_DONORS } from "../../utils/queries";
 import { QUERY_STUDENTS } from "../../utils/queries"
 
 const DonationForm = () => {
@@ -15,5 +16,6 @@ const DonationForm = () => {
 
 
 </DropdownButton>
+}
 
 export default DonationForm;
