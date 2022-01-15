@@ -1,7 +1,7 @@
-import { Card } from "react-bootstrap";
-import React from "react";
-import { MDBContainer } from "mdbreact";
-import { Bar } from "react-chartjs-2";
+import { Card } from "react-bootstrap"
+import React from "react"
+import { MDBContainer } from "mdbreact"
+import { Bar } from "react-chartjs-2"
   
 const DonorsTable = () => {
   
