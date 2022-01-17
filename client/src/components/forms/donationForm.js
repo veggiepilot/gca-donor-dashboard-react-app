@@ -98,7 +98,9 @@ const DonationForm = () => {
                 </Row>
 
                 <Row>
-                  <select
+                <Form.Group as={Col} controlId="formDridStudentId">
+                  <Form.Label>Select A Student</Form.Label>
+                  <Form.Select
                     value={formState.studentId}
                     onChange={handleChange}
                     name="studentId">
@@ -108,7 +110,8 @@ const DonationForm = () => {
                           {firstName} {lastName}
                         </option>
                       ))}
-                  </select>
+                  </Form.Select>
+                  </Form.Group>
                 </Row>
                 <Stack className="col-md-5 p-2 m-2 mx-auto ">
                   <Button variant="light" type="submit">
