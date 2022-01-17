@@ -7,6 +7,8 @@ import {
 } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import algoliasearch from 'algoliasearch/lite';
+import { InstantSearch } from 'react-instantsearch-dom';
 import React from "react";
 import Dashboard from "./components/dashboard";
 import StudentTabs from "./components/studentTabs";
@@ -20,6 +22,8 @@ import Layout from "./views/layout";
 import DonationForm from "./components/forms/donationForm";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
+
+const searchClient = algoliasearch('TVBBEWQ9E1', '2fe73286a5e66c57551f04ea9670778c');
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -47,6 +51,7 @@ const client = new ApolloClient({
 
 function App() {
   return (
+  <InstantSearch searchClient={searchClient} indexName="demo_ecommerce">
     <ApolloProvider client={client}>
       {/* <Header />
       <SignIn /> */}
@@ -72,6 +77,7 @@ function App() {
         </Routes>
       </Router>
     </ApolloProvider>
+  </InstantSearch>
   );
 }
 

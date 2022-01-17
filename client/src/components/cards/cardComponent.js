@@ -1,89 +1,77 @@
-import { Card, Container, Col, Row } from "react-bootstrap";
+import { Card, Container, Col, Row, Table} from "react-bootstrap";
 import { Icon } from "@iconify/react";
-import { useQuery } from '@apollo/client';
-import { QUERY_ALL } from '../../utils/queries'
+import { useQuery } from "@apollo/client";
+import { QUERY_ALL } from "../../utils/queries";
 
 const CardComponent = () => {
-const { error, data } = useQuery(QUERY_ALL);
-const students = data?.students || [];
-const donors = data?.donors || [];
- if (error) {return console.log(error.networkError.result.errors) };
+  const { error, data } = useQuery(QUERY_ALL);
+  const students = data?.students || [];
+  const donors = data?.donors || [];
+  if (error) {
+    return console.log(error.networkError.result.errors);
+  }
 
   return (
     <>
       <Container className="header d-flex flex-column justify-content-center align-content-center">
         <h1 className="py-2">GAC Admin Dashboard</h1>
       </Container>
-
       <Container className="d-flex flex-column justify-content-center align-content-center">
         <Row>
           <Col lg={3}>
-            <Card className="text-center d-flex flex-column justify-content-center align-content-center">
-              <Card.Body>
-                <Col>
+            <Card className="text-center">
+              <Card.Body> 
                 <Card.Title>
                   <h5>Total Students</h5>
+                  <h4>{students.length}</h4>
                 </Card.Title>
-                </Col>
-                <Col>
-                <Card.Text>
-                  <h3>{students.length}</h3>
-                </Card.Text>
-                <h3>
-                  <Icon icon="ph:student-fill" width="50" height="50" />
-                </h3>
-                </Col>
+                  <Card.Text>
+                    <Icon icon="ph:student-fill" width="30" height="30" />
+                 </Card.Text>
               </Card.Body>
             </Card>
           </Col>
           <Col lg={3}>
-            <Card className="text-center d-flex flex-column justify-content-center align-content-center">
+            <Card className="text-center">
               <Card.Body>
                 <Card.Title>
                   <h5>Total Donors</h5>
+                  <h4>{donors.length}</h4>
                 </Card.Title>
                 <Card.Text>
-                  <h3>{donors.length}</h3>
+                <Icon icon="iconoir:donate" width="30" height="30" />
                 </Card.Text>
-                <h3>
-                  <Icon icon="iconoir:donate" width="50" height="50" />
-                </h3>
               </Card.Body>
             </Card>
           </Col>
           <Col lg={3}>
-            <Card className="text-center d-flex flex-column justify-content-center align-content-center">
+            <Card className="text-center">
               <Card.Body>
                 <Card.Title>
                   <h5>Pledge Total YTD</h5>
+                  <h4>$65,232</h4>
                 </Card.Title>
                 <Card.Text>
-                  <h3>$65,232</h3>
+                   <Icon icon="fa-solid:donate" width="30" height="30" />
                 </Card.Text>
-                <h3>
-                  <Icon icon="fa-solid:donate" width="50" height="50" />
-                </h3>
               </Card.Body>
             </Card>
           </Col>
           <Col lg={3}>
-            <Card className="text-center d-flex flex-column justify-content-center align-content-center">
+            <Card className="text-center">
               <Card.Body>
                 <Card.Title>
                   <h5>Avg Donation YTD</h5>
+                  <h4>$600</h4>
                 </Card.Title>
                 <Card.Text>
-                  <h3>$600</h3>
+                  <Icon icon="fa-solid:donate" width="30" height="30" />
                 </Card.Text>
-                <h3>
-                  <Icon icon="fa-solid:donate" width="50" height="50" />
-                </h3>
               </Card.Body>
             </Card>
           </Col>
         </Row>
       </Container>
-
       <Container className=" mt-2 d-flex flex-column justify-content-center align-content-center">
         <Row>
           <Col lg={4}>
@@ -116,80 +104,35 @@ const donors = data?.donors || [];
         <Row>
           <Col lg={12}>
             <Card className="text-center d-flex flex-column justify-content-center align-content-center">
+              <Card.Title>Student List</Card.Title>
               <Card.Body>
-                <Card.Title className="d-flex flex-row justify-content-start m-1 p-4">
-                  <h1>Announcements</h1>
-                </Card.Title>
-                <Card.Text className="d-flex flex-row justify-content-around p-2">
-                  <h3>9/12/2022</h3>
-                </Card.Text>
-                <article>
-                  Section 1.10.33 of "de Finibus Bonorum et Malorum", written by
-                  Cicero in 45 BC "At vero eos et accusamus et iusto odio
-                  dignissimos ducimus qui blanditiis praesentium voluptatum
-                  deleniti atque corrupti quos dolores et quas molestias us
-                  saepe eveniet ut et voluptates repudiandae sint et molestiae
-                  non recusandae. Itaque earum rerum hic tenetur a sapiente
-                  delectus, ut aut reiciendis voluptatibus maiores alias
-                  consequatur aut perferendis doloribus asperiores repellat."
-                </article>
+                <Table>
+                  <thead>
+                    <tr>
+                      <th>#</th>
+                      <th>First Name</th>
+                      <th>Last Name</th>
+                      <th>Funding Needed</th>
+                    </tr>
+                  </thead>
+                  {students &&
+                    students.map((student) => (
+                      <tbody key={student._id}>
+                        <tr>
+                          <td>{student._id}</td>
+                          <td>{student.firstName}</td>
+                          <td>{student.lastName}</td>
+                          <td>{student.fundingNeeded}</td>
+                        </tr>
+                      </tbody>
+                    ))}
+                </Table>
               </Card.Body>
             </Card>
           </Col>
         </Row>
       </Container>
-      <Container className="mt-2">
-        <Row>
-          <Col lg={12}>
-            <Card className="text-center d-flex flex-column justify-content-center align-content-center">
-              <Card.Body>
-                <Card.Title className="d-flex flex-row justify-content-start m-1 p-4">
-                  <h1>Announcements</h1>
-                </Card.Title>
-                <Card.Text className="d-flex flex-row justify-content-around p-2">
-                  <h3>9/09/2022</h3>
-                </Card.Text>
-                <article>
-                  Section 1.10.33 of "de Finibus Bonorum et Malorum", written by
-                  Cicero in 45 BC "At vero eos et accusamus et iusto odio
-                  dignissimos ducimus qui blanditiis praesentium voluptatum
-                  deleniti atque corrupti quos dolores et quas molestias us
-                  saepe eveniet ut et voluptates repudiandae sint et molestiae
-                  non recusandae. Itaque earum rerum hic tenetur a sapiente
-                  delectus, ut aut reiciendis voluptatibus maiores alias
-                  consequatur aut perferendis doloribus asperiores repellat."
-                </article>
-              </Card.Body>
-            </Card>
-          </Col>
-        </Row>
-      </Container>
-      <Container className="mt-2">
-        <Row>
-          <Col lg={12}>
-            <Card className="text-center d-flex flex-column justify-content-center align-content-center">
-              <Card.Body>
-                <Card.Title className="d-flex flex-row justify-content-start m-1 p-4">
-                  <h1>Announcements</h1>
-                </Card.Title>
-                <Card.Text className="d-flex flex-row justify-content-around p-2">
-                  <h3>8/26/2022</h3>
-                </Card.Text>
-                <article>
-                  Section 1.10.33 of "de Finibus Bonorum et Malorum", written by
-                  Cicero in 45 BC "At vero eos et accusamus et iusto odio
-                  dignissimos ducimus qui blanditiis praesentium voluptatum
-                  deleniti atque corrupti quos dolores et quas molestias us
-                  saepe eveniet ut et voluptates repudiandae sint et molestiae
-                  non recusandae. Itaque earum rerum hic tenetur a sapiente
-                  delectus, ut aut reiciendis voluptatibus maiores alias
-                  consequatur aut perferendis doloribus asperiores repellat."
-                </article>
-              </Card.Body>
-            </Card>
-          </Col>
-        </Row>
-      </Container>
+
     </>
   );
 };

@@ -10,65 +10,22 @@ import {
   Container,
   Stack,
 } from "react-bootstrap";
-import { Icon } from "@iconify/react";
-import { useQuery } from '@apollo/client'
-import { QUERY_STUDENTS } from "../utils/queries";
 
 const StudentTabs = () => {
-  const { error, data } = useQuery(QUERY_STUDENTS);
-
-  const students = data?.students || [];
-  if (error) {return console.log(error) };
-
   return (
     <>
-      <Container className="d-flex flex-column justify-content-start align-content-start p-3 w-25 fixed-top">
+      <Container className="d-flex flex-column justify-content-start align-content-start p-3 w-25">
         <Stack direction="horizontal">
-          <Form.Control className="me-auto" placeholder="Search..." />
+        <Form.Control className="me-auto" placeholder="Search..." />
           <div className="vr" />
           <Button variant="light">Find</Button>
         </Stack>
       </Container>
-
       <Tabs
         defaultActiveKey="home"
         id="tab"
         className="userTabs d-flex flex-row justify-content-center align-content-center"
       >
-        <Tab eventKey="home" title="Students">
-        <Container className=" d-flex flex-row justify-content-center align-content-center">
-        <Card className="text-center w-100 d-flex flex-column justify-content-center align-content-center m-2">
-          <Card.Header>Student List</Card.Header>
-          
-          <Card.Body>
-            <Card.Title>
-              <Icon icon="ph:student-fill" width="50" height="50" />
-            </Card.Title>
-      
-            <Table>
-              <thead>
-                <tr>
-                  <th>#</th>
-                  <th>First Name</th>
-                  <th>Last Name</th>
-                  <th>Funding Needed</th>
-                </tr>
-              </thead>
-              {students && students.map((student) =>(
-              <tbody key={student._id}>
-                <tr>
-                  <td>{student._id}</td>
-                  <td>{student.firstName}</td>
-                  <td>{student.lastName}</td>
-                  <td>{student.fundingNeeded}</td>
-                </tr>
-              </tbody>
-              ))}
-            </Table>
-          </Card.Body>
-        </Card>
-      </Container>
-        </Tab>
         <Tab eventKey="notes" title="Notes">
           <Row className="d-flex flex-row justify-content-center align-content-center">
             <Col sm={8}>

@@ -23,23 +23,20 @@ const DonorsCard = () => {
   // }
   return (
     <>
-      <Container className="d-flex flex-column justify-content-start align-content-start p-3 w-25 fixed-top">
+      <Container className=" d-flex flex-row justify-content-center align-content-center">
+        <Card className="text-center w-100 d-flex flex-column justify-content-center align-content-center m-2">
+          <Card.Header> Donors&nbsp;&nbsp;
+              <Icon  icon="ph:student-fill" width="50" height="50" />
+              &nbsp;&nbsp;students
+              <Container className="d-flex flex-column justify-content-start align-content-start p-3 w-25">
         <Stack direction="horizontal">
           <Form.Control className="me-auto" placeholder="Search..." />
           <div className="vr" />
           <Button variant="light">Find</Button>
         </Stack>
       </Container>
-
-      <Container className=" d-flex flex-row justify-content-center align-content-center">
-        <Card className="text-center w-100 d-flex flex-column justify-content-center align-content-center m-2">
-          <Card.Header>Donor List</Card.Header>
-          
+              </Card.Header>
           <Card.Body>
-            <Card.Title>
-              <Icon icon="ph:student-fill" width="50" height="50" />
-            </Card.Title>
-      
             <Table>
               <thead>
                 <tr>
@@ -78,7 +75,7 @@ const DonorsCard = () => {
                 </Card.Title>
                 <Card.Text className="d-flex flex-row justify-content-center p-4">
                   <h1 className="d-flex flex-start justify-content-start align-content-center">
-                    13
+                    {donors.length}
                   </h1>
                 </Card.Text>
               </Card.Body>
