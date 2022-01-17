@@ -4,12 +4,16 @@ import { useQuery } from '@apollo/client';
 import { QUERY_ALL } from '../../utils/queries'
 
 const CardComponent = () => {
-const { error, data } = useQuery(QUERY_ALL);
-const students = data?.students || [];
-const donors = data?.donors || [];
-const totalFundingNeeded = (students) => {
-  
-}
+  const { error, data } = useQuery(QUERY_ALL);
+  const students = data?.students || [];
+  const donors = data?.donors || [];
+  console.log(donors);
+
+  let totalFundingNeeded = 0;
+  students.map((student) => {
+    return totalFundingNeeded += student.fundingNeeded
+  })
+
  if (error) {return console.log(error.networkError.result.errors) };
 
   return (
@@ -108,7 +112,7 @@ const totalFundingNeeded = (students) => {
                   Funding Goal
                 </Card.Title>
                 <Card.Text className="d-flex flex-row justify-content-center p-2">
-                  <h3>$150,000</h3>
+                  <h3><span>$</span>{totalFundingNeeded.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</h3>
                 </Card.Text>
               </Card.Body>
             </Card>

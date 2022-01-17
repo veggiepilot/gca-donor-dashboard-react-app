@@ -12,7 +12,7 @@ const typeDefs = gql`
     zip: Int
     email: String
     phone: String
-    students: [Student]
+    donation: String
   }
 
   type Student {

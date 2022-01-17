@@ -10,24 +10,21 @@ import { QUERY_STUDENTS } from "../../utils/queries";
 import { Link } from "react-router-dom";
 
 const DonationForm = () => {
-
-  return(
-  <DropdownButton id="dropdown-basic-button" title="Dropdown button">
-    <Dropdown.Item href="#/action-1">Students</Dropdown.Item>
-      
-
-    <Dropdown.Item href="#/action-2">Donation Amount</Dropdown.Item>
-
   const [formState, setFormState] = useState({
     amount: "",
     date: "",
     studentId: "",
   });
+
+  const { queryError, queryData } = useQuery(QUERY_STUDENTS);
+  const students = queryData?.students;
+  console.log(students);
+
   
   const [addDonation, { error, data }] = useMutation(ADD_DONATION);
   
-  const { queryError, queryData } = useQuery(QUERY_STUDENTS);
-  const students = queryData?.students;
+  
+
   if (queryError) {
     return console.log(queryError);
   }
@@ -41,7 +38,6 @@ const DonationForm = () => {
       });
     } catch (err) {
       console.error(err.networkError.result.errors);
-      console.log(students)
     }
   };
   const handleChange = (event) => {
@@ -58,13 +54,6 @@ const DonationForm = () => {
     });
   };
 
-
-    <Dropdown.Item href="#/action-3">Donation Date</Dropdown.Item>
-
-
-  </DropdownButton>
-  )
-}
   return (
     <div>
       {data ? (

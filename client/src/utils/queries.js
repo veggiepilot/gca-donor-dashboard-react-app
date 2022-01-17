@@ -37,6 +37,11 @@ export const QUERY_DONORS = gql`
       zip
       email
       phone
+      donation{
+        studentId
+        amount
+        date
+      }
     }
   }
 `;
@@ -77,7 +82,11 @@ export const QUERY_SINGLE_DONOR = gql`
       zip
       email
       phone
-      donations
+      donation{
+        studentId
+        amount
+        date
+      }
     }
   }
 `;
