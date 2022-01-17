@@ -89,6 +89,8 @@ export const ADD_DONATION = gql `
  mutation addDonation(
    $donorId: ID!
    $amount: Int!
+   $date: String!
+   $studentId: ID!
  ) {
    addDonation(
      donorId: $donorId
@@ -100,7 +102,7 @@ export const ADD_DONATION = gql `
      firstName
      lastName
      email
-     donations {
+     donation {
        _id
        studentId
        amount

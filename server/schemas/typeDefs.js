@@ -69,8 +69,10 @@ const typeDefs = gql`
     ): Donor
     
     addDonation(
-      donorId: ID!
-      amount: Int!
+      donorId: ID!,
+      amount: Int!,
+      date: String!
+      studentId: ID!
       ): Donor
 
     

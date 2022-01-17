@@ -48,7 +48,7 @@ const donorSchema = new Schema({
         {
             studentId: {
                 type: String,
-                required: "Student required"
+            
             },
             amount: {
                 type: Number,

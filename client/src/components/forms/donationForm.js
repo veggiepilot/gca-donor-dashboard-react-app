@@ -1,24 +1,17 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 import { Form, Row, Col, Button, Stack, Container } from "react-bootstrap";
-import DropdownButton from "react-bootstrap/DropdownButton";
-import Dropdown from "react-bootstrap/Dropdown";
 import { useMutation } from "@apollo/client";
+import { useParams } from 'react-router-dom';
 import { ADD_DONATION } from "../../utils/mutations";
 import { useQuery } from "@apollo/client";
 import { QUERY_STUDENTS } from "../../utils/queries";
 import { Link } from "react-router-dom";
 
 const DonationForm = () => {
-
-  return(
-  <DropdownButton id="dropdown-basic-button" title="Dropdown button">
-    <Dropdown.Item href="#/action-1">Students</Dropdown.Item>
-      
-
-    <Dropdown.Item href="#/action-2">Donation Amount</Dropdown.Item>
-
+  const { donorId } = useParams();
   const [formState, setFormState] = useState({
+    donorId: donorId,
     amount: "",
     date: "",
     studentId: "",
@@ -27,7 +20,8 @@ const DonationForm = () => {
   const [addDonation, { error, data }] = useMutation(ADD_DONATION);
   
   const { queryError, queryData } = useQuery(QUERY_STUDENTS);
-  const students = queryData?.students;
+  const students = queryData?.students || [];
+  console.log(students)
   if (queryError) {
     return console.log(queryError);
   }
@@ -51,20 +45,12 @@ const DonationForm = () => {
       if (isNaN(value)) value = 0;
     }
 
-
     setFormState({
       ...formState,
       [name]: value,
     });
   };
 
-
-    <Dropdown.Item href="#/action-3">Donation Date</Dropdown.Item>
-
-
-  </DropdownButton>
-  )
-}
   return (
     <div>
       {data ? (
