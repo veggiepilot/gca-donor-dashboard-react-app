@@ -10,6 +10,14 @@ import { QUERY_STUDENTS } from "../../utils/queries";
 import { Link } from "react-router-dom";
 
 const DonationForm = () => {
+
+  return(
+  <DropdownButton id="dropdown-basic-button" title="Dropdown button">
+    <Dropdown.Item href="#/action-1">Students</Dropdown.Item>
+      
+
+    <Dropdown.Item href="#/action-2">Donation Amount</Dropdown.Item>
+
   const [formState, setFormState] = useState({
     amount: "",
     date: "",
@@ -43,12 +51,20 @@ const DonationForm = () => {
       if (isNaN(value)) value = 0;
     }
 
+
     setFormState({
       ...formState,
       [name]: value,
     });
   };
 
+
+    <Dropdown.Item href="#/action-3">Donation Date</Dropdown.Item>
+
+
+  </DropdownButton>
+  )
+}
   return (
     <div>
       {data ? (

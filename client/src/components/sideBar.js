@@ -56,7 +56,7 @@ const SideBar = () => {
                     to="/account"
                     className="text-decoration-none text-dark"
                   >
-                    Account Overveiw
+                    Account Overview
                   </Link>
                 </Accordion.Body>
               </Accordion.Item>

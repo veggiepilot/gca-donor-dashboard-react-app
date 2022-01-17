@@ -20,7 +20,7 @@ query all{
     zip
     email
     phone
-}
+  }
 }
 `
 
