@@ -3,12 +3,14 @@ import { gql } from "@apollo/client";
 export const QUERY_ALL = gql`
 query all{
   students {
+    _id
     firstName
     lastName
     parentEmail
     fundingNeeded
   }
   donors {
+    _id
     firstName
     lastName
     address1

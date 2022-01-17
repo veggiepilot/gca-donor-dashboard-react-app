@@ -5,7 +5,7 @@ const donorSeed = require("./donorData.json");
 const studentSeed = require("./studentData.json");
 const userSeed = require("./userData.json");
 
-mongoose.connect(process.env.MONGODB_URI, {
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/gca-dashboard', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 });
