@@ -18,7 +18,7 @@ query all{
     zip
     email
     phone
-}
+  }
 }
 `
 
@@ -42,6 +42,7 @@ export const QUERY_DONORS = gql`
 export const QUERY_STUDENTS = gql`
   query allStudents {
     students {
+      _id
       firstName
       lastName
       parentEmail

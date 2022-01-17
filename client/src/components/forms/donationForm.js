@@ -6,17 +6,17 @@ import { QUERY_STUDENTS } from "../../utils/queries"
 
 const DonationForm = () => {
   return(
-<DropdownButton id="dropdown-basic-button" title="Dropdown button">
-  <Dropdown.Item href="#/action-1">Students</Dropdown.Item>
-    
+  <DropdownButton id="dropdown-basic-button" title="Dropdown button">
+    <Dropdown.Item href="#/action-1">Students</Dropdown.Item>
+      
 
-  <Dropdown.Item href="#/action-2">Donation Amount</Dropdown.Item>
-
-
-  <Dropdown.Item href="#/action-3">Donation Date</Dropdown.Item>
+    <Dropdown.Item href="#/action-2">Donation Amount</Dropdown.Item>
 
 
-</DropdownButton>
+    <Dropdown.Item href="#/action-3">Donation Date</Dropdown.Item>
+
+
+  </DropdownButton>
   )
 }
 

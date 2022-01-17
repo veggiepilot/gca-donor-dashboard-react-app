@@ -7,12 +7,15 @@ const CardComponent = () => {
 const { error, data } = useQuery(QUERY_ALL);
 const students = data?.students || [];
 const donors = data?.donors || [];
+const totalFundingNeeded = (students) => {
+  
+}
  if (error) {return console.log(error.networkError.result.errors) };
 
   return (
     <>
       <Container className="header d-flex flex-column justify-content-center align-content-center">
-        <h1 className="py-2">GAC Admin Dashboard</h1>
+        <h1 className="py-2">GCA Admin Dashboard</h1>
       </Container>
 
       <Container className="d-flex flex-column justify-content-center align-content-center">
@@ -93,7 +96,7 @@ const donors = data?.donors || [];
                   Students In Need
                 </Card.Title>
                 <Card.Text className="d-flex flex-row justify-content-around p-2">
-                  <h3>23</h3>
+                  <h3>{students.length}</h3>
                 </Card.Text>
               </Card.Body>
             </Card>

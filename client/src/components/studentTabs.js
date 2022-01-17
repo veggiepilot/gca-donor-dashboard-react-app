@@ -55,7 +55,7 @@ const StudentTabs = () => {
                 </tr>
               </thead>
               {students && students.map((student) =>(
-              <tbody key={student._id}>
+              <tbody key={student._id}> 
                 <tr>
                   <td>{student._id}</td>
                   <td>{student.firstName}</td>
