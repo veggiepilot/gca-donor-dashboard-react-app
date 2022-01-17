@@ -16,7 +16,8 @@ const DonationForm = () => {
     date: "",
     studentId: "",
   });
-  
+
+ 
   const [addDonation, { error, data }] = useMutation(ADD_DONATION);
   
   const { queryError, queryData } = useQuery(QUERY_STUDENTS);
@@ -35,7 +36,6 @@ const DonationForm = () => {
       });
     } catch (err) {
       console.error(err.networkError.result.errors);
-      console.log(students)
     }
   };
   const handleChange = (event) => {
