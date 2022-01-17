@@ -37,11 +37,6 @@ export const QUERY_DONORS = gql`
       zip
       email
       phone
-      donation {
-        studentId
-        amount
-        date
-      }
     }
   }
 `;
