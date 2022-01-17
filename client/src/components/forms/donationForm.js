@@ -7,7 +7,7 @@ import { useMutation } from "@apollo/client";
 import { ADD_DONATION } from "../../utils/mutations";
 import { useQuery } from "@apollo/client";
 import { QUERY_STUDENTS } from "../../utils/queries";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 const DonationForm = () => {
   const [formState, setFormState] = useState({
@@ -15,8 +15,14 @@ const DonationForm = () => {
     date: "",
     studentId: "",
   });
-
+  
   const [addDonation, { error, data }] = useMutation(ADD_DONATION);
+  
+  const { queryError, queryData } = useQuery(QUERY_STUDENTS);
+  const students = queryData?.students;
+  if (queryError) {
+    return console.log(queryError);
+  }
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
@@ -27,29 +33,21 @@ const DonationForm = () => {
       });
     } catch (err) {
       console.error(err.networkError.result.errors);
+      console.log(students)
     }
   };
   const handleChange = (event) => {
     let { name, value } = event.target;
-    console.log(name, value);
-    console.log(typeof name, typeof value);
     if (name === "amount") {
       value = parseInt(value, 10);
       if (isNaN(value)) value = 0;
     }
-
-    console.log(typeof name, typeof value);
 
     setFormState({
       ...formState,
       [name]: value,
     });
   };
-  const { errorStudent, dataStudent } = useQuery(QUERY_STUDENTS);
-  const students = dataStudent?.students || [];
-  if (errorStudent) {
-    return console.log(errorStudent.networkError.result.errors);
-  }
 
   return (
     <div>
@@ -90,20 +88,20 @@ const DonationForm = () => {
                     />
                   </Form.Group>
                 </Row>
-                  {students &&
-                    students.map((student) => (
+
                 <Row>
-                      <DropdownButton
-                      id="dropdown-basic-button"
-                      title="Select A Student"
-                      key={students._id}
-                      >
-                        <Dropdown.Item type="id" value={formState.studentId} onChange={handleChange} name="studentId">
-                          {student.firstname} {student.lastname}
-                        </Dropdown.Item>
-                      </DropdownButton>
+                  <select
+                    value={formState.studentId}
+                    onChange={handleChange}
+                    name="studentId">
+                    {students &&
+                      students.map(({ _id, firstName, lastName}) => (
+                        <option key={_id} value={_id}>
+                          {firstName} {lastName}
+                        </option>
+                      ))}
+                  </select>
                 </Row>
-                ))}
                 <Stack className="col-md-5 p-2 m-2 mx-auto ">
                   <Button variant="light" type="submit">
                     Create
