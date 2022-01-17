@@ -8,14 +8,14 @@ import {
 import { setContext } from "@apollo/client/link/context";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import React from "react";
-import DashboardView from "./views/dashboardView";
-import StudentVeiw from "./views/studentView";
-import DonorView from "./views/donorView";
-import AccountView from "./views/accountView";
-import NewDonorView from "./views/newDonorView";
+import Dashboard from "./components/dashboard";
+import StudentTabs from "./components/studentTabs";
+import DonorsCard from "./components/cards/donorsCard";
+import AccountForm from "./components/forms/accountForm";
+import DonorForm from "./components/forms/donorForm";
 import SignIn from "./views/signIn";
 import SignUp from "./views/signUp";
-import StudentCreationView from "./views/studentCreationView";
+import CreateStudentForm from "./components/forms/createStudentForm";
 import Layout from "./views/layout";
 import DonationForm from "./components/forms/donationForm";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -57,19 +57,17 @@ function App() {
           {/* Landing Page / Login  */}
           <Route path="SignIn" element={<SignIn />} />
           <Route path="SignUp" element={<SignUp />} />
-
           <Route element={<Layout />}>
             {/* Main Dashboard */}
-            <Route path="Dashboard" element={<DashboardView />} />
+            <Route path="Dashboard" element={<Dashboard />} />
             {/* Students View  Links */}
-            <Route path="Student" element={<StudentVeiw />} />
-            <Route path="NewStudent" element={<StudentCreationView />} />
+            <Route path="Student" element={<StudentTabs />} />
+            <Route path="NewStudent" element={<CreateStudentForm/>} />
             {/* Donor View Links */}
-            <Route path="Donor" element={<DonorView />} />
-            <Route path="NewDonor" element={<NewDonorView />} />
-            <Route path="Account" element={<AccountView />} />
+            <Route path="Donor" element={<DonorsCard />} />
+            <Route path="NewDonor" element={<DonorForm />} />
             <Route path="donor/newdonation/:donorId" element={ <DonationForm/>}/>
-             
+            <Route path="Account" element={<AccountForm />} />
           </Route>
         </Routes>
       </Router>
