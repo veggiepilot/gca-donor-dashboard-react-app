@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 import { Form, Row, Col, Button, Stack, Container } from "react-bootstrap";
-import { useMutation } from "@apollo/client";
+import { useMutation, useApolloClient } from "@apollo/client";
 import { useParams } from 'react-router-dom';
 import { ADD_DONATION } from "../../utils/mutations";
 import { useQuery } from "@apollo/client";
@@ -20,12 +20,18 @@ const DonationForm = () => {
  
   const [addDonation, { error, data }] = useMutation(ADD_DONATION);
   
-  const { queryError, queryData } = useQuery(QUERY_STUDENTS);
-  const students = queryData?.students || [];
-  console.log(students)
-  if (queryError) {
-    return console.log(queryError);
-  }
+  const client = useApolloClient();
+  const { students } = client.readQuery({
+    query: QUERY_STUDENTS
+  });
+
+
+  // const { queryError, queryData } = useQuery(QUERY_STUDENTS);
+  // const students = queryData?.students || [];
+  // console.log(students)
+  // if (queryError) {
+  //   return console.log(queryError);
+  // }
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
