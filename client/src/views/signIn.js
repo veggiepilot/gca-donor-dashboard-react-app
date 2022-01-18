@@ -50,7 +50,7 @@ const SignIn = () => {
         </div>
         {data ? (
           <p>
-            Success! You may now head <Link to="/">back to the homepage.</Link>
+            Success! You may now head <Link to="/dashboard">back to the homepage.</Link>
           </p>
         ) : (
         <>
@@ -79,18 +79,18 @@ const SignIn = () => {
               ></input>            
             </div>
             </Row>              
-          </form> 
           <br/>
           <div className="w-50 d-flex flex-row justify-content-end align-content-end">
-          <Link to="/dashboard">
+          {/* <Link to="/dashboard"> */}
               <button
                 type="submit"
                 className="btn btn-secondary btn-lrg"
-              >
+                >
                 Sign In
               </button>
-          </Link>
+          {/* </Link> */}
           </div>
+        </form> 
           <br/>         
            <p className="text-center">
               <small className="text-muted text-center">

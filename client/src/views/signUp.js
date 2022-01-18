@@ -51,9 +51,9 @@ const SignUp = () => {
           <h1 className="text-center m-3">Sign Up</h1>
         </div>
         {data ? (
-          <p>
+          <span>
             Success! You may now head <Link to="/">back to the homepage.</Link>
-          </p>
+          </span>
         ) : (
           <form onSubmit={handleFormSubmit}>
             <div className="form-input d-flex flex-column justify-center align-center">
@@ -106,11 +106,11 @@ const SignUp = () => {
             >
               Sign Up
             </button>
-            <p className="text-center">
+            <span className="text-center">
               <small className="text-muted text-center">
                 Already have an account? <Link to="/signin">Sign In</Link>.
               </small>
-            </p>
+            </span>
           </form>
         )}
 
