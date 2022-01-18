@@ -48,15 +48,17 @@ const donorSchema = new Schema({
         {
             studentId: {
                 type: Schema.Types.ObjectId,
-            
+                required: true
             },
             amount: {
                 type: Number,
-                trim: true
+                trim: true,
+                required: true
             },
             date: {
                 type: Date,
-                default: Date.now
+                default: Date.now,
+                required: true
             }
         }
     ]

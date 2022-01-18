@@ -17,6 +17,7 @@ import { Link } from 'react-router-dom';
 const DonorsCard = () => {
   const { error, data } = useQuery(QUERY_DONORS);
   const donors = data?.donors || [];
+  console.log(donors);
   if (error) {return console.log(error) };
   // if (!donors.length) {
   //   return <h3>No Donors Yet</h3>;

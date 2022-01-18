@@ -49,9 +49,9 @@ const SignIn = () => {
           <h1 className="text-center m-3">Sign In</h1>
         </div>
         {data ? (
-          <p>
-            Success! You may now head <Link to="/dashboard">back to the homepage.</Link>
-          </p>
+          <span>
+            Success! You may now head <Link to="/">back to the homepage.</Link>
+          </span>
         ) : (
         <>
           <form onSubmit={handleFormSubmit}>
