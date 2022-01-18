@@ -66,7 +66,7 @@ function App() {
             {/* Donor View Links */}
             <Route path="Donor" element={<DonorsCard />} />
             <Route path="NewDonor" element={<DonorForm />} />
-            <Route path="donor/newdonation/:donorId" element={ <DonationForm/>}/>
+            <Route path="newdonation/:donorId" element={ <DonationForm/>}/>
             <Route path="Account" element={<AccountForm />} />
           </Route>
         </Routes>

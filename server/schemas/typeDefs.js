@@ -12,7 +12,14 @@ const typeDefs = gql`
     zip: Int
     email: String
     phone: String
-    donation: String
+    donation: [Donation]!
+  }
+
+  type Donation {
+    _id: ID
+    amount: Int
+    date: String
+    studentId: ID
   }
 
   type Student {
@@ -71,7 +78,7 @@ const typeDefs = gql`
     addDonation(
       donorId: ID!,
       amount: Int!,
-      date: String!
+      date: String!,
       studentId: ID!
       ): Donor
 

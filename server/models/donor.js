@@ -47,7 +47,7 @@ const donorSchema = new Schema({
     donation: [
         {
             studentId: {
-                type: String,
+                type: Schema.Types.ObjectId,
             
             },
             amount: {

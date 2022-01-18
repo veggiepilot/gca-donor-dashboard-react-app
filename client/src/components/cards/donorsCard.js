@@ -55,7 +55,7 @@ const DonorsCard = () => {
                   <td>{donor.firstName}</td>
                   <td>{donor.lastName}</td>
                   <td>N/A</td>
-                  <td><Link to={`./newdonation/:${donor._id}`}>
+                  <td><Link to={`/newdonation/${donor._id}`}>
                   <Button>Donate</Button>
                   </Link>
                   </td>
