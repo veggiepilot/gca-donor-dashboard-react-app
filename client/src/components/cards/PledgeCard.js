@@ -15,9 +15,9 @@ const PledgeCard = () => {
               <h1 className="d-flex flex-start justify-content-start align-content-center">
                 23
               </h1>
-              <p className="d-flex flex-end justify-content-end align-content-center">
+              <span className="d-flex flex-end justify-content-end align-content-center">
                 Total Students
-              </p>
+              </span>
             </Card.Text>
           </Card.Body>
         </Card>
@@ -32,9 +32,9 @@ const PledgeCard = () => {
               <h1 className="d-flex flex-start justify-content-start align-content-center">
                 13
               </h1>
-              <p className="d-flex flex-end justify-content-end align-content-center">
+              <span className="d-flex flex-end justify-content-end align-content-center">
                 Total Donors
-              </p>
+              </span>
             </Card.Text>
           </Card.Body>
           .
@@ -50,9 +50,9 @@ const PledgeCard = () => {
               <h1 className="d-flex flex-start justify-content-start align-content-center">
                 $34,506
               </h1>
-              <p className="d-flex flex-end justify-content-end align-content-center">
+              <span className="d-flex flex-end justify-content-end align-content-center">
                 Total Pledge
-              </p>
+              </span>
             </Card.Text>
           </Card.Body>
         </Card>

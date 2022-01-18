@@ -65,7 +65,7 @@ const resolvers = {
       return Donor.findOneAndUpdate(
         { _id: donorId },
         {
-          $addToSet: { donations: { studentId, amount, date } },
+          $addToSet: { donation: { studentId, amount, date } },
         },
         {
           new: true, 
