@@ -49,9 +49,9 @@ const DonorForm = () => {
   return (
     <>
     {data ? ( 
-             <p>
+             <span>
              Success! You may now head <Link to="/dashboard">back to the homepage.</Link>
-           </p>
+           </span>
          ) : (
       <div>
       <Container className=" header d-flex flex-column justify-content-center align-content-center p-3 w-25 fixed-top">

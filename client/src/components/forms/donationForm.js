@@ -25,14 +25,6 @@ const DonationForm = () => {
     query: QUERY_STUDENTS
   });
 
-
-  // const { queryError, queryData } = useQuery(QUERY_STUDENTS);
-  // const students = queryData?.students || [];
-  // console.log(students)
-  // if (queryError) {
-  //   return console.log(queryError);
-  // }
-
   const handleFormSubmit = async (event) => {
     event.preventDefault();
     console.log(formState);
@@ -60,10 +52,10 @@ const DonationForm = () => {
   return (
     <div>
       {data ? (
-        <p>
+        <span>
           Success! You may now head{" "}
           <Link to="/dashboard">back to the homepage.</Link>
-        </p>
+        </span>
       ) : (
         <div>
           <Container className=" header d-flex flex-column justify-content-start align-content-start p-3 w-25 fixed-top">
@@ -115,7 +107,7 @@ const DonationForm = () => {
                 </Row>
                 <Stack className="col-md-5 p-2 m-2 mx-auto ">
                   <Button variant="light" type="submit">
-                    Create
+                    Donate
                   </Button>
                 </Stack>
               </Form>
