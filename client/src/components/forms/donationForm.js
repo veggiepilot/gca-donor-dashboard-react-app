@@ -32,6 +32,7 @@ const DonationForm = () => {
       const { data } = await addDonation({
         variables: { ...formState },
       });
+      console.log(data);
     } catch (err) {
       console.error(err.networkError.result.errors);
     }
