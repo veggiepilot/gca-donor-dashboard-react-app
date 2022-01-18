@@ -48,7 +48,7 @@ const donorSchema = new Schema({
         {
             studentId: {
                 type: Schema.Types.ObjectId,
-                required: UniqueTypeNamesRule
+                required: true
             },
             amount: {
                 type: Number,
