@@ -20,6 +20,11 @@ query all{
     zip
     email
     phone
+    donation {
+      amount
+      date
+      studentId
+    }
   }
 }
 `
@@ -37,6 +42,11 @@ export const QUERY_DONORS = gql`
       zip
       email
       phone
+      donation {
+        amount
+        date
+        studentId
+      }
     }
   }
 `;
