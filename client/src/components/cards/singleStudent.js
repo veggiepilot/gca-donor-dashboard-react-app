@@ -1,44 +1,65 @@
-import { Form, Row, Col, Button, Stack, Container } from "react-bootstrap";
-import { Link } from "react-router-dom";
+/* eslint-disable no-unused-vars */
+
+import { Card, Row, Button, Stack, Container } from "react-bootstrap";
+import { Link, useParams } from "react-router-dom";
+import { useQuery, useMutation } from "@apollo/client";
+import { QUERY_SINGLE_STUDENT } from "../../utils/queries";
+import { REMOVE_STUDENT } from "../../utils/mutations";
 
 const SingleStudent = () => {
+const { studentId } = useParams();
+  const [removeStudent, { mutationError }] = useMutation(REMOVE_STUDENT);
+  if (mutationError) {
+    console.log(mutationError.networkError.result.errors);
+  }
+  const handleRemoveStudent = async (_id) => {
+      try {
+          const {mutationData} = await
+          removeStudent({
+            variables: { studentId:studentId }
+          });
+      } catch (err) {
+          console.error(err.networkError.result.errors)
+      }
+  }
+
+  const { loading, data, error } = useQuery(QUERY_SINGLE_STUDENT, {
+    variables: { studentId: studentId },
+  });
+
+  const student = data?.student || {};
+  console.log(student);
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+  if (error) {
+    return console.log(error.networkError.result.errors);
+  }
   return (
     <>
       <Container className=" header d-flex flex-column justify-content-center align-content-center p-3 w-25 fixed-top">
         <h1 className="py-2">Student Infomation</h1>
-      </Container>
-
-      <Container className="accountform">
-        <Form>
+        <Card>
+          {/* <Container className="donorInformation"> */}
           <Row className="mb-3">
-            <Form.Group as={Col} controlId="formGridFirstName">
-              <Form.Label>First Name</Form.Label>
-              <Form.Control type="firstname" placeholder="John" />
-            </Form.Group>
-
-            <Form.Group as={Col} controlId="formGridLastName">
-              <Form.Label>Last Name</Form.Label>
-              <Form.Control type="lastname" placeholder="Doe" />
-            </Form.Group>
+            <h4>Name</h4>
+            <h5>
+              {student.firstName} {student.lastName}
+            </h5>
+            <h4>Parent Email</h4>
+            <h5>
+              {student.parentEmail}
+            </h5>
           </Row>
-          <Row>
-            <Form.Group as={Col} controlId="formGridEmail">
-              <Form.Label>Email</Form.Label>
-              <Form.Control type="email" placeholder="Enter email" />
-            </Form.Group>
 
-            <Form.Group as={Col} controlId="formGridPassword">
-              <Form.Label>Password</Form.Label>
-              <Form.Control type="password" placeholder="Password" />
-            </Form.Group>
-          </Row>
-        </Form>
-
-        <Stack gap={2} className="col-md-5 mt-3 mx-auto">
-          <Link to="/dashboard">
-            <Button variant="light">Save changes</Button>
-          </Link>
-        </Stack>
+          <Stack gap={2} className="col-md-5 mt-3 mx-auto">
+            <Link to="/dashboard">
+              <Button variant="light" onClick={() => handleRemoveStudent(studentId)}>Delete Student</Button>
+            </Link>
+          </Stack>
+          {/* </Container> */}
+        </Card>
       </Container>
     </>
   );

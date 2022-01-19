@@ -53,7 +53,9 @@ const resolvers = {
     removeDonor : async(parent, { donorId }) => {
       return Donor.findOneAndDelete({_id: donorId})
     },
-
+    removeStudent : async(parent, { studentId }) => {
+      return Student.findOneAndDelete({_id: studentId})
+    },
     // removeUser: async (parent, { userId }) => {
     //   return User.findOneAndDelete({ _id: userId });
     // },

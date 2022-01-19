@@ -84,6 +84,7 @@ const typeDefs = gql`
       ): Donor
       
       removeDonor(donorId:ID!): Donor
+      removeStudent(studentId:ID!): Student
     
   }
 `;

@@ -65,7 +65,7 @@ function App() {
             {/* Students View  Links */}
             <Route path="Student" element={<StudentTabs />} />
             <Route path="NewStudent" element={<CreateStudentForm/>} />
-            {/* <Route path="studentinfo/:studentId" element={<SingleStudent/>}/> */}
+            <Route path="studentinfo/:studentId" element={<SingleStudent/>}/>
             {/* Donor View Links */}
             <Route path="Donor" element={<DonorsCard />} />
             <Route path="NewDonor" element={<DonorForm />} />

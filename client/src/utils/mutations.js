@@ -137,6 +137,17 @@ mutation removeDonor($donorId: ID!){
   }
 }
 `
+export const REMOVE_STUDENT = gql`
+  mutation removeStudent($studentId: ID!) {
+    removeStudent(studentId: $studentId) {
+      _id
+      firstName
+      lastName
+      parentEmail
+      fundingNeeded
+    }
+  }
+`;
 
 // test mutation for graphql
 // mutation { addStudent( firstName: "Sophie", lastName: "Maskill", parentEmail: "sarah@gmail.com", fundingNeeded: 3123){
