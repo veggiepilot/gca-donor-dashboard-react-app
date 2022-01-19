@@ -13,6 +13,7 @@ import {
 import { Icon } from "@iconify/react";
 import { useQuery } from '@apollo/client'
 import { QUERY_STUDENTS } from "../utils/queries";
+// import { Link } from 'react-router-dom'
 
 const StudentTabs = () => {
   const { error, data } = useQuery(QUERY_STUDENTS);
@@ -48,7 +49,7 @@ const StudentTabs = () => {
             <Table>
               <thead>
                 <tr>
-                  <th>#</th>
+        
                   <th>First Name</th>
                   <th>Last Name</th>
                   <th>Funding Needed</th>
@@ -57,10 +58,11 @@ const StudentTabs = () => {
               {students && students.map((student) =>(
               <tbody key={student._id}> 
                 <tr>
-                  <td>{student._id}</td>
+              
                   <td>{student.firstName}</td>
                   <td>{student.lastName}</td>
                   <td>{student.fundingNeeded}</td>
+                  {/* <td><Link to={`/studentinfo/${student._id}`}><Button>View Information</Button></Link></td> */}
                 </tr>
               </tbody>
               ))}
@@ -97,7 +99,7 @@ const StudentTabs = () => {
           </Row>
         </Tab>
 
-        <Tab eventKey="profile" title="Donors">
+        {/* <Tab eventKey="profile" title="Donors">
           <Card className="w-25 m-3">
             <Card.Body>
               <h1>John Doe</h1>
@@ -157,7 +159,7 @@ const StudentTabs = () => {
               </Row>
             </Container>
           </Row>
-        </Tab>
+        </Tab> */}
       </Tabs>
     </>
   );

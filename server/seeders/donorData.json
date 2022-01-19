@@ -11,7 +11,6 @@
     "phone": "5550235555",
     "donation": [
       {
-        "studentId": "",
         "amount": 4000
       }
     ]
@@ -28,7 +27,6 @@
     "phone": "5554325555",
     "donation": [
       {
-        "studentId": "",
         "amount": 5000
       }
     ]
@@ -45,7 +43,6 @@
     "phone": "5556355555",
     "donation": [
       {
-        "studentId": "",
         "amount": 1000
       }
     ]
@@ -62,7 +59,6 @@
     "phone": "5554785555",
     "donation": [
       {
-        "studentId": "",
         "amount": 300
       }
     ]
@@ -79,7 +75,6 @@
     "phone": "5554895555",
     "donation": [
       {
-        "studentId": "",
         "amount": 1000
       }
     ]
@@ -96,7 +91,6 @@
     "phone": "5556585555",
     "donation": [
       {
-        "studentId": "",
         "amount": 6000
       }
     ]
@@ -113,7 +107,6 @@
     "phone": "5558962145",
     "donation": [
       {
-        "studentId": "",
         "amount": 300
       }
     ]
@@ -130,7 +123,6 @@
     "phone": "5553624856",
     "donation": [
       {
-        "studentId": "",
         "amount": 2000
       }
     ]

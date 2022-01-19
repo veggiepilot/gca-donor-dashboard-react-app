@@ -118,6 +118,26 @@ export const ADD_DONATION = gql`
  }
 `;
 
+export const REMOVE_DONOR = gql`
+mutation removeDonor($donorId: ID!){
+  removeDonor(donorId: $donorId){
+    _id
+    firstName
+     lastName
+     address1
+     address2
+     city
+     state
+     zip
+     email
+     phone
+     donation {
+       amount
+     }
+  }
+}
+`
+
 // test mutation for graphql
 // mutation { addStudent( firstName: "Sophie", lastName: "Maskill", parentEmail: "sarah@gmail.com", fundingNeeded: 3123){
 //   firstName

@@ -49,6 +49,7 @@ const typeDefs = gql`
     users: [User]!
     user(userId: ID!): User
     students: [Student]!
+    student( studentId: ID!):Student
   }
 
   type Mutation {
@@ -81,7 +82,8 @@ const typeDefs = gql`
       date: String!,
       studentId: ID!
       ): Donor
-
+      
+      removeDonor(donorId:ID!): Donor
     
   }
 `;

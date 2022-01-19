@@ -163,18 +163,10 @@ const DonorForm = () => {
               onChange={handleChange} 
               />
             </Form.Group>
-
-            <Form.Group as={Col} controlId="formGridStudent">
-              <Form.Label>Student(s)</Form.Label>
-              <Form.Select defaultValue="Choose...">
-                <option>Choose...</option>
-                <option>...</option>
-              </Form.Select>
-            </Form.Group>
           </Row>
           <Stack gap={2} className="col-md-5 mx-auto">
             {/* <Link to="/dashboard"> */}
-              <Button variant="light" type="submit">Donate</Button>
+              <Button variant="light" type="submit">Add Donor</Button>
             {/* </Link> */}
           </Stack>
         </Form>
