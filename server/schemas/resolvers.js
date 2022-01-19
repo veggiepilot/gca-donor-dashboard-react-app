@@ -17,7 +17,13 @@ const resolvers = {
     donors: async () => {
       return Donor.find()
     },
+    donor: async (parent, { donorId }) => {
+      return Donor.findOne({ _id: donorId })
+    },
 
+    student: async (parent, { studentId }) => {
+      return Student.findOne({_id: studentId})
+    }
   },
 
   Mutation: {
@@ -42,6 +48,9 @@ const resolvers = {
 
       const token = signToken(user);
       return { token, user };
+    },
+    removeDonor : async(parent, { donorId }) => {
+      return Donor.findOneAndDelete({_id: donorId})
     },
 
     // removeUser: async (parent, { userId }) => {

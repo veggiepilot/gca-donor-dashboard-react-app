@@ -18,6 +18,8 @@ import SignUp from "./views/signUp";
 import CreateStudentForm from "./components/forms/createStudentForm";
 import Layout from "./views/layout";
 import DonationForm from "./components/forms/donationForm";
+import SingleDonor from "./components/cards/singleDonor";
+import SingleStudent from "./components/cards/singleStudent";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
@@ -63,10 +65,12 @@ function App() {
             {/* Students View  Links */}
             <Route path="Student" element={<StudentTabs />} />
             <Route path="NewStudent" element={<CreateStudentForm/>} />
+            {/* <Route path="studentinfo/:studentId" element={<SingleStudent/>}/> */}
             {/* Donor View Links */}
             <Route path="Donor" element={<DonorsCard />} />
             <Route path="NewDonor" element={<DonorForm />} />
             <Route path="newdonation/:donorId" element={ <DonationForm/>}/>
+            <Route path="donorinfo/:donorId" element={ <SingleDonor/>}/>
             <Route path="Account" element={<AccountForm />} />
           </Route>
         </Routes>

@@ -13,6 +13,7 @@ import {
 import { Icon } from "@iconify/react";
 import { useQuery } from '@apollo/client'
 import { QUERY_STUDENTS } from "../utils/queries";
+import { Link } from 'react-router-dom'
 
 const StudentTabs = () => {
   const { error, data } = useQuery(QUERY_STUDENTS);
@@ -61,6 +62,7 @@ const StudentTabs = () => {
                   <td>{student.firstName}</td>
                   <td>{student.lastName}</td>
                   <td>{student.fundingNeeded}</td>
+                  <td><Link to={`/studentinfo/${student._id}`}><Button>View Information</Button></Link></td>
                 </tr>
               </tbody>
               ))}

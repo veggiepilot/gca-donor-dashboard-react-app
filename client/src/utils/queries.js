@@ -75,8 +75,8 @@ export const QUERY_SINGLE_USER = gql`
 `;
 
 export const QUERY_SINGLE_DONOR = gql`
-  query singleDonor($id: ID!) {
-    donor(id: $id) {
+  query singleDonor($donorId: ID!) {
+    donor(donorId: $donorId) {
       _id
       firstName
       lastName
@@ -96,9 +96,9 @@ export const QUERY_SINGLE_DONOR = gql`
   }
 `;
 
-export const getStudentQuery = gql`
-  query GetStudent($studentId: ID!) {
-    student(id: $id) {
+export const QUERY_SINGLE_STUDENT = gql`
+  query singleStudent($studentId: ID!) {
+    student(studentId: $studentId) {
       _id
       firstName
       lastName
