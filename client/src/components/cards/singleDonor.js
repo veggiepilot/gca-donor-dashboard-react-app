@@ -11,11 +11,11 @@ const { donorId } = useParams();
   if (mutationError) {
     console.log(mutationError.networkError.result.errors);
   }
-  const handleRemoveDonor = async (donor) => {
+  const handleRemoveDonor = async (_id) => {
       try {
           const {mutationData} = await
           removeDonor({
-            variables: { donorId }
+            variables: { donorId:donorId }
           });
       } catch (err) {
           console.error(err.networkError.result.errors)

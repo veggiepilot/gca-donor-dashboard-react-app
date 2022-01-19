@@ -49,6 +49,7 @@ const resolvers = {
       const token = signToken(user);
       return { token, user };
     },
+    
     removeDonor : async(parent, { donorId }) => {
       return Donor.findOneAndDelete({_id: donorId})
     },

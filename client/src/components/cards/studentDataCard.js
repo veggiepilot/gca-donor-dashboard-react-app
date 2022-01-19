@@ -1,12 +1,12 @@
 import React from "react";
 import { Card, Container } from "react-bootstrap";
 
-const SingleDonor = () => {
+const StudentDataCard = () => {
   return (
     <>
       <Container className=" d-flex flex-row justify-content-center align-content-center">
         <Card className="text-center w-100 d-flex flex-column justify-content-center align-content-center m-2">
-          <Card.Header>Donor Information</Card.Header>
+          <Card.Header>Students</Card.Header>
           <Card.Body>
             <Card.Title>
               <i className="fas fa-user-graduate"></i>
@@ -61,4 +61,4 @@ const SingleDonor = () => {
   );
 };
 
-export default SingleDonor;
+export default StudentDataCard;

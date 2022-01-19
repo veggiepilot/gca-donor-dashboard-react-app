@@ -119,8 +119,8 @@ export const ADD_DONATION = gql`
 `;
 
 export const REMOVE_DONOR = gql`
-mutation removeDonor($donorId:ID!){
-  removeDonor(donorId:$donorId){
+mutation removeDonor($donorId: ID!){
+  removeDonor(donorId: $donorId){
     _id
     firstName
      lastName
@@ -131,7 +131,9 @@ mutation removeDonor($donorId:ID!){
      zip
      email
      phone
-     donation
+     donation {
+       amount
+     }
   }
 }
 `
