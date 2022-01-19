@@ -4,7 +4,7 @@ import { Form, Row, Col, Button, Stack, Container } from "react-bootstrap";
 import { useMutation, useApolloClient } from "@apollo/client";
 import { useParams } from 'react-router-dom';
 import { ADD_DONATION } from "../../utils/mutations";
-import { useQuery } from "@apollo/client";
+import { resetCaches } from "@apollo/client";
 import { QUERY_STUDENTS } from "../../utils/queries";
 import { Link } from "react-router-dom";
 
@@ -31,6 +31,9 @@ const DonationForm = () => {
     try {
       const { data } = await addDonation({
         variables: { ...formState },
+      });
+      resetCaches({
+        include: "active",
       });
       console.log(data);
     } catch (err) {

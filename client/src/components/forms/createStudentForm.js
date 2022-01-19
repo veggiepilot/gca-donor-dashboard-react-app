@@ -2,7 +2,7 @@
 import { Form, Row, Col, Button, Stack, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import React, { useState } from "react";
-import { useMutation } from "@apollo/client";
+import { useMutation, resetCaches } from "@apollo/client";
 import { ADD_STUDENT } from "../../utils/mutations";
 
 const CreateStudentForm = () => {
@@ -21,6 +21,9 @@ const CreateStudentForm = () => {
     try {
       const { data } = await addStudent({
         variables: { ...formState },
+      });
+      resetCaches({
+        include: "active",
       });
     } catch (err) {
       console.error(err.networkError.result.errors);

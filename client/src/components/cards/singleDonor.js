@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import { Card, Row, Button, Stack, Container } from "react-bootstrap";
 import { Link, useParams } from "react-router-dom";
-import { useQuery, useMutation } from "@apollo/client";
+import { useQuery, useMutation, resetCaches } from "@apollo/client";
 import { QUERY_SINGLE_DONOR } from "../../utils/queries";
 import { REMOVE_DONOR } from "../../utils/mutations";
 
@@ -16,6 +16,9 @@ const { donorId } = useParams();
           const {mutationData} = await
           removeDonor({
             variables: { donorId:donorId }
+          });
+          resetCaches({
+            include: "active",
           });
       } catch (err) {
           console.error(err.networkError.result.errors)

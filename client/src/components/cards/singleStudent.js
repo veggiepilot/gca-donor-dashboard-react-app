@@ -2,7 +2,7 @@
 
 import { Card, Row, Button, Stack, Container } from "react-bootstrap";
 import { Link, useParams } from "react-router-dom";
-import { useQuery, useMutation } from "@apollo/client";
+import { useQuery, useMutation, resetCaches } from "@apollo/client";
 import { QUERY_SINGLE_STUDENT } from "../../utils/queries";
 import { REMOVE_STUDENT } from "../../utils/mutations";
 
@@ -17,6 +17,9 @@ const { studentId } = useParams();
           const {mutationData} = await
           removeStudent({
             variables: { studentId:studentId }
+          });
+          resetCaches({
+            include: "active",
           });
       } catch (err) {
           console.error(err.networkError.result.errors)
