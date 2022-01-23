@@ -92,21 +92,6 @@ const DonorsCard = () => {
         </Row>
       </Container>
 
-      <Container>
-        <Card className="text-center w-100 d-flex flex-column justify-content-center align-content-center m-2">
-          <Card.Header>Pledge Fund Graph</Card.Header>
-          <Card.Body>
-            <Card.Title>
-              <i className="fas fa-user-graduate"></i>
-            </Card.Title>
-            <Card.Text className="d-flex flex-row justify-content-center p-4">
-              <h1 className="d-flex flex-row justify-content-center align-content-center">
-                Coming Soon
-              </h1>
-            </Card.Text>
-          </Card.Body>
-        </Card>
-      </Container>
     </>
   );
 };
