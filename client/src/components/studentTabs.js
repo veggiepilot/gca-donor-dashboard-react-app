@@ -22,14 +22,6 @@ const StudentTabs = () => {
 
   return (
     <>
-      <Container className="d-flex flex-column justify-content-start align-content-start p-3 w-25 fixed-top">
-        <Stack direction="horizontal">
-          <Form.Control className="me-auto" placeholder="Search..." />
-          <div className="vr" />
-          <Button variant="light">Find</Button>
-        </Stack>
-      </Container>
-
       <Tabs
         defaultActiveKey="home"
         id="tab"

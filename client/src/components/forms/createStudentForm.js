@@ -52,13 +52,13 @@ const CreateStudentForm = () => {
           </span>
         ) : (
           <div>
-            <Container className=" header d-flex flex-column justify-content-start align-content-start p-3 w-25 fixed-top">
-              <h1 className="py-2 ">New Student Form</h1>
-            </Container>
+           
             <Container
               className="studentform d-flex flex-column justify-center align-center mt-5 "
               onSubmit={handleFormSubmit}
-            >
+            > <Container className=" header d-flex flex-column justify-content-start align-content-start p-3 w-25">
+              <h1 className="py-2 ">New Student Form</h1>
+            </Container>
               <Form>
                 <Row className="mb-3">
                   <Form.Group as={Col} controlId="formGridFirstName">

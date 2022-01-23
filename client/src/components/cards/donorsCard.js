@@ -19,23 +19,11 @@ const DonorsCard = () => {
   const donors = data?.donors || [];
   console.log(donors);
   if (error) {return console.log(error) };
-  // if (!donors.length) {
-  //   return <h3>No Donors Yet</h3>;
-  // }
   return (
     <>
-      <Container className="d-flex flex-column justify-content-start align-content-start p-3 w-25 fixed-top">
-        <Stack direction="horizontal">
-          <Form.Control className="me-auto" placeholder="Search..." />
-          <div className="vr" />
-          <Button variant="light">Find</Button>
-        </Stack>
-      </Container>
-
       <Container className=" d-flex flex-row justify-content-center align-content-center">
         <Card className="text-center w-100 d-flex flex-column justify-content-center align-content-center m-2">
           <Card.Header>Donor List</Card.Header>
-          
           <Card.Body>
             <Card.Title>
               <Icon icon="ph:student-fill" width="50" height="50" />
