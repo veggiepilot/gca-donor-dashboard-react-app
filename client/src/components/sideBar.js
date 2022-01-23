@@ -1,12 +1,7 @@
 import { Link } from "react-router-dom";
 import { Accordion, Nav, Navbar, Col, Row, Button } from "react-bootstrap";
-import Auth from '../utils/auth'
-
 const SideBar = () => {
-  const logout = (event) => {
-    event.preventDefault();
-    Auth.logout();
-  };
+
   return (
     <Navbar className="fixed ">
       <Navbar.Toggle />
@@ -66,20 +61,6 @@ const SideBar = () => {
                 </Accordion.Body>
               </Accordion.Item>
             </Accordion>
-            {Auth.loggedIn() ? (
-            <>
-              <span>Hey there, {Auth.getProfile().data.firstName}!</span>
-              <button className="btn btn-lg btn-light m-2" onClick={logout}>
-                Logout
-              </button>
-            </>
-          ) : (
-            <>
-              <Link className="btn btn-lg btn-info m-2" to="/">
-                Login
-              </Link>
-            </>
-          )}
           </Col>
         </Row>
       </Nav>

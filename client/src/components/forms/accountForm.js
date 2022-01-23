@@ -4,11 +4,11 @@ import { Link } from "react-router-dom";
 const AccountForm = () => {
   return (
     <>
-      <Container className=" header d-flex flex-column justify-content-center align-content-center p-3 w-25 fixed-top">
+ 
+
+      <Container className="accountform">     <Container className=" header d-flex flex-column justify-content-center align-content-center p-3 w-25">
         <h1 className="py-2">Update Account Information</h1>
       </Container>
-
-      <Container className="accountform">
         <Form>
           <Row className="mb-3">
             <Form.Group as={Col} controlId="formGridFirstName">

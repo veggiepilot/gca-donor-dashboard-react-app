@@ -54,10 +54,11 @@ const DonorForm = () => {
            </span>
          ) : (
       <div>
-      <Container className=" header d-flex flex-column justify-content-center align-content-center p-3 w-25 fixed-top">
+ 
+      <Container className="donorform d-flex flex-column justify-center align-center mt-5" onSubmit={handleDonorFormSubmit} >
+             <Container className=" header d-flex flex-column justify-content-center align-content-center p-3 w-25">
         <h1 className="py-2">New Donor Form</h1>
       </Container>
-      <Container className="donorform d-flex flex-column justify-center align-center mt-5" onSubmit={handleDonorFormSubmit} >
         <Form>
           <Row className="mb-3">
             <Form.Group as={Col} controlId="formGridFirstName">
